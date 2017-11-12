@@ -5,7 +5,7 @@ function verifyFunction(){
   if(start == "90210"){
     document.getElementById("here").innerHTML = "account verified"
   } else {
-    alert("accoun not verified");
+    alert("account not verified");
   }
 }
 
@@ -16,21 +16,33 @@ function onloadFunction(){
   document.getElementById("here").innerHTML = "this is being written from a document.getElementById script"
 }
 
-function questionFunction(){
+// function questionFunction(){
 
-  var question = prompt("what is your name?");
+//   var question = prompt("what is your name?");
 
-  if(question == "Marco"){
-    alert("Great, you are on your way to some great JavaScript developer skills!")
-  } else if(question == "Mark"){
-    alert("Still on the way to great JavaScript developer skills!")
-  } else {
-    alert("name not recognized yet")
-  }
+//   if(question == "Marco"){
+//     alert("Great, you are on your way to some great JavaScript developer skills!")
+//   } else if(question == "Mark"){
+//     alert("Still on the way to great JavaScript developer skills!")
+//   } else {
+//     alert("name not recognized yet")
+//   }
 
-}
+// }
 
 function keypressFunction(){
   document.getElementById("jumbojet").style = "background-color: yellow;"
 }
+
+$("#showButton").click(function(){
+  $("#anime1").show();
+    return false;
+})
+
+$("#hideButton").click(function(){
+  $("#anime1").hide('slow');
+})
+
+
+
 

@@ -9,3 +9,13 @@
   width: 100%;
   background-color: #4265f4;
 }
+
+.two {
+  height: 250px;
+  width: 100%;
+  background-color: #215ab7;
+}
+
+#hideButton {
+  z-index:100;
+}
