@@ -4,8 +4,8 @@
   <title>FUNDIESJS1</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -23,9 +23,14 @@
     <button onclick="alert('hello')"> Click Here</button>
   </div>
   <div class="two">
-    <img src="http://www.xsjjys.com/data/out/140/WHDQ-512803808.jpg" id="anime1">
+    <img src="http://www.xsjjys.com/data/out/140/WHDQ-512803808.jpg" id="anime1" style="height:300px; width:500px; display:none">
+    <img src="https://i.pinimg.com/736x/00/73/bb/0073bb778ee5fbed2ca90635df45dd18--manga-art-anime-manga.jpg" id="prettygirl">
     <button id="showButton">show up</button>
     <button id="hideButton">hide now</button>
+    <button id="showHerButton"> show her</button>
+    <form id="theform">
+      <input type="text" name="" id="theinput">
+    </form>
   </div>
 
   <script type="text/javascript"> alert("this is the very first script run")</script>
@@ -35,3 +40,4 @@
 
 <!-- notes: 
  for backwards compatibility, some older browsers such as older versions of IE, need the script attribute type="application/javascript" , instead of the usual script attribute type="text/javascript"-->
+ <!-- sometimes the functionality of the jquery show and hide method animations depend on the version of jquery that is used. Using this src worked:  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"   DO NOT USE ANY SLIM VERSIONS. USE A FULL VERSION OR AT LEAST A MINIFIED VERSION, SO WE CAN UTULIZE THE FULL FUNCTIONALITIES OF JQUERY-->
