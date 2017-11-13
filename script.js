@@ -11,10 +11,10 @@ function verifyFunction(){
 
 
 
-function onloadFunction(){
-  alert("This is the very first function and also functions first, when the document loads!");
-  document.getElementById("here").innerHTML = "this is being written from a document.getElementById script"
-}
+// function onloadFunction(){
+//   alert("This is the very first function and also functions first, when the document loads!");
+//   document.getElementById("here").innerHTML = "this is being written from a document.getElementById script"
+// }
 
 // function questionFunction(){
 
@@ -35,14 +35,44 @@ function keypressFunction(){
 }
 
 $("#showButton").click(function(){
-  $("#anime1").show();
+  $("#anime1").show("slow");
     return false;
 })
 
 $("#hideButton").click(function(){
-  $("#anime1").hide('slow');
+  $("#anime1").hide("slow");
+  return false;
+});
+
+$("#showHerButton").click(function(){
+  $("#prettygirl").show("slow");
+  return false;
 })
 
+
+
+$("#theform").submit(function(e){
+  if ($("#theinput").val() == "prettygirl" ){
+     $("#prettygirl").hide("slow");
+      e.preventDefault();
+  } else {
+    alert("incorect answer")
+    e.preventDefault();
+  }
+})
+
+
+// $("#theform").submit(function(e){
+//   if( $("#theform").val() == "prettygirl"){
+//     $("#prettygirl").hide("slow");
+//     alert("pretty girl script has run");
+//     e.preventDefault(); 
+//     return;
+//   } else {
+//     alert("incorrect answer");
+//     e.preventDefault(); 
+//   }
+// })
 
 
 
