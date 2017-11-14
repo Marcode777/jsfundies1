@@ -35,12 +35,12 @@ function keypressFunction(){
 }
 
 $("#showButton").click(function(){
-  $("#anime1").show("slow");
+  $("#anime1").show("slow"); // this "slow" can be replaced with integers, e.g., 3000
     return false;
 })
 
 $("#hideButton").click(function(){
-  $("#anime1").hide("slow");
+  $("#anime1").hide("slow"); // this "slow" can be replaced with integers, e.g., 3000
   return false;
 });
 
