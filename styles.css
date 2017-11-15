@@ -19,3 +19,9 @@
 #hideButton {
   z-index:100;
 }
+
+.three {
+  height: 500px;
+  width: 100%;
+  background-color:#20a0e5;
+}
