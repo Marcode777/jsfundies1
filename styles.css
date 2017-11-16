@@ -25,3 +25,13 @@
   width: 100%;
   background-color:#20a0e5;
 }
+
+/* below this is for fade in effect, the class of div or element must be set to fade, to see this working*/
+.fade {
+  opacity: 0.5;
+}
+
+.fade:hover {
+  opacity: 1;
+}
+/* above is for fade in effect, the class of div or element must be set to fade, to see this working */
