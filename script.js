@@ -74,5 +74,27 @@ $("#theform").submit(function(e){
 //   }
 // })
 
+function getter(){
+  var root = 'https://jsonplaceholder.typicode.com';
+  $.ajax({
+    url: root + '/posts/1',
+    method: 'GET'
+  }).then(function(data){
+   var yay = "the following is JSON data:" + " " + (data.body);
+   document.getElementById("apiSection").innerHTML = yay;
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
