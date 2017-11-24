@@ -99,7 +99,14 @@
   margin:50%;
 }
 
+.cubetocircle {
+  border-radius: 0%;
+}
 
+.cubetocircle:hover {
+  border-radius: 50%;
+  transition: 0.5s;
+}
 
 
 
