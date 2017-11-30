@@ -245,6 +245,34 @@
   transition: 2s;
 }
 
+.newStartDiv {
+  height: 1000px;
+  width: 100%;
+  background-color: #c6d1cb;
+}
+
+.subNewStartDiv1 {
+  height:50px;
+  width:100%;
+  background-color: white;
+}
+
+.characterDiv {
+  height: 500px;
+  width: 500px;
+  background-color: #535955;
+}
+
+#Kazuya {
+  visibility: hidden;
+}
+
+#Lee {
+  height:300px;
+  width:600px;
+  visibility: hidden;
+}
+
 
 
 

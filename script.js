@@ -86,6 +86,15 @@ function getter(){
 }
 
 
+function newStartFunction(){
+  var start = prompt("which Tekken character would you choose to show up?");
+  if(start == "Kazuya"){
+    document.getElementById("Kazuya").style.visibility = "visible";
+  } else if(start == "Lee" || start == "Violet"){
+    document.getElementById("Lee").style.visibility = "visible";
+  }
+}
+
 
 
 
