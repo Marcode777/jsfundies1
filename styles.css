@@ -265,7 +265,15 @@
 
 #Kazuya {
   visibility: hidden;
+  opacity: 0.5;
 }
+
+#Kazuya.newClass {
+  visibility: visible;
+  opacity: 1.0;
+  transition: 2s;
+}
+
 
 #Lee {
   height:300px;
