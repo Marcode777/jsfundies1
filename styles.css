@@ -279,6 +279,13 @@
   height:300px;
   width:600px;
   visibility: hidden;
+  opacity: 0.5;
+}
+
+#Lee.newClass {
+  visibility: visible;
+  opacity: 1.0;
+  transition: 2s;
 }
 
 

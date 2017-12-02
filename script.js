@@ -93,7 +93,7 @@ function newStartFunction(){
     document.getElementById("Kazuya").classList.add('newClass');
 
   } else if(start == "Lee" || start == "Violet"){
-    document.getElementById("Lee").style.visibility = "visible";
+    document.getElementById("Lee").classList.add('newClass');
   }
 }
 
