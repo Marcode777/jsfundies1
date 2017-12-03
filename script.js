@@ -97,7 +97,17 @@ function newStartFunction(){
   }
 }
 
-
+function apiGetter(){
+  // var root = "http://www.omdbapi.com/?t=vanilla+sky&apikey=43e240f9";
+  // var root = "https://jsonplaceholder.typicode.com";
+  $.ajax({
+    url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
+    method: 'GET'
+  }).then(function(data){
+    var yay = ("Title:" + " "+ data.Title + ". " + "Starring:" + " " + data.Actors);
+    document.getElementById("theInputDiv").innerHTML = yay;
+  })
+}
 
 
 

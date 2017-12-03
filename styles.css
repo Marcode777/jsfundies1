@@ -244,6 +244,27 @@
   box-shadow: inset 0 0 0 25px #07cbf7;
   transition: 2s;
 }
+.apiSection {
+  height: 200px;
+  width: 100%;
+  background-color: #14356b;
+}
+
+.apiSection h4 {
+  color: blue;
+}
+
+#theInputDiv{
+  height: 50px;
+  width:100%;
+  background-color: white;
+}
+
+.theForm {
+  top: 50%;
+  box-sizing: border-box;
+}
+
 
 .newStartDiv {
   height: 1000px;
@@ -271,7 +292,7 @@
 #Kazuya.newClass {
   visibility: visible;
   opacity: 1.0;
-  transition: 2s;
+  transition: 2.5s;
 }
 
 
@@ -285,7 +306,7 @@
 #Lee.newClass {
   visibility: visible;
   opacity: 1.0;
-  transition: 2s;
+  transition: 2.5s;
 }
 
 
