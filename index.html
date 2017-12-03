@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body onload="getter();">
+<body>
   <div class="jumbotron" id="jumbojet">
     fundiesjs1
     <h3 id="here"></h3>
@@ -47,7 +47,7 @@
   </div>
   <div class="four">
     <div id="apiSection">
-      <button onclick="getter()">load api data</button>
+      <button onclick="getter();">load api data</button>
     </div>
   </div>
   <div class="rotation">
@@ -70,6 +70,12 @@
   <div class="insetDiv">
     <div class="inset">
       <h3>inset effect</h3>
+    </div>
+  </div>
+  <div class="apiSection">
+    <div>
+      <button onclick="apiGetter();"> load api</button>
+      <h4 id="theInputDiv">api Section</h4>
     </div>
   </div>
   <div class="newStartDiv">
