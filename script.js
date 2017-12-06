@@ -105,7 +105,7 @@ function apiGetter(){
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
     method: 'GET'
   }).then(function(data){
-    var yay = ("Title:" + " "+ data.Title + ". " + "Starring:" + " " + data.Actors);
+    var yay = ("Title:" + " "+ data.Title + ". " + "Starring :" + " " + data.Actors);
     document.getElementById("theInputDiv").innerHTML = yay;
   })
 }
