@@ -250,15 +250,26 @@
   background-color: #14356b;
 }
 
-.apiSection h4 {
+/*.apiSection h4 {
   color: blue;
-}
+}*/
+
+
 
 #theInputDiv{
-  height: 50px;
+  height: 34px;
   width:100%;
   background-color: white;
+  opacity: 0.1; /*test*/
+  visibility: hidden; /*test*/
 }
+
+#theInputDiv.newClass { /*test code block*/
+  visibility: visible;
+  opacity: 1.0;
+  transition: 2.5s;
+}
+
 
 .theForm {
   top: 50%;
@@ -308,8 +319,6 @@
   opacity: 1.0;
   transition: 2.5s;
 }
-
-
 
 
 

@@ -107,6 +107,8 @@ function apiGetter(){
   }).then(function(data){
     var yay = ("Title:" + " "+ data.Title + ". " + "Starring :" + " " + data.Actors);
     document.getElementById("theInputDiv").innerHTML = yay;
+    document.getElementById("theInputDiv").classList.add('newClass');
+    alert('this script has worked');
   })
 }
 
