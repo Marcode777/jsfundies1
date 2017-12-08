@@ -101,8 +101,8 @@ function apiGetter(){
   // var root = "http://www.omdbapi.com/?t=vanilla+sky&apikey=43e240f9";
   // var root = "https://jsonplaceholder.typicode.com";
   $.ajax({
-    url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
-    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
+    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
+    url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
     method: 'GET'
   }).then(function(data){
     var yay = ("Title:" + " "+ data.Title + ". " + "Starring :" + " " + data.Actors);
