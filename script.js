@@ -97,21 +97,49 @@ function newStartFunction(){
   }
 }
 
-function apiGetter(){
+function apiGetter(){ // haha nice I am getting some of it!
+  var root = "http://www.omdbapi.com/?t=";
+  var theValue = document.getElementById("testInput").value; // line of test code here
   // var root = "http://www.omdbapi.com/?t=vanilla+sky&apikey=43e240f9";
   // var root = "https://jsonplaceholder.typicode.com";
+  var rootApiKey = "&apikey=43e240f9";
   $.ajax({
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
-    url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
+    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
+    url: root + theValue + rootApiKey,
     method: 'GET'
   }).then(function(data){
     var yay = ("Title:" + " "+ data.Title + ". " + "Starring :" + " " + data.Actors);
     document.getElementById("theInputDiv").innerHTML = yay;
     document.getElementById("theInputDiv").classList.add('newClass');
-    alert('this script has worked');
+    alert("the script has worked here");
   })
 }
 
+// function apiGetter(){
+  // var root = "http://www.omdbapi.com/?t=vanilla+sky&apikey=43e240f9";
+  // var root = "https://jsonplaceholder.typicode.com";
+//   $.when(
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
+//       method: 'GET'
+//     }),
+//     $.ajax({
+//       url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
+//       method: 'GET'
+//     })
+//   ).then(function(data){
+//       var yay = ("Title:" + " "+ data.Title + ". " + "Starring :" + " " + data.Actors);
+//       document.getElementById("theInputDiv").innerHTML = yay;
+//       document.getElementById("theInputDiv").classList.add('newClass');
+//       alert("the script has worked here");
+//     })
+// }
+
+function testInputFunction(){
+  var theValue = document.getElementById("testInput").value;
+  alert(theValue);
+}
 
 
 

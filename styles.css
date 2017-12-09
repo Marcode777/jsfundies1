@@ -270,6 +270,19 @@
   transition: 2.5s;
 }
 
+#theInputDiv2{
+  height: 34px;
+  width:100%;
+  background-color: white;
+  opacity: 0.1; /*test*/
+  visibility: hidden; /*test*/
+}
+
+#theInputDiv2.newClass { /*test code block*/
+  visibility: visible;
+  opacity: 1.0;
+  transition: 2.5s;
+}
 
 .theForm {
   top: 50%;
