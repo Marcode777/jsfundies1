@@ -274,7 +274,7 @@
   height: 34px;
   width:100%;
   background-color: white;
-  opacity: 0.1; /*test*/
+  opacity: 0.0; /*test*/
   visibility: hidden; /*test*/
 }
 
@@ -333,7 +333,10 @@
   transition: 2.5s;
 }
 
-
+.info {
+  color: blue;
+  background-color: white;
+}
 
 
 
