@@ -141,7 +141,10 @@ function testInputFunction(){
   alert(theValue);
 }
 
-
+$("#inputForm").submit(function(e){
+  alert("the submit function has worked!");
+  e.preventDefault();
+})
 
 
 
