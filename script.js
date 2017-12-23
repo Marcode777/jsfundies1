@@ -146,8 +146,14 @@ $("#inputForm").submit(function(e){
   e.preventDefault();
 })
 
+function traditionalFunction(){
+  alert('this is working from the traditional function syntax');
+}
 
 
+let newFunction = () => {
+  alert('this is working from the new ES6 function syntax!');
+}
 
 
 
