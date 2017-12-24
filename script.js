@@ -155,6 +155,19 @@ let newFunction = () => {
   alert('this is working from the new ES6 function syntax!');
 }
 
+let newFunctionCalculator = () => {
+    let x = 15000;
+    let y = 300;
+    let z = 39;
+    let question = prompt("what coin do you want to look up in price?");
+    if(question == "bitcoin"){
+      alert(x * 1);
+    } else if(question == "litecoin"){
+      alert(y *1);
+    } else if (question == "ppt"){
+      alert(z * 1);
+    }
+  }
 
 
 
