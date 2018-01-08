@@ -170,5 +170,45 @@ let newFunctionCalculator = () => {
   }
 
 
+  var cars = [
+    {
+      brand: "Acura",
+      model: "TSX"
+    },
+    {
+      brand: "Infiniti",
+      model: "G35"
+    },
+    {
+      brand: "Lexus",
+      model: "IS-F"
+    }
+  ]
+
+  function looper(){
+    // for(var i = 0; i < cars.length; i++){
+    //   console.log("the looper has triggered");
+    //   var theList = (cars[i].brand + " " + cars[i].model);
+    //   document.getElementById("loopAreaHeading").innerHTML = theList;
+    // console.log(cars[0].brand + " " + cars[0].model);
+    // var theList = (cars[0].brand + " " + cars[0].model);
+    // console.log("this is theList", theList);
+    // document.getElementById("loopAreaHeading").innerHTML = theList;
+
+    // for(var i = 0; i < cars.length; i++){
+    //   console.log(cars[i].brand + " " + cars[i].model);
+    //   var theList = (cars[i].brand + " " + cars[i].model);
+    //   document.getElementById("loopAreaHeading").innerHTML = theList;
+    // }
+
+    var theQuote = "this should take more width, but how come when I loop through the cars array, it only renders the first object?";
+    document.getElementById("loopAreaHeading").innerHTML = theQuote;
+
+    }
+
+
+
+
+
 
 
