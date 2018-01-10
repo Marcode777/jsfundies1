@@ -112,7 +112,7 @@ function apiGetter(){ // haha nice I am getting some of it!
     var yay = ("Title:" + " "+ data.Title + ". " + "Starring :" + " " + data.Actors);
     document.getElementById("theInputDiv").innerHTML = yay;
     document.getElementById("theInputDiv").classList.add('newClass');
-    alert("the script has worked here");
+    // alert("the script has worked here");
   })
 }
 
