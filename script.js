@@ -207,6 +207,23 @@ let newFunctionCalculator = () => {
     }
 
 
+    var table = '';
+    var rows = 2;
+    var cols = 3;
+
+    function tableLooper() {
+      alert('tableLooper triggered');
+      for(var r = 0; r < rows; r++ ) {
+        table += '<tr>';
+          for(var c = 0; c < cols; c++){
+            table += '<td>' + c + '</td>';
+          }
+        table += '</tr>';
+      }
+      document.write('<table>' + table + '</table>');
+    }
+
+
 
 
 
