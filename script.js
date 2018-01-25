@@ -201,7 +201,7 @@ let newFunctionCalculator = () => {
     //   document.getElementById("loopAreaHeading").innerHTML = theList;
     // }
 
-    var theQuote = "this should take more width, but how come when I loop through the cars array, it only renders the first object?";
+    var theQuote = "this should take more width, but how come when I loop through the cars array, it only renders the first object???";
     document.getElementById("loopAreaHeading").innerHTML = theQuote;
 
     }
