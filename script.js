@@ -237,7 +237,7 @@ let newFunctionCalculator = () => {
           }
         table += '</tr>';
       }
-      document.getElementById("theTable").innerHTML = "transformed!!!!!";
+      document.getElementById("theTable").innerHTML = "transformed!";
     }
 
 
