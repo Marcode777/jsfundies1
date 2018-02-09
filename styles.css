@@ -357,7 +357,7 @@
 }
 
 .paginationArea {
-  height: 250px;
+  height: 888px;
   width: 100%;
 }
 
@@ -403,3 +403,23 @@
   border-radius: 3px;
   color: #4286f4;
 }
+
+
+#page-navi li:last-child a {
+  margin-right: 0px;
+}
+
+#page-navi li a.current, 
+#page-navi li a.disable, 
+#page-navi li a:hover, {
+  background: tomato;
+  color: #fff;
+  border-bottom: 3px solid #fff;
+} 
+
+
+
+
+
+
+
