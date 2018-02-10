@@ -250,6 +250,9 @@ let newFunctionCalculator = () => {
       document.getElementById("theTable").innerHTML = "transformed";
     }
 
+    // pagination
+
+
 
 
 
