@@ -250,6 +250,10 @@ let newFunctionCalculator = () => {
       document.getElementById("theTable").innerHTML = "transformed!";
     }
 
+    function pathDetector() {
+      alert('the current path of this page is' + window.location.pathname);
+    }
+
     // pagination
 
 
