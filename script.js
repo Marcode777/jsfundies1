@@ -251,7 +251,7 @@ let newFunctionCalculator = () => {
     }
 
     function pathDetector() {
-      alert('the current path of this page is:' + window.location.pathname);
+      alert('the current path of this page is' + window.location.pathname);
     }
 
     // pagination
