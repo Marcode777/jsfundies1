@@ -9,15 +9,15 @@ function verifyFunction(){
   }
 }
 
-$(document).ready(function(){
-  $("#tab").pagination({
-    items: 5, 
-    contents: 'contents',
-    previous: 'Previous',
-    next: 'Next',
-    position: 'bottom',
-  })
-})
+// $(document).ready(function(){
+//   $("#tab").pagination({
+//     items: 5, 
+//     contents: 'contents',
+//     previous: 'Previous',
+//     next: 'Next',
+//     position: 'bottom',
+//   })
+// })
 
 
 
@@ -251,8 +251,18 @@ let newFunctionCalculator = () => {
     }
 
     function pathDetector() {
-      alert('the current path of this page is' + window.location.pathname);
+      alert('the current path of this page is:' + window.location.pathname);
     }
+
+   // setTimeout(function(){
+   //  alert('this triggers 3 seconds later')
+   // }, 3000);
+
+    setTimeout(function(){
+    function pathDetector() {
+      alert('the current path of this page is:' + window.location.pathname);
+    } pathDetector();
+   }, 3000);
 
     // pagination
 
