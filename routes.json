@@ -1,0 +1,17 @@
+[
+  {
+    "filename": "page2.html",
+    "title": "page2",
+  }
+]
+
+
+// example:
+// [
+//   {
+//     "filename": "championship.html",
+//     "title": "Championship",
+//     "mapImage": true,
+//     "template": "templates/championship.hbs"
+//   }
+// ]
