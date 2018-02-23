@@ -266,6 +266,34 @@ let newFunctionCalculator = () => {
 
     // pagination
 
+    // addition for gaugeSection
+    var gaugeArray = [];
+    function looperAdder(){
+      gaugeArray.push('+');
+      document.getElementsByClassName("addPlace")[0].innerHTML = gaugeArray;
+      console.log(gaugeArray);
+      if (gaugeArray.length > 5) {
+        document.getElementsByClassName("letterColor")[0].style.color = "orange";
+      } 
+      if (gaugeArray.length > 10) {
+        document.getElementsByClassName("letterColor")[0].style.color = "red";
+      }
+    }
+
+    function looperReducer(){
+      gaugeArray.pop('+');
+      document.getElementsByClassName("addPlace")[0].innerHTML = gaugeArray;
+      if (gaugeArray.length < 5) {
+        document.getElementsByClassName("letterColor")[0].style.color = "blue";
+      } 
+      if (gaugeArray.length > 5) {
+        document.getElementsByClassName("letterColor")[0].style.color = "orange";
+      } 
+      if (gaugeArray.length > 10) {
+        document.getElementsByClassName("letterColor")[0].style.color = "red";
+      }
+    }
+
 
 
 
