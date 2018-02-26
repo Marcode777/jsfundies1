@@ -419,7 +419,7 @@
 
 
 .gaugeSection {
-  height: 100px;
+  height: 150px;
   width:100%;
   background-color: green;
 }
@@ -427,6 +427,13 @@
 .letterColor {
   color: blue;
 }
+
+.gaugeMeter {
+  height: 10px;
+  width: 100px;
+  background-color: blue;
+}
+
 
 
 
