@@ -274,9 +274,11 @@ let newFunctionCalculator = () => {
       console.log(gaugeArray);
       if (gaugeArray.length > 5) {
         document.getElementsByClassName("letterColor")[0].style.color = "orange";
+        document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "yellow";
       } 
       if (gaugeArray.length > 10) {
         document.getElementsByClassName("letterColor")[0].style.color = "red";
+        document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "red";
       }
     }
 
@@ -285,12 +287,15 @@ let newFunctionCalculator = () => {
       document.getElementsByClassName("addPlace")[0].innerHTML = gaugeArray;
       if (gaugeArray.length < 5) {
         document.getElementsByClassName("letterColor")[0].style.color = "blue";
+        document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "blue";
       } 
       if (gaugeArray.length > 5) {
         document.getElementsByClassName("letterColor")[0].style.color = "orange";
+        document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "yellow";
       } 
       if (gaugeArray.length > 10) {
         document.getElementsByClassName("letterColor")[0].style.color = "red";
+        document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "red";
       }
     }
 
