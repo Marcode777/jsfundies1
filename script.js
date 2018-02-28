@@ -275,10 +275,13 @@ let newFunctionCalculator = () => {
       if (gaugeArray.length > 5) {
         document.getElementsByClassName("letterColor")[0].style.color = "orange";
         document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "yellow";
+        document.getElementsByClassName("gaugeMeter2")[0].style.visibility = "visible";
       } 
       if (gaugeArray.length > 10) {
         document.getElementsByClassName("letterColor")[0].style.color = "red";
         document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "red";
+        document.getElementsByClassName("gaugeMeter2")[0].style.backgroundColor = "red";
+        document.getElementsByClassName("gaugeMeter3")[0].style.visibility = "visible";
       }
     }
 
