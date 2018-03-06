@@ -293,12 +293,12 @@ let newFunctionCalculator = () => {
         document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "blue";
       } 
       if (gaugeArray.length <=5) {
-        document.getElementsByClassName("letterColor")[0].style.color = "orange";
+        document.getElementsByClassName("letterColor")[0].style.color = "blue";
         document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "blue";
         document.getElementsByClassName("gaugeMeter2")[0].style.visibility = "hidden";
       } 
       if (gaugeArray.length <=10 && gaugeArray.length >5) {
-        document.getElementsByClassName("letterColor")[0].style.color = "red";
+        document.getElementsByClassName("letterColor")[0].style.color = "yellow";
         document.getElementsByClassName("gaugeMeter")[0].style.backgroundColor = "yellow";
         document.getElementsByClassName("gaugeMeter2")[0].style.backgroundColor = "yellow";
         document.getElementsByClassName("gaugeMeter3")[0].style.visibility = "hidden";
