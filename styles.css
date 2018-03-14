@@ -451,6 +451,11 @@
   visibility: hide;
 }
 
+.tickerAPIArea{
+  height: 300px;
+  width:100%;
+  background-color:#4286f4;
+}
 
 
 
