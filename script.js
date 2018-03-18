@@ -305,6 +305,20 @@ let newFunctionCalculator = () => {
       }
     }
 
+// tickerAPIArea
+function apiGetterIEX(){ // haha nice I am getting some of it!
+  alert('apiGetterIEX function triggered!!!!!');
+  $.ajax({
+    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
+    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
+    url: "/stock/aapl/batch?types=quote,news,chart&range=1m&last=1",
+    method: 'GET'
+  }).then(function(data){
+    var yay = data.symbol;
+    document.getElementById("actualTickerArea").innerHTML = yay;
+    // alert("the script has worked here");
+  })
+}
 
 
 

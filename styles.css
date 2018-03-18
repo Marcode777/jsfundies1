@@ -457,7 +457,15 @@
   background-color:#4286f4;
 }
 
+.actualTickerArea {
+  height: 22px;
+  width: 300px;
+  background-color: white;  
+}
 
+.linkIEX {
+  color: blue;
+}
 
 
 
