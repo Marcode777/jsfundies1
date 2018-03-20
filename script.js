@@ -307,7 +307,7 @@ let newFunctionCalculator = () => {
 
 // tickerAPIArea
 function apiGetterIEX(){ // haha nice I am getting some of it!
-  alert('apiGetterIEX function triggered!');
+  alert('apiGetterIEX function triggered');
   $.ajax({
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
