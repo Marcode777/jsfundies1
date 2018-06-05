@@ -163,7 +163,23 @@
     <div class="actualTickerArea"></div>
     <button onclick="apiGetterIEX();">get ticker</button>
     <a href="https://iextrading.com/developer/" class="linkIEX">"IEX Real-Time Price"</a>
-    <h4>Data provided free by <a href="https://iextrading.com/developer/" class="linkIEX"/>IEX</h4>
+    <h4>Data provided free by <a href="https://iextrading.com/developer/" class="linkIEX"/>IEX</h4></a>
+  </div>
+
+  <div class="calculatorArea">
+    <h4>calculator</h4>
+    <div class="calculatorScreen" id="screen">
+      <h4 id="screenText"></h4>
+    </div>
+    <div class="buttons">
+      <button onClick=addFunction();>+</button>
+      <button onClick=subtractFunction();>-</button>
+      <button onClick=arrayContains();>arraycontains</button>
+      <button onClick=sum();>sum</button>
+    </div>
+    <div class="inputArea">
+      <input id="inputId" type="text" onchange=submitFunction(); value=""/>
+    </div>
   </div>
 
   <script type="text/javascript"> alert("this is the very first script run")</script>

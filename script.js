@@ -324,3 +324,49 @@ function apiGetterIEX(){ // haha nice I am getting some of it!
 
 
 
+
+// calculatorArea
+array = [];
+
+function arrayContains(){
+  console.log(array);
+  document.getElementById('screenText').innerHTML = array.toString();
+}
+
+function addFunction(){
+  console.log('addFunction has been triggered');
+  array.push('+');
+};
+
+function subtractFunction(){
+  console.log('subtractFunction has been triggered');
+  array.pop('+')
+};
+
+function submitFunction(value){
+  console.log('submitFunction triggered, the value is', value);
+  var theValue = document.getElementById('inputId').value;
+  console.log('now the value is:', theValue);
+  document.getElementById('screenText').innerHTML = array + theValue;
+}
+
+function sum(){
+  var totalValue = document.getElementById('screenText').textContent; // use textContent because this is getting the value of an h tag
+  console.log('the totalValue is:', totalValue);
+}
+
+
+
+/////////////////////////////////////////////////////////////////////
+/////////
+// function getSum(total, num) {
+//     return total + num;
+// }
+// function myFunction(array) {
+//   console.log('myFunction has just been triggered');
+//     document.getElementById("demo").innerHTML = numbers.reduce(getSum);
+// }
+
+
+
+

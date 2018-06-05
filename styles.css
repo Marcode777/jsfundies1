@@ -469,3 +469,28 @@
 
 
 
+.calculatorArea {
+  height: 500px;
+  width: 100%;
+  background-color: #8db7fc;
+}
+
+.calculatorScreen {
+  height: 200px;
+  width: 50%;
+  margin: auto;
+  background-color: lightgray;
+}
+
+.inputArea {
+  width: 50%;
+  margin: auto;
+}
+
+.buttons {
+  width: 50%;
+  margin: auto;
+}
+
+
+
