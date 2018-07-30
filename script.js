@@ -250,19 +250,19 @@ let newFunctionCalculator = () => {
       document.getElementById("theTable").innerHTML = "transformed";
     }
 
-    function pathDetector() {
-      alert('the current path of this page is: ' + window.location.pathname);
-    }
+    // function pathDetector() {
+    //   alert('the current path of this page is: ' + window.location.pathname);
+    // }
 
    // setTimeout(function(){
    //  alert('this triggers 3 seconds later')
    // }, 3000);
 
-    setTimeout(function(){
-    function pathDetector() {
-      alert('the current path of this page is:' + window.location.pathname);
-    } pathDetector();
-   }, 3000);
+   //  setTimeout(function(){
+   //  function pathDetector() {
+   //    alert('the current path of this page is:' + window.location.pathname);
+   //  } pathDetector();
+   // }, 3000);
 
     // pagination
 
@@ -350,9 +350,16 @@ function submitFunction(value){
   document.getElementById('screenText').innerHTML = array + theValue;
 }
 
-function sum(){
-  var totalValue = document.getElementById('screenText').textContent; // use textContent because this is getting the value of an h tag
-  console.log('the totalValue is:', totalValue);
+function summer(){
+  // var totalValue = document.getElementById('screenText').textContent; // use textContent because this is getting the value of an h tag
+  // console.log('the totalValue is:', totalValue);
+  firstInputIdVal = document.getElementById('firstInputId').value;
+  secondInputIdVal = document.getElementById('secondInputId').value;
+  console.log('sum function has just been triggered');
+  console.log('the value of the firstInputId is', firstInputIdVal);
+  console.log('the value of the secondInputId is', secondInputIdVal);
+  summerVal = firstInputIdVal + ' ' + secondInputIdVal;
+  console.log('now the total Value is:', summerVal);
 }
 
 

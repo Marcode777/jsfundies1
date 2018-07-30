@@ -492,5 +492,20 @@
   margin: auto;
 }
 
+.secondCalculatorArea {
+  height: 10em;
+  background-color: silver;
+}
+
+.firstInputArea {
+  height: 2em;
+  background-color: 'hotpink' !important;
+}
+
+.secondInputArea {
+  height: 2em;
+  background-color: 'lightblue' !important;
+}
+
 
 
