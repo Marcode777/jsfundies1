@@ -358,7 +358,10 @@ function summer(){
   console.log('sum function has just been triggered');
   console.log('the value of the firstInputId is', firstInputIdVal);
   console.log('the value of the secondInputId is', secondInputIdVal);
-  summerVal = firstInputIdVal + ' ' + secondInputIdVal;
+  if(isNan(firstInputIdVal)) {
+    console.log('fck nah, it is a string');
+  }
+  summerVal = +firstInputIdVal + +secondInputIdVal;
   console.log('now the total Value is:', summerVal);
 }
 
