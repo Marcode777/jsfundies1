@@ -360,6 +360,8 @@ function summer(){
   console.log('the value of the secondInputId is', secondInputIdVal);
   if(isNan(firstInputIdVal) && isNan(secondInputIdVal)) {
     console.log('fck nah, it is a string');
+  } else {
+    console.log('these are integers')
   }
   summerVal = +firstInputIdVal + +secondInputIdVal;
   console.log('now the total Value is:', summerVal);
