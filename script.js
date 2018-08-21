@@ -247,7 +247,7 @@ let newFunctionCalculator = () => {
           }
         table += '</tr>';
       }
-      document.getElementById("theTable").innerHTML = "Los Angeles";
+      document.getElementById("theTable").innerHTML = "Update";
     }
 
     // function pathDetector() {
