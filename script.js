@@ -247,7 +247,7 @@ let newFunctionCalculator = () => {
           }
         table += '</tr>';
       }
-      document.getElementById("theTable").innerHTML = "Arrived!";
+      document.getElementById("theTable").innerHTML = "Arrived in NYC";
     }
 
     // function pathDetector() {
