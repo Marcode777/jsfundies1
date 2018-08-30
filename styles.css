@@ -493,7 +493,7 @@
 }
 
 .secondCalculatorArea {
-  height: 10em;
+  height: 15em;
   background-color: silver;
 }
 
@@ -505,6 +505,12 @@
 .secondInputArea {
   height: 2em;
   background-color: 'lightblue' !important;
+}
+
+#calcDisplayArea {
+  height: 5em;
+  width: 10em;
+  background-color: #79abfc;
 }
 
 

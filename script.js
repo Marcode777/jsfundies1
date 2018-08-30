@@ -358,13 +358,20 @@ function summer(){
   console.log('sum function has just been triggered');
   console.log('the value of the firstInputId is', firstInputIdVal);
   console.log('the value of the secondInputId is', secondInputIdVal);
-  if(isNan(firstInputIdVal) && isNan(secondInputIdVal)) {
+  if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
     console.log('fck nah, it is a string');
+    summerVal = firstInputIdVal + secondInputIdVal;
+    console.log('the total Value of the Strings are:', summerVal);
+    document.getElementById('calcDisplayArea').style.backgroundColor = 'orange';
+    document.getElementById('calcDisplayArea').innerHTML = summerVal;
   } else {
-    console.log('these are integers')
+    console.log('these are integers');
+    summerVal = +firstInputIdVal + +secondInputIdVal;
+    console.log('the total Value of the Integers are:', summerVal);
+    document.getElementById('calcDisplayArea').style.backgroundColor = 'blue';
+    document.getElementById('calcDisplayArea').innerHTML = summerVal;
   }
-  summerVal = +firstInputIdVal + +secondInputIdVal;
-  console.log('now the total Value is:', summerVal);
+  // console.log('now the total Value is:', summerVal);
 }
 
 
