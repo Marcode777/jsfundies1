@@ -493,7 +493,7 @@
 }
 
 .secondCalculatorArea {
-  height: 15em;
+  height: 34em;
   background-color: silver;
 }
 
@@ -511,6 +511,12 @@
   height: 5em;
   width: 10em;
   background-color: #79abfc;
+}
+
+.jetDisplayArea {
+  height: 10em;
+  width: 20em;
+  background-color: #0e67f7;
 }
 
 
