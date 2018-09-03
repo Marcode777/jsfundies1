@@ -247,7 +247,7 @@ let newFunctionCalculator = () => {
           }
         table += '</tr>';
       }
-      document.getElementById("theTable").innerHTML = "update.";
+      document.getElementById("theTable").innerHTML = ".";
     }
 
     // function pathDetector() {
