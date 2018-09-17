@@ -365,7 +365,7 @@ function summer(){
     document.getElementById('calcDisplayArea').style.backgroundColor = 'orange';
     document.getElementById('calcDisplayArea').innerHTML = summerVal;
   } else {
-    console.log('these integers');
+    console.log('these are integers');
     summerVal = +firstInputIdVal + +secondInputIdVal;
     console.log('the total Value of the Integers are:', summerVal);
     document.getElementById('calcDisplayArea').style.backgroundColor = 'blue';
