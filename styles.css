@@ -519,5 +519,8 @@
   background-color: #0e67f7;
 }
 
+.buttonRow {
+  display: inline-block;
+}
 
 
