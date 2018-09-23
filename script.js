@@ -353,25 +353,58 @@ function submitFunction(value){
 function summer(){
   // var totalValue = document.getElementById('screenText').textContent; // use textContent because this is getting the value of an h tag
   // console.log('the totalValue is:', totalValue);
+  // firstInputIdVal = document.getElementById('firstInputId').value;
+  // secondInputIdVal = document.getElementById('secondInputId').value;
+  // console.log('sum function has just been triggered');
+  // console.log('the value of the firstInputId is', firstInputIdVal);
+  // console.log('the value of the secondInputId is', secondInputIdVal);
+  // if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
+  //   console.log('string');
+  //   summerVal = firstInputIdVal + secondInputIdVal;
+  //   console.log('the total Value of the Strings are:', summerVal);
+  //   document.getElementById('calcDisplayArea').style.backgroundColor = 'orange';
+  //   document.getElementById('calcDisplayArea').innerHTML = summerVal;
+  // } else {
+  //   console.log('integer');
+  //   summerVal = +firstInputIdVal + +secondInputIdVal;
+  //   console.log('the total Value of the Integers are:', summerVal);
+  //   document.getElementById('calcDisplayArea').style.backgroundColor = 'blue';
+  //   document.getElementById('calcDisplayArea').innerHTML = summerVal;
+  // }
+  // console.log('now the total Value is:', summerVal);
+      document.getElementById('calcDisplayArea').style.backgroundColor = 'deepskyblue';
+      // document.getElementById('calcDisplayArea').innerHTML = summerVal;
+      document.getElementById('calcDisplayAreaValueArea').innerHTML = summerVal;
+}
+
+function addButtonFunc(){
+  console.log('add button has been pressed and addButtonFunc has been triggered');
   firstInputIdVal = document.getElementById('firstInputId').value;
   secondInputIdVal = document.getElementById('secondInputId').value;
-  console.log('sum function has just been triggered');
-  console.log('the value of the firstInputId is', firstInputIdVal);
-  console.log('the value of the secondInputId is', secondInputIdVal);
   if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
-    console.log('string');
-    summerVal = firstInputIdVal + secondInputIdVal;
-    console.log('the total Value of the Strings are:', summerVal);
-    document.getElementById('calcDisplayArea').style.backgroundColor = 'orange';
-    document.getElementById('calcDisplayArea').innerHTML = summerVal;
-  } else {
-    console.log('integer');
-    summerVal = +firstInputIdVal + +secondInputIdVal;
-    console.log('the total Value of the Integers are:', summerVal);
-    document.getElementById('calcDisplayArea').style.backgroundColor = 'blue';
-    document.getElementById('calcDisplayArea').innerHTML = summerVal;
+    console.log('the values being added are strings and will not be added');
   }
-  // console.log('now the total Value is:', summerVal);
+  else {
+    console.log('the values are integers and will be added');
+    summerVal = +firstInputIdVal + +secondInputIdVal;
+    // document.getElementById('calcDisplayArea').style.backgroundColor = 'orange';
+    // document.getElementById('calcDisplayArea').innerHTML = summerVal;
+    return summerVal;
+  }
+}
+
+function subtractButtonFunc(){
+  console.log('subtract button has been pressed and subtractButtonFunc has been triggered');
+  firstInputIdVal = document.getElementById('firstInputId').value;
+  secondInputIdVal = document.getElementById('secondInputId').value;
+  if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
+    console.log('the values being subtracted are string and will not be subtracted');
+  }
+  else {
+    console.log('the values are integers and will be subtracted');
+    summerVal = firstInputIdVal - secondInputIdVal;
+    return summerVal;
+  }
 }
 
 
