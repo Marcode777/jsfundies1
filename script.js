@@ -419,6 +419,20 @@ function subtractButtonFunc(){
 //     document.getElementById("demo").innerHTML = numbers.reduce(getSum);
 // }
 
+///////////////////////////////////////////////////////////////////
+function extensiveElementAggregator() {
+  var elemental = document.querySelector('.extensive')
+  console.log('the elemental variable is:', elemental);
+  var aggregate = elemental.querySelectorAll('a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, input, h1, img');
+  console.log('the aggregate is', aggregate);
+  // elemental.style.backgroundColor = 'orange';
+}
+
+setTimeout(function(){
+  console.log('extensiveElementAggregator function now triggering from setTimeout');
+  extensiveElementAggregator();
+}, 5000);
+
 
 
 
