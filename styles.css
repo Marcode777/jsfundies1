@@ -533,4 +533,14 @@
   background-color: #186df7;
 }
 
+.keyBoardUserDetectionArea {
+  height: 500px;
+  background-color: lightgreen;
+}
+
+
+.keyBoardFocus button:focus, a:focus{
+  background-color: orange;
+}
+
 

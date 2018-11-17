@@ -434,5 +434,21 @@ setTimeout(function(){
 }, 5000);
 
 
+function loadFunc(){
+  alert('this script is ran onload and is invoked from the actual html body');
+}
+
+function onloadFunc() {
+  document.addEventListener('keydown', this.keyBoardUserDetect);
+  console.log('onloadFunc invoked and is actively adding eventListener keyBoardUserDetect');
+}
+
+function keyBoardUserDetect(e) {
+  console.log('keyBoardUserDetect triggered');
+  $('body').addClass('keyBoardFocus');
+  window.removeEventListener('keydown', this.keyBoardUserDetect)
+;}
+
+
 
 
