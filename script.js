@@ -441,13 +441,21 @@ function loadFunc(){
 function onloadFunc() {
   document.addEventListener('keydown', this.keyBoardUserDetect);
   console.log('onloadFunc invoked and is actively adding eventListener keyBoardUserDetect');
+  document.addEventListener('keydown', this.activeElementDetect);
 }
 
 function keyBoardUserDetect(e) {
   console.log('keyBoardUserDetect triggered');
   $('body').addClass('keyBoardFocus');
-  window.removeEventListener('keydown', this.keyBoardUserDetect)
+  window.removeEventListener('keydown', this.keyBoardUserDetect);
 ;}
+
+function activeElementDetect(e){
+  if (e.keyCode === 9) {
+    console.log('tab keypress detected, will now be listenting to detect current element that is actively being focused on');
+    console.log('the current active Element is:', document.activeElement);
+  }
+}
 
 
 
