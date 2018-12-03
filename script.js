@@ -457,6 +457,14 @@ function activeElementDetect(e){
   }
 }
 
+function selfInvokingLoop() {
+  console.log('selfInvokingLoop is being invoked');
+  var repeat = setTimeout(selfInvokingLoop, 2000);
+}
+
+selfInvokingLoop();
+
+
 
 
 
