@@ -459,10 +459,19 @@ function activeElementDetect(e){
 
 function selfInvokingLoop() {
   console.log('selfInvokingLoop is being invoked');
-  var repeat = setTimeout(selfInvokingLoop, 2000);
+  var repeat = setTimeout(selfInvokingLoop, 10000);
 }
 
 selfInvokingLoop();
+
+function pageDetector(){
+  if (window.location.pathname == '/page2.html') {
+    alert('page detector has detected that you are on page 2')
+  };
+  return console.log('the current page is', window.location.pathname);
+}
+
+pageDetector();
 
 
 
