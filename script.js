@@ -473,6 +473,34 @@ function pageDetector(){
 
 pageDetector();
 
+// function tickerFunc(){
+//   var root = 'https://jsonplaceholder.typicode.com';
+//   $.ajax({
+//     url: root + '/posts/1',
+//     method: 'GET'
+//   }).then(function(data){
+//    var yay = "the following is JSON data:" + " " + (data.body);
+//    document.getElementById("apiSection").innerHTML = yay;
+//   })
+// }
+
+// important: API key for stock ticker data from AlphaVantage is OL0YECBOH3ZI7R8W
+// important: API key for stock ticker data from AlphaVantage is OL0YECBOH3ZI7R8W
+// important: API key for stock ticker data from AlphaVantage is OL0YECBOH3ZI7R8W
+
+
+function tickerFunc(){
+  console.log('the tickerFunc has triggered');
+  var root = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=OL0YECBOH3ZI7R8W';
+  $.ajax({
+    url: root,
+    method: 'GET'
+  }).then(function(data){
+    var yay = "the following is JSON data" + " " + (JSON.stringify(data));
+    console.log('data.body', data);
+    document.getElementById('ticker').innerHTML = yay;
+  })
+}
 
 
 
