@@ -539,8 +539,13 @@
 }
 
 
-.keyBoardFocus button:focus, a:focus{
+.keyBoardFocus button:focus, a:focus {
   background-color: orange;
+}
+
+.stockTickerArea {
+  height: 500px;
+  background-color: #4286f4;
 }
 
 
