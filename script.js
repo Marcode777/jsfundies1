@@ -496,9 +496,10 @@ function tickerFunc(){
     url: root,
     method: 'GET'
   }).then(function(data){
-    var yay = "the following is JSON data" + " " + (JSON.stringify(data));
-    console.log('data.body', data);
-    document.getElementById('ticker').innerHTML = yay;
+    var yay = (JSON.stringify(data));
+    var yay2 = yay[2] + yay[3] + yay[4] + yay[5];
+    console.log('data', data);
+    document.getElementById('ticker').innerHTML = yay2;
   })
 }
 
