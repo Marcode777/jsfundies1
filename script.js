@@ -407,6 +407,10 @@ function subtractButtonFunc(){
   }
 }
 
+function multiplyButtonFunc() {
+  // should continue this
+}
+
 
 
 /////////////////////////////////////////////////////////////////////
