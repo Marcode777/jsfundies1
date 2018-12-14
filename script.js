@@ -408,7 +408,17 @@ function subtractButtonFunc(){
 }
 
 function multiplyButtonFunc() {
-  // should continue this
+  console.log('mutiplication button has been pressed');
+  // firstInputIdVal = document.getElementById('firstInputId').value;
+  // secondInputIdVal = document.getElementById('secondInputId').value;
+  // if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
+  //   console.log('the values being being multiplied are strings and will not be multiplied');
+  // }
+  // else {
+  //   console.log('the values are integers and will be multipled');
+  //   summerVal = firstInputIdVal * secondInputIdVal;
+  //   return summerVal;
+  // }
 }
 
 
