@@ -184,16 +184,19 @@
 
   <div class="secondCalculatorArea">
     <h4>second calculator area</h4>
+    <p>input first value first and then second value second, then press an operator, and then finally press get the result</p>
     <div class="firstInputArea">
-      <input id="firstInputId" value=""/>
+      <input id="firstInputId" placeholder="first value" value=""/>
     </div>
     <div class="secondInputArea">
-      <input id="secondInputId" value=""/>
+      <input id="secondInputId" placeholder="second value" value=""/>
     </div>
     <div class="buttonRow">
       <button onClick=addButtonFunc();>+</button>
       <button onClick=subtractButtonFunc();>-</button>
-      <button onClick=summer();>get sum</button>
+      <button onClick=multiplyButtonFunc();>*</button>
+      <button onClick=divideButtonFunc();>/</button>
+      <button onClick=summer();>get result</button>
     </div>
     <div id="calcDisplayArea">
       <h2 id="calcDisplayAreaValueArea"></h2>

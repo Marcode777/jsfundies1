@@ -409,16 +409,30 @@ function subtractButtonFunc(){
 
 function multiplyButtonFunc() {
   console.log('mutiplication button has been pressed');
-  // firstInputIdVal = document.getElementById('firstInputId').value;
-  // secondInputIdVal = document.getElementById('secondInputId').value;
-  // if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
-  //   console.log('the values being being multiplied are strings and will not be multiplied');
-  // }
-  // else {
-  //   console.log('the values are integers and will be multipled');
-  //   summerVal = firstInputIdVal * secondInputIdVal;
-  //   return summerVal;
-  // }
+  firstInputIdVal = document.getElementById('firstInputId').value;
+  secondInputIdVal = document.getElementById('secondInputId').value;
+  if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
+    console.log('the values being being multiplied are strings and will not be multiplied');
+  }
+  else {
+    console.log('the values are integers and will be multipled');
+    summerVal = firstInputIdVal * secondInputIdVal;
+    return summerVal;
+  }
+}
+
+function divideButtonFunc() {
+  console.log('divison button has been pressed');
+  firstInputIdVal = document.getElementById('firstInputId').value;
+  secondInputIdVal = document.getElementById('secondInputId').value;
+  if(isNaN(firstInputIdVal) && isNaN(secondInputIdVal)) {
+    console.log('the values being being divided are strings and will not be divided');
+  }
+  else {
+    console.log('the values are integers and will be divided');
+    summerVal = firstInputIdVal / secondInputIdVal;
+    return summerVal;
+  }
 }
 
 
@@ -471,12 +485,12 @@ function activeElementDetect(e){
   }
 }
 
-function selfInvokingLoop() {
-  console.log('selfInvokingLoop is being invoked');
-  var repeat = setTimeout(selfInvokingLoop, 10000);
-}
+// function selfInvokingLoop() {
+//   console.log('selfInvokingLoop is being invoked');
+//   var repeat = setTimeout(selfInvokingLoop, 10000);
+// }
 
-selfInvokingLoop();
+// selfInvokingLoop();
 
 function pageDetector(){
   if (window.location.pathname == '/page2.html') {
@@ -510,13 +524,20 @@ function tickerFunc(){
     url: root,
     method: 'GET'
   }).then(function(data){
-    // var yay = (JSON.stringify(data));
+    var yay = (JSON.stringify(data));
     // var yay2 = yay[2] + yay[3] + yay[4] + yay[5];
-    var yay = data;
+    // var yay = data;
     var yay2 = JSON.stringify(yay);
-    var yay3 = JSON.stringify(yay2);
-    console.log('data', data);
+    // var yay3 = JSON.stringify(yay2);
+    // console.log('data', data);
+    // console.log('yay2', yay2);
+    // console.log('yay2', yay2);
     document.getElementById('ticker').innerHTML = yay2;
+    // document.getElementById('ticker').innerHTML = yay2[11] + yay2[12] +yay2[13] + yay2[14] + yay2[15] + yay2[16] +yay2[17] + yay2[18];
+    // var parsed = JSON.parse(data);
+    // var usableparsed = parsed[0];
+    // console.log('usableparsed', usableparsed);
+    // document.getElementById('ticker').innerHTML = usableparsed;
   })
 }
 
