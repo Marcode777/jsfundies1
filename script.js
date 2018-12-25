@@ -473,8 +473,8 @@ function onloadFunc() {
 }
 
 function keyBoardUserDetect(e) {
-  console.log('keyBoardUserDetect triggered');
   $('body').addClass('keyBoardFocus');
+  console.log('keyBoardUserDetect triggered');
   window.removeEventListener('keydown', this.keyBoardUserDetect);
 ;}
 
@@ -519,7 +519,7 @@ pageDetector();
 
 function tickerFunc(){
   console.log('the tickerFunc has triggered');
-  var root = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=OL0YECBOH3ZI7R8W';
+  var root = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=DJIA&interval=5min&apikey=OL0YECBOH3ZI7R8W';
   $.ajax({
     url: root,
     method: 'GET'
@@ -539,6 +539,33 @@ function tickerFunc(){
     // console.log('usableparsed', usableparsed);
     // document.getElementById('ticker').innerHTML = usableparsed;
   })
+}
+
+function removeOverlay() {
+  // var target = document.getElementsByClassName('passwordProtectOverlay')[0];
+  // $(this).addClass('overlay');
+  var target = document.getElementsByClassName('overlay')[0];
+  $(target).removeClass('overlay');
+  console.log('password is incorrect');
+}
+
+function press(e){
+  console.log('press function triggered, the key that was just pressed is:', e.target.value);
+}
+
+function checkPassword() {
+  console.log('checkPassword triggered');
+  var password = document.getElementById('passwordInputForPasswordProtect').value;
+  console.log('the password entered is:', password);
+  if (password === 'thePassword') {
+    console.log('checkPassword completed');
+    this.removeOverlay();
+    document.getElementById('passwordInputForPasswordProtect').value = '';
+    return console.log('input should be cleared');
+  }
+  console.log('checkPassword completed, password is incorrect');
+  document.getElementById('passwordInputForPasswordProtect').value = '';
+  document.getElementsByClassName('overlayMessageArea')[0].innerHTML = 'Password Entered Was Incorrect, Please Enter Correct Password';
 }
 
 
