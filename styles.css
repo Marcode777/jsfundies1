@@ -573,6 +573,10 @@
   background-color: blue;
 }
 
+.submitPassword:hover {
+  outline: 2px solid gold;
+}
+
 .correctPasswordMessage {
   font-size: 50px;
 }
