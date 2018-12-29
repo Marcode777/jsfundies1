@@ -525,19 +525,25 @@ function tickerFunc(){
     method: 'GET'
   }).then(function(data){
     var yay = (JSON.stringify(data));
+    var arrayData = yay[0] + yay[2] + yay[3] + yay[4] + yay[5] + yay[6] + yay[7] + yay[8] + yay[9] + yay[10];
+    var proper = yay[0];
     // var yay2 = yay[2] + yay[3] + yay[4] + yay[5];
     // var yay = data;
-    var yay2 = JSON.stringify(yay);
+    // var yay2 = JSON.stringify(yay);
     // var yay3 = JSON.stringify(yay2);
     // console.log('data', data);
     // console.log('yay2', yay2);
     // console.log('yay2', yay2);
-    document.getElementById('ticker').innerHTML = yay2;
+
+    // document.getElementById('ticker').innerHTML = yay;
+    // document.getElementById('ticker').innerHTML = proper;
+    document.getElementById('ticker').innerHTML = arrayData;
     // document.getElementById('ticker').innerHTML = yay2[11] + yay2[12] +yay2[13] + yay2[14] + yay2[15] + yay2[16] +yay2[17] + yay2[18];
     // var parsed = JSON.parse(data);
     // var usableparsed = parsed[0];
     // console.log('usableparsed', usableparsed);
     // document.getElementById('ticker').innerHTML = usableparsed;
+    console.log('ticker func through to completion');
   })
 }
 
