@@ -519,7 +519,8 @@ pageDetector();
 
 function tickerFunc(){
   console.log('the tickerFunc has triggered');
-  var root = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=DJIA&interval=5min&apikey=OL0YECBOH3ZI7R8W';
+  var root = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=DJIA&apikey=OL0YECBOH3ZI7R8W'
+  // var root = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=DJIA&interval=5min&apikey=OL0YECBOH3ZI7R8W';
   $.ajax({
     url: root,
     method: 'GET'
@@ -527,6 +528,16 @@ function tickerFunc(){
     var yay = (JSON.stringify(data));
     var arrayData = yay[0] + yay[2] + yay[3] + yay[4] + yay[5] + yay[6] + yay[7] + yay[8] + yay[9] + yay[10];
     var proper = yay[0];
+    console.log('yay.GlobalQuote', yay.GlobalQuote);
+
+    // function loopedArrayData() {
+    //   for(var i = 0; i < 5; i++ ) {
+    //   console.log('from loopedArrayData', arrayData[i])
+    //   var result = arrayData[i];
+    //   };
+    // }
+    // loopedArrayData();
+
     // var yay2 = yay[2] + yay[3] + yay[4] + yay[5];
     // var yay = data;
     // var yay2 = JSON.stringify(yay);
@@ -535,9 +546,10 @@ function tickerFunc(){
     // console.log('yay2', yay2);
     // console.log('yay2', yay2);
 
-    // document.getElementById('ticker').innerHTML = yay;
+    document.getElementById('ticker').innerHTML = yay;
     // document.getElementById('ticker').innerHTML = proper;
-    document.getElementById('ticker').innerHTML = arrayData;
+    // document.getElementById('ticker').innerHTML = arrayData;
+    // document.getElementById('ticker').innerHTML = result;
     // document.getElementById('ticker').innerHTML = yay2[11] + yay2[12] +yay2[13] + yay2[14] + yay2[15] + yay2[16] +yay2[17] + yay2[18];
     // var parsed = JSON.parse(data);
     // var usableparsed = parsed[0];
