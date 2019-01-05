@@ -581,4 +581,8 @@
   font-size: 50px;
 }
 
+.itemPopulatorArea {
+  height: 500px;
+  background-color: gray;
+}
 
