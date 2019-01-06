@@ -556,6 +556,9 @@
 
 .overlay {
   height: 500px;
+  position: fixed;
+  display: none;
+  z-index: 2;
   background-color: gray;
 }
 
