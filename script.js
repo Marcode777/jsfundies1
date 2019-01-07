@@ -586,6 +586,13 @@ function checkPassword() {
   document.getElementsByClassName('overlayMessageArea')[0].innerHTML = 'Password Entered Was Incorrect, Please Enter Correct Password';
 }
 
+function itemPopulatorFunction() {
+  console.log('itemPopulatorFunction triggered');
+  var value = document.getElementById('itemPopulatorInput').value;
+  console.log('the value is:', value);
+  var target = document.getElementsByClassName('itemPopulatorResult')[0].innerHTML = value;
+}
+
 
 
 
