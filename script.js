@@ -586,11 +586,21 @@ function checkPassword() {
   document.getElementsByClassName('overlayMessageArea')[0].innerHTML = 'Password Entered Was Incorrect, Please Enter Correct Password';
 }
 
+var resultArray = [];
+
 function itemPopulatorFunction() {
   console.log('itemPopulatorFunction triggered');
   var value = document.getElementById('itemPopulatorInput').value;
   console.log('the value is:', value);
-  var target = document.getElementsByClassName('itemPopulatorResult')[0].innerHTML = value;
+  console.log('the resultArray is', resultArray);
+  resultArray.push(value);
+  var target = document.getElementsByClassName('itemPopulatorResult')[0].innerHTML = resultArray;
+}
+
+function enterFunction(event) {
+  if (event.keyCode === 13) {
+    this.itemPopulatorFunction();
+  }
 }
 
 
