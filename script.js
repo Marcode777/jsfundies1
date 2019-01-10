@@ -600,6 +600,8 @@ function itemPopulatorFunction() {
 function enterFunction(event) {
   if (event.keyCode === 13) {
     this.itemPopulatorFunction();
+    console.log('now, the input value will also be cleared by resetting its value to something empty');
+    document.getElementById('itemPopulatorInput').value = '';
   }
 }
 
