@@ -1,4 +1,4 @@
-document.write("this is being written from a document.write script")
+document.write("this is being written from a document.write script");
 
 function verifyFunction(){
   var start = prompt("what is the number");
@@ -604,6 +604,19 @@ function enterFunction(event) {
     document.getElementById('itemPopulatorInput').value = '';
   }
 }
+
+function enterUtils(event) {
+  if (event.keyCode === 13) {
+    console.log('enter key pressed');
+    var targetValue = document.getElementById('utilsInput').value;
+    console.log('the current enterUtils value is:', targetValue);
+    document.getElementById('utilsInput').value = '';
+  }
+}
+
+// import firstUtils from './utils.js';
+
+// this.utils = firstUtils();
 
 
 
