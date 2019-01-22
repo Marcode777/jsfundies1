@@ -594,3 +594,17 @@
   background-color: darkorange;
 }
 
+
+.helperArea{
+  height: 500px;
+  background-color: green;
+}
+
+.helperAreaDisplay{
+  height: 250px;
+  background-color: white;
+  width:50%;
+  margin: auto;
+}
+
+

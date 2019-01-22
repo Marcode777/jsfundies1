@@ -605,18 +605,39 @@ function enterFunction(event) {
   }
 }
 
-function enterUtils(event) {
-  if (event.keyCode === 13) {
-    console.log('enter key pressed');
-    var targetValue = document.getElementById('utilsInput').value;
-    console.log('the current enterUtils value is:', targetValue);
-    document.getElementById('utilsInput').value = '';
-  }
-}
+// function enterUtils(event) {
+//   if (event.keyCode === 13) {
+//     console.log('enter key pressed');
+//     var targetValue = document.getElementById('utilsInput').value;
+//     console.log('the current enterUtils value is:', targetValue);
+//     document.getElementById('utilsInput').value = '';
+//   }
+// }
 
 // import firstUtils from './utils.js';
 
 // this.utils = firstUtils();
+
+function firstStageHelper(event){
+  if(event.keyCode === 13) {
+    console.log('firstStageHelper function triggered');
+    var originalValue = document.getElementById('helperInput').value;
+    this.transformerFunction(originalValue);
+    document.getElementById('helperInput').value = '';
+  }
+}
+
+function transformerFunction(originalValue){
+  console.log('transformerFunction also triggered, and now value will have additional 5');
+  var transformedValue = originalValue * 5;
+  console.log('transformedValue is', transformedValue);
+  if (transformedValue !== isNaN) {
+    document.getElementsByClassName('helperAreaDisplay')[0].innerHTML = transformedValue;
+  }
+  if (transformedValue === isNaN){
+    document.getElementsByClassName('helperAreaDisplay')[0].innerHTML = 'result is not valid';
+  }
+}
 
 
 
