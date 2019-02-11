@@ -639,6 +639,10 @@ function transformerFunction(originalValue){
   }
 }
 
+function looperFunction() {
+  alert('looperFunction triggered');
+}
+
 
 
 

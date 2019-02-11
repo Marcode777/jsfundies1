@@ -607,4 +607,14 @@
   margin: auto;
 }
 
+.looperArea {
+  height: 500px;
+  background-color: #014dc6;
+}
+
+.looperArea h5 {
+  color: white;
+}
+
+
 
