@@ -639,24 +639,19 @@ function transformerFunction(originalValue){
   }
 }
 
+var looperArray = [];
 function looperHelper(event) { // still needs to be worked on
   if (event.keyCode === 13) {
     console.log('looperHelper triggered');
     var originalValue = document.getElementById('looperInput').value;
-    // var looperItemAggregateAreaValue = document.getElementById('looperItemAggregateArea').value;
-    // var sumValue = originalValue + looperItemAggregateAreaValue;
-    document.getElementById('looperItemAggregateArea').value = originalValue;
-    var looperItemAggregateAreaValue = document.getElementById('looperItemAggregateArea').value;
-    document.getElementById('looperItemAggregateArea').innerHTML = looperItemAggregateAreaValue;
-    console.log('originalValue:',originalValue);
-    console.log('looperItemAggregateAreaValue', looperItemAggregateAreaValue);
-    // document.getElementsByClassName('looperDisplay')[0].value = sumValue;
+    looperArray.push(originalValue);
     document.getElementById('looperInput').value = '';
+    document.getElementById('looperItemAggregateArea').innerHTML = looperArray;
   }
 }
 
 function looperFunction() {
-  alert('looperFunction triggered');
+  console.log('looperFunction triggered');
 }
 
 
