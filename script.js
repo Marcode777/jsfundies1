@@ -640,7 +640,7 @@ function transformerFunction(originalValue){
 }
 
 var looperArray = [];
-function looperHelper(event) { // still needs to be worked on
+function looperHelper(event) { // still needs to be worked on 
   if (event.keyCode === 13) {
     console.log('looperHelper triggered');
     var originalValue = document.getElementById('looperInput').value;
