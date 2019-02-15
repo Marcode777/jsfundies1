@@ -647,11 +647,16 @@ function looperHelper(event) { // still needs to be worked on
     looperArray.push(originalValue);
     document.getElementById('looperInput').value = '';
     document.getElementById('looperItemAggregateArea').innerHTML = looperArray;
+    window.looperArray = looperArray;
   }
 }
 
 function looperFunction() {
-  console.log('looperFunction triggered');
+  for(var i = 0; i < looperArray.length; i ++) {
+    console.log(looperArray[i]);
+    var result = looperArray[i];
+    console.log(result);
+  }
 }
 
 
