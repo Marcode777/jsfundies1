@@ -651,12 +651,20 @@ function looperHelper(event) { // still needs to be worked on
   }
 }
 
+var result = '';
 function looperFunction() {
   for(var i = 0; i < looperArray.length; i ++) {
     console.log(looperArray[i]);
     var result = looperArray[i];
     console.log(result);
   }
+  window.result = result;
+}
+
+function looperDisplayFunc(){
+  console.log('looperDisplayFunc triggered');
+  console.log('testFunc to see if RESULT logs', result);
+  document.getElementsByClassName('looperDisplay')[0].innerHTML = result;
 }
 
 

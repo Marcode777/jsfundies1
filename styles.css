@@ -548,6 +548,10 @@
   background-color: #4286f4;
 }
 
+.stockTickerArea h5 {
+  font-size: 35px;
+}
+
 .passwordProtectOverlay {
   height: 500px;
   color: white;
