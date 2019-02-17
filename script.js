@@ -655,10 +655,13 @@ var result = '';
 function looperFunction() {
   for(var i = 0; i < looperArray.length; i ++) {
     console.log(looperArray[i]);
-    var result = looperArray[i];
-    console.log(result);
+    // var result = looperArray[i];
+    var mapped = looperArray.map(function(o, i){
+      return {o}
+    });
   }
   window.result = result;
+  window.mapped = mapped;
 }
 
 function looperDisplayFunc(){
@@ -666,6 +669,11 @@ function looperDisplayFunc(){
   console.log('testFunc to see if RESULT logs', result);
   document.getElementsByClassName('looperDisplay')[0].innerHTML = result;
 }
+
+setTimeout(function(){
+  console.log('MAPPED', mapped);
+  document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
+}, 10000);
 
 
 
