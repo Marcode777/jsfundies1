@@ -657,7 +657,8 @@ function looperFunction() {
     console.log(looperArray[i]);
     // var result = looperArray[i];
     var mapped = looperArray.map(function(o, i){
-      return {o}
+      var mapRefined = JSON.stringify(o);
+      return mapRefined;
     });
   }
   window.result = result;
@@ -667,13 +668,13 @@ function looperFunction() {
 function looperDisplayFunc(){
   console.log('looperDisplayFunc triggered');
   console.log('testFunc to see if RESULT logs', result);
-  document.getElementsByClassName('looperDisplay')[0].innerHTML = result;
+  document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
 }
 
-setTimeout(function(){
-  console.log('MAPPED', mapped);
-  document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
-}, 10000);
+// setTimeout(function(){
+//   console.log('MAPPED', mapped);
+//   document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
+// }, 10000);
 
 
 
