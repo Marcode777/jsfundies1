@@ -663,12 +663,15 @@ function looperFunction() {
   }
   window.result = result;
   window.mapped = mapped;
+  window.mapRefined = mapRefined;
+
 }
 
 function looperDisplayFunc(){
   console.log('looperDisplayFunc triggered');
   console.log('testFunc to see if RESULT logs', result);
   document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
+  console.log('mapRefined.....:::', mapRefined);
 }
 
 // setTimeout(function(){
