@@ -658,12 +658,12 @@ function looperFunction() {
     // var result = looperArray[i];
     var mapped = looperArray.map(function(o, i){
       var mapRefined = JSON.stringify(o);
+      window.mapRefined = mapRefined;
       return mapRefined;
     });
   }
   window.result = result;
   window.mapped = mapped;
-  window.mapRefined = mapRefined;
 
 }
 
@@ -671,7 +671,7 @@ function looperDisplayFunc(){
   console.log('looperDisplayFunc triggered');
   console.log('testFunc to see if RESULT logs', result);
   document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
-  console.log('mapRefined.....:::', mapRefined);
+  console.log('mapRefined:', mapRefined);
 }
 
 // setTimeout(function(){
