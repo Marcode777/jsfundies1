@@ -674,6 +674,28 @@ function looperDisplayFunc(){
   console.log('mapRefined:', mapRefined);
 }
 
+var sampleArray = ['Silver', 'Gold', 'Bitcoin'];
+
+function loopWay() {
+  console.log('loopWay');
+  for(var i = 0; i < sampleArray.length; i++) {
+    console.log('sampleArray[i]', sampleArray[i]);
+  }
+}
+
+function mapWay() {
+  console.log('mapWay');
+  sampleArray.map(function(o, i){
+    return console.log('o', {o})
+  })
+}
+
+function remover() {
+  console.log('remover function triggered');
+  var target = document.getElementById('looperInput');
+  target.remove();
+}
+
 // setTimeout(function(){
 //   console.log('MAPPED', mapped);
 //   document.getElementsByClassName('looperDisplay')[0].innerHTML = mapped;
