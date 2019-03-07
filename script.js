@@ -703,4 +703,37 @@ function remover() {
 
 
 
+// code below is separate logic
+ 
+// if ('.icon-callout-cta') {
+//   function trigger(e) {
+//     if(e.keyCode === 13) {
+//       e.target.click();
+//     }
+//   }
+//   var targets = document.getElementsByClassName('icon-callout-cta');
+//   function distributor() {
+//     for(var i = 0; i < target.length; i++) {
+//       targets[i].setAttribute('tabindex', '0');
+//       targets[i].addEventListener('keypress', trigger, false);
+//       targets[i].addEventListener('focusin', function(){
+//         this.style.outline = 'dotted black 1px';
+//       });
+//       targets[i].addEventListener('focusout', function(){
+//         this.style.outline = '';
+//       })
+//     }
+//   }
+//   var secondaryTargets = document.querySelectorAll('div.col-12.col-sm-3 > a');
+//   function focusRemover() {
+//     for(var i = 0; i < secondaryTargets.length; i++) {
+//       secondaryTargets[i].setAttribute('tabindex', '-1');
+//     }
+//   }
+//   focusRemover();
+// }
+
+// code above is separate logic
+
+
 
