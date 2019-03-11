@@ -320,11 +320,6 @@ function apiGetterIEX(){ // haha nice I am getting some of it!
   })
 }
 
-
-
-
-
-
 // calculatorArea
 array = [];
 
@@ -734,6 +729,38 @@ function remover() {
 // }
 
 // code above is separate logic
+
+function coinDeskBitcoinPriceAPIGetter(){ // haha nice I am getting some of it!
+  console.log('coinDeskBitcoinPrice triggered every minute');
+  $.ajax({
+    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
+    // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
+    url: "https://api.coindesk.com/v1/bpi/currentprice.json",
+    method: 'GET'
+  }).then(function(data){
+    // var yay = data;
+    console.log('data:', data);
+    var grouped = data[374] + data[375] + data[376] + data[377] + data[378];
+    console.log('grouped', grouped);
+    var message =  "$" + grouped;
+    console.log('message', message);
+    var target = document.getElementsByClassName('bitcoinFiatPrice')[0];
+    target.innerHTML = message;
+    // document.getElementById("actualTickerArea").innerHTML = yay;
+    // alert("the script has worked here");
+  })
+}
+
+function coinDeskTimedTrigger() {
+  console.log('coinDeskTimedTrigger triggered');
+  coinDeskBitcoinPriceAPIGetter();
+  setTimeout(function(){
+    coinDeskTimedTrigger();
+  }, 60000);
+}
+
+coinDeskTimedTrigger();
+
 
 
 
