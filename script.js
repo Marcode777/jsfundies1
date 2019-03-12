@@ -756,10 +756,18 @@ function coinDeskTimedTrigger() {
   coinDeskBitcoinPriceAPIGetter();
   setTimeout(function(){
     coinDeskTimedTrigger();
+    attributeDistributor();
   }, 60000);
 }
 
 coinDeskTimedTrigger();
+
+function attributeDistributor() {
+  console.log('attributeDistributor triggered');
+  var targets = document.querySelector('div.container > p > span > a');
+  targets.style.backgroundColor = "blue";
+}
+
 
 
 
