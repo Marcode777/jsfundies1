@@ -764,8 +764,14 @@ coinDeskTimedTrigger();
 
 function attributeDistributor() {
   console.log('attributeDistributor triggered');
+  // note the difference between 'document.querySelector' and 'document.querySelectoAll'
+  // where in one, it's okay to manipulate straight and right away, while the other needs to be looped through before able to be manipuated or use methods on
   var targets = document.querySelector('div.container > p > span > a');
   targets.style.backgroundColor = "blue";
+  var targetz = document.querySelectorAll('div.container > div.row > div.col-md-6 > h3');
+  for (var i = 0; i < targetz.length; i++) {
+    targetz[i].style.color = 'blue';
+  }
 }
 
 
