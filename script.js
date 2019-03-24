@@ -774,6 +774,16 @@ function attributeDistributor() {
   }
 }
 
+function JSONDisplayTrigger() {
+  console.log('JSONDisplayTrigger triggered');
+  var object = {
+    one: 'first object, a gift',
+    two: 'second object, a second gift',
+    three: 'third object, a third gift',
+  }
+  var objectData = object.one;
+  var target = document.getElementsByClassName('JSONdisplay')[0].innerHTML = objectData;
+}
 
 
 
