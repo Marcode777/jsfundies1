@@ -635,6 +635,19 @@
   background-color: gray;
 }
 
+.extraBonusAreainJSONplace > h5:first-child {
+  color: orange;
+}
+
+.extraBonusAreainJSONplace > h5:not(first-child):not(last-child) {
+  color: maroon;
+}
+
+.extraBonusAreainJSONplace > h5:last-child {
+  color: blue;
+}
+
+
 
 
 
