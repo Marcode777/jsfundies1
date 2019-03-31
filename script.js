@@ -247,7 +247,7 @@ let newFunctionCalculator = () => {
           }
         table += '</tr>';
       }
-      document.getElementById("theTable").innerHTML = "transforming.........";
+      document.getElementById("theTable").innerHTML = "transforming.";
     }
 
     // function pathDetector() {
@@ -785,6 +785,18 @@ function JSONDisplayTrigger() {
   var target = document.getElementsByClassName('JSONdisplay')[0].innerHTML = objectData;
 }
 
+window.Utils = (function () {
+  return {
+    firstFunc: function(n) { console.log('firstFunc triggered from utils!', n*5) },
+    secondFunc: function() { alert('secondFunc triggered from Utils!') }
+  }
+}());
+
+// to use the Utils functions, the syntax is:    Utils.firstFunc(); or Utils.secondFunc();
+// to use the Utils functions for calculations, the syntax is: Utils.firstFunc(n) where 'n' is a number 
+
+
+Utils.firstFunc(7);
 
 
 
