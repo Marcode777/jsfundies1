@@ -787,7 +787,7 @@ function JSONDisplayTrigger() {
 
 window.Utils = (function () {
   return {
-    firstFunc: function(n) { console.log('firstFunc triggered from utils!', n*5) },
+    firstFunc: function(n) { console.log('firstFunc triggered from utils!', n*3) },
     secondFunc: function() { alert('secondFunc triggered from Utils!') }
   }
 }());
@@ -796,8 +796,23 @@ window.Utils = (function () {
 // to use the Utils functions for calculations, the syntax is: Utils.firstFunc(n) where 'n' is a number 
 
 
-Utils.firstFunc(7);
+Utils.firstFunc(5);
 
+//dataAggregatorCentralDisplay section
+
+function fullDataAggregatorForCentralDisplay() { // it's currently adding the values as strings, might need to use parseInt() to actually add the integers
+  console.log('fullDataAggregatorForCentralDisplay triggered');
+  var firstSum = document.getElementById('dataAggregatorInputOne').value;
+  var secondSum = document.getElementById('dataAggregatorInputTwo').value;
+  var thirdSum = document.getElementById('dataAggregatorInputThree').value;
+  var mainSum = document.getElementById('mainDataAggregatorInput').value;
+
+  var total = firstSum + secondSum + thirdSum + mainSum;
+  console.log('TOTAL IS', total);
+
+}
+
+fullDataAggregatorForCentralDisplay();
 
 
 

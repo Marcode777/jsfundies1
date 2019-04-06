@@ -647,6 +647,24 @@
   color: blue;
 }
 
+.dataAggregatorCentral {
+  height: 500px;
+  background-color: #42f4bf;
+}
+
+.dataAggregatorCentralDisplay {
+  height: 25%;
+  background-color: #ffff;
+}
+
+.dataAggregatorCentralDisplayActual {
+  text-align: center;
+}
+
+.D3.JSsection {
+  height: 500px;
+  color: #3bace5;
+}
 
 
 
