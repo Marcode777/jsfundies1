@@ -812,7 +812,7 @@ function fullDataAggregatorForCentralDisplay() { // it's currently adding the va
 
 }
 
-fullDataAggregatorForCentralDisplay();
+fullDataAggregatorForCentralDisplay(); 
 
 
 
