@@ -812,7 +812,10 @@ function fullDataAggregatorForCentralDisplay() { // it's currently adding the va
 
 }
 
-fullDataAggregatorForCentralDisplay(); 
+fullDataAggregatorForCentralDisplay();
+
+// D3.JS testing run area
+d3.selectAll('h1').style('color', 'red');
 
 
 
