@@ -814,8 +814,20 @@ function fullDataAggregatorForCentralDisplay() { // it's currently adding the va
 
 fullDataAggregatorForCentralDisplay();
 
+// for loader
+function loaderTimedTrigger() {
+  setTimeout(function(){
+    var target = document.getElementsByClassName('loader')[0];
+    target.classList.add('loaderSectionHide');
+  }, 2000);
+}
+
+loaderTimedTrigger();
+
 // D3.JS testing run area
 d3.selectAll('h1').style('color', 'red');
+
+
 
 
 

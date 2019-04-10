@@ -661,6 +661,15 @@
   text-align: center;
 }
 
+.loader {
+  height: 3%;
+  width: 3%;
+}
+
+.loaderSectionHide {
+  display: none;
+}
+
 .D3.JSsection {
   height: 500px;
   color: #3bace5;
