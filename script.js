@@ -825,7 +825,7 @@ function loaderTimedTrigger() {
 loaderTimedTrigger();
 
 // D3.JS testing run area
-d3.selectAll('h1').style('color', 'red');
+d3.selectAll('h1').style('color', 'red'); 
 
 
 
