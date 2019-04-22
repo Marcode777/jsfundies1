@@ -824,6 +824,21 @@ function loaderTimedTrigger() {
 
 loaderTimedTrigger();
 
+// for iterators and generators
+var num = 0;
+function outerIterator() {
+  function innerIterator() {
+    // num *= num++; for incrementing using multiplication
+    num++;
+    console.log('num', num);
+    num = window.num;
+    return num;
+  }
+  innerIterator();
+  document.getElementsByClassName('iteratorDisplay')[0].innerHTML = num;
+}
+
+
 // D3.JS testing run area
 d3.selectAll('h1').style('color', 'blue');
 d3.select('div.innerD3 > h2').style('color', 'red');

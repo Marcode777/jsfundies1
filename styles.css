@@ -670,6 +670,23 @@
   display: none;
 }
 
+.iterators-and-generators {
+  height:500px;
+  /*background-color: #0f3777;*/
+  background-color: #0f3b82;
+}
+
+.iterators-and-generators h3, h5 {
+  color: white;
+  text-align: center;
+}
+
+.btn btn-primary {
+  display: inline-block;
+  text-align: center;
+
+}
+
 .D3.JSsection {
   height: 500px;
   color: #3bace5;
