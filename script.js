@@ -846,7 +846,7 @@ d3.select('div.innerMostD3 > h3').style('color', 'orange');
 
 d3.selectAll('p').style('color', function() {
   return 'hsl(' + Math.random() * 360 + ', 100%, 50%';
-});
+}); 
 
 
 
