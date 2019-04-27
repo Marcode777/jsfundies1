@@ -836,7 +836,7 @@ function outerIterator() {
   }
   innerIterator();
   document.getElementsByClassName('iteratorDisplay')[0].innerHTML = num;
-}
+} 
 
 
 // D3.JS testing run area
