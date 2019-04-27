@@ -247,7 +247,7 @@ let newFunctionCalculator = () => {
           }
         table += '</tr>';
       }
-      document.getElementById("theTable").innerHTML = "transforming...";
+      document.getElementById("theTable").innerHTML = "transforming........";
     }
 
     // function pathDetector() {
@@ -836,7 +836,7 @@ function outerIterator() {
   }
   innerIterator();
   document.getElementsByClassName('iteratorDisplay')[0].innerHTML = num;
-}
+} 
 
 
 // D3.JS testing run area
