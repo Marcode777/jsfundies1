@@ -852,6 +852,29 @@ d3.selectAll('p').style('color', function() {
 
 
 
+// objectSection
+function objectSectionTrigger() {
+  var theObject = {
+    first: 'https://cdn3.vectorstock.com/i/1000x1000/03/62/gold-bar-vector-2200362.jpg',
+    second: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvDbgqeP4MlR_q2JNSYWIWvVqU7g0TOUopza-vQea-irH9hOJcQ',
+  }
+  setTimeout(function(){
+    console.log('objectSectionTrigger triggered');
+    document.getElementById('objectSectionFirstImage').src = theObject.first;
+    document.getElementById('objectSectionSecondImage').src = theObject.second;
+      setTimeout(function(){
+        console.log('secondary time trigger');
+        document.getElementById('objectSectionFirstImage').classList.add('appear');
+        document.getElementById('objectSectionSecondImage').classList.add('appear');
+      }, 1000);
+  }, 5000);
+}
+
+objectSectionTrigger();
+
+
+
+
 
 
 

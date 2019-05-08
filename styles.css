@@ -692,6 +692,42 @@
   color: #3bace5;
 }
 
+.objectSection {
+  height: 650px;
+  background-color: #40e8df;
+}
+
+.objectSection.jumbotron {
+  background-color: #40e8df;
+}
+
+.objectSectionSecondary {
+  height: 350px;
+  background-color: gold;
+}
+
+#objectSectionFirstImage {
+  visibility: hidden;
+  opacity: 0.1;
+}
+
+#objectSectionSecondImage {
+  visibility: hidden;
+  opacity: 0.1;
+}
+
+#objectSectionFirstImage.appear {
+  visibility: visible;
+  opacity: 1;
+  transition: 5s;
+}
+
+#objectSectionSecondImage.appear {
+  visibility: visible;
+  opacity: 1;
+  transition: 5s;
+}
+
 
 
 
