@@ -728,6 +728,16 @@
   transition: 5s;
 }
 
+.webCrawlerSection {
+  height: 500px;
+  background-color: #0f3f8c;
+  color: white;
+}
 
+
+.webCrawlerButton{
+  background-color: #3b92ef;
+  color: blue;
+}
 
 
