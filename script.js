@@ -855,17 +855,29 @@ d3.selectAll('p').style('color', function() {
 // objectSection
 function objectSectionTrigger() {
   var theObject = {
-    first: 'https://cdn3.vectorstock.com/i/1000x1000/03/62/gold-bar-vector-2200362.jpg',
-    second: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvDbgqeP4MlR_q2JNSYWIWvVqU7g0TOUopza-vQea-irH9hOJcQ',
+    first: 'https://images.unsplash.com/photo-1542830466-91773113dd3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+    second: 'https://cdn.jmbullion.com/wp-content/uploads/2013/09/1-oz-sunshine-silver-bar.jpg',
+    third: 'https://cdn3.vectorstock.com/i/1000x1000/03/62/gold-bar-vector-2200362.jpg',
+    fourth: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvDbgqeP4MlR_q2JNSYWIWvVqU7g0TOUopza-vQea-irH9hOJcQ',
   }
   setTimeout(function(){
     console.log('objectSectionTrigger triggered');
     document.getElementById('objectSectionFirstImage').src = theObject.first;
     document.getElementById('objectSectionSecondImage').src = theObject.second;
+    document.getElementById('objectSectionThirdImage').src = theObject.third;
+    document.getElementById('objectSectionFourthImage').src = theObject.fourth;
       setTimeout(function(){
         console.log('secondary time trigger');
         document.getElementById('objectSectionFirstImage').classList.add('appear');
-        document.getElementById('objectSectionSecondImage').classList.add('appear');
+        setTimeout(function(){
+          document.getElementById('objectSectionSecondImage').classList.add('appear');
+          setTimeout(function(){
+            document.getElementById('objectSectionThirdImage').classList.add('appear');
+            setTimeout(function(){
+              document.getElementById('objectSectionFourthImage').classList.add('appear');
+            }, 1000);
+          }, 1000);
+        }, 1000);
       }, 1000);
   }, 5000);
 }
