@@ -716,6 +716,16 @@
   opacity: 0.1;
 }
 
+#objectSectionThirdImage {
+  visibility: hidden;
+  opacity: 0.1;
+}
+
+#objectSectionFourthImage {
+  visibility: hidden;
+  opacity: 0.1;
+}
+
 #objectSectionFirstImage.appear {
   visibility: visible;
   opacity: 1;
@@ -723,6 +733,18 @@
 }
 
 #objectSectionSecondImage.appear {
+  visibility: visible;
+  opacity: 1;
+  transition: 5s;
+}
+
+#objectSectionThirdImage.appear {
+  visibility: visible;
+  opacity: 1;
+  transition: 5s;
+}
+
+#objectSectionFourthImage.appear {
   visibility: visible;
   opacity: 1;
   transition: 5s;
