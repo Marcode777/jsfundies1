@@ -885,8 +885,20 @@ function objectSectionTrigger() {
 objectSectionTrigger();
 
 // webCrawlerSection
-function webCrawlerTrigger() {
+function pageCrawlerTrigger() {
   console.log('*****webCrawlTrigger*****');
+  var targetz = document.querySelectorAll('h3');
+  var allLinkz = [];
+  function linkDistributor() {
+    console.log('linkDistributor inside webCrawlerTrigger, triggered');
+    for(var i = 0; i < targetz.length; i++) {
+      console.log(targetz[i]);
+      allLinkz.push(targetz[i]);
+    }
+    console.log('allLinkz', allLinkz);
+    document.getElementsByClassName('pageCrawlerDisplayOneHeader')[0].innerHTML = allLinkz;
+  }
+  linkDistributor();
 }
 
 
