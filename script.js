@@ -40,6 +40,14 @@ function verifyFunction(){
 
 // }
 
+//helloWorld
+function helloWorld(){
+  console.log('helloWorld triggered');
+  document.getElementsByClassName('NYC')[0].classList.add('appear');
+}
+
+helloWorld();
+
 function keypressFunction(){
   document.getElementById("jumbojet").style = "background-color: yellow;"
 }
