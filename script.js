@@ -909,6 +909,29 @@ function pageCrawlerTrigger() {
   linkDistributor();
 }
 
+// Promise Section
+function promiseButtonTrigger() {
+  console.log('promiseButtonTrigger triggered');
+  setTimeout(function(){
+    promiseTrigger();
+  }, 3000);
+}
+
+function promiseTrigger() {
+  console.log('*promiseTriggered');
+  var promise1 = new Promise(function(resolve, reject){
+    setTimeout(function(){
+      resolve('kolokoyz');
+    }, 1000);
+  });
+
+  promise1.then(function(value){
+    alert('from PROMISE' + '' + value);
+  });
+}
+
+
+
 
 
 
