@@ -928,7 +928,7 @@ function promiseTrigger() {
   promise1.then(function(value){
     alert('from PROMISE' + '' + value);
   });
-}
+} 
 
 
 
