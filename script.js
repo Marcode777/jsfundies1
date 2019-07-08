@@ -928,7 +928,16 @@ function promiseTrigger() {
   promise1.then(function(value){
     alert('from PROMISE' + '' + value);
   });
-} 
+}
+
+function promiseTriggerOne() {
+  console.log('promise trigger one triggered');
+  var variable = 'still in progress';
+  console.log('variable, second try', variable);
+  document.getElementsByClassName('promiseSectionDisplay')[0].innerHTML = variable;
+  return variable;
+}
+
 
 
 
