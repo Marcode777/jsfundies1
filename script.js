@@ -936,7 +936,7 @@ function promiseTriggerOne() {
   console.log('variable, second try', variable);
   document.getElementsByClassName('promiseSectionDisplay')[0].innerHTML = variable;
   return variable;
-} 
+}  
 
 
 
