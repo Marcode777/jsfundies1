@@ -950,13 +950,14 @@ function searchFunction() {
     txtValue = a.textContent || a.innerText;
     if(txtValue.toUpperCase().indexOf(filter) > -1){
       li[i].style.display = '';
-      document.getElementsByClassName('searchDisplayArea')[0].innerHTML = li[i].textContent;
+      document.getElementsByClassName('searchDisplayHeader')[0].innerHTML = li[i].textContent;
     } else {
       li[i].style.display = 'none';
-      document.getElementsByClassName('searchDisplayArea')[0].innerHTML = '';
+      document.getElementsByClassName('searchDisplayHeader')[0].innerHTML = '';
     }
   }
 }
+
 
 
 
