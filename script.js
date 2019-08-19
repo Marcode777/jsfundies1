@@ -956,8 +956,7 @@ function searchFunction() {
       document.getElementsByClassName('searchDisplayHeader')[0].innerHTML = '';
     }
   }
-}
-
+} 
 
 
 
