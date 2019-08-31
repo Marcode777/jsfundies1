@@ -955,7 +955,7 @@ function searchFunction() {
       li[i].style.display = 'none';
       document.getElementsByClassName('searchDisplayHeader')[0].innerHTML = '';
     }
-  }  
+  } 
 
 
 
