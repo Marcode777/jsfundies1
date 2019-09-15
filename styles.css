@@ -786,6 +786,22 @@
   background-color: white;
 }
 
+.json-object-section {
+  height: 500px;
+  background-color: #2AC8CD;
+}
+
+button.json-selector-first-button {
+  background-color: orange;
+}
+
+button.json-selector-second-button {
+  background-color: blue;
+}
+
+button.json-selector-third-button {
+  background-color: lightblue;
+}
 
 
 

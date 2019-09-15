@@ -956,8 +956,28 @@ function searchFunction() {
       document.getElementsByClassName('searchDisplayHeader')[0].innerHTML = '';
     }
   }
+}
+
+var jsonObject = {
+  first: 'firstObject - Alpha!',
+  second: 'secondObject - yee hawww Beta!',
+  third: 'thirdObject - third time is a charm!'
+}
+
+function jsonSelectorOne() {
+  console.log('jsonSelector triggered');
+  alert(jsonObject.first);
 }  
 
+function jsonSelectorTwo() {
+  console.log('jsonSelector triggered');
+  alert(jsonObject.second);
+}
+
+function jsonSelectorThree() {
+  console.log('jsonSelector triggered');
+  alert(jsonObject.third);
+}
 
 
 
