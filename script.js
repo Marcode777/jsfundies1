@@ -977,7 +977,7 @@ function jsonSelectorTwo() {
 function jsonSelectorThree() {
   console.log('jsonSelector triggered');
   alert(jsonObject.third);
-}
+} 
 
 
 
