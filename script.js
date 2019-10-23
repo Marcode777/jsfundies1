@@ -979,6 +979,37 @@ function jsonSelectorThree() {
   alert(jsonObject.third);
 }
 
+function stacker() {
+  console.log('stacker triggered');
+  //var target = document.querySelector('div.stack-here');
+  //target.append('appended value');
+  //document.getElementsByClassName('stack-here')[0].append('appended value');
+  var item = document.getElementById('stack-input');
+  var itemValue = item.value;
+  var sampleSyntax = 'sampleSyntax';
+  var openingDiv = '<div>';
+  var closingDiv = '</div>';
+  document.getElementsByClassName('stack-here')[0].append(itemValue + ' ' + sampleSyntax);
+  item.value = '';
+}
+
+function stackTable() {
+  console.log('stackTable triggered');
+  //var table = document.querySelector('table#stack-table');
+  var table = document.getElementById('stack-table');
+  var row = table.insertRow(0);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var dataOne = document.getElementById('td-stack-one');
+  var dataTwo = document.getElementById('td-stack-two');
+  var dataOneValue = dataOne.value;
+  var dataTwoValue = dataTwo.value;
+  cell1.innerHTML = dataOneValue;
+  cell2.innerHTML = dataTwoValue;
+  dataOne.value = '';
+  dataTwo.value = '';
+}
+
 
 
 
