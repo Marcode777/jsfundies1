@@ -805,6 +805,16 @@ button.json-selector-third-button {
 
 
 
+.append-stack-section { /* note, this file is regular css, there is no .less nesting here for now*/
+  height:800px;
+  background-color: gold;
+}
+
+table, td {
+  border: 1px solid blue;
+}
+
+
 
 
 
