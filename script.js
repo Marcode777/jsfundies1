@@ -1008,7 +1008,7 @@ function stackTable() {
   cell2.innerHTML = dataTwoValue;
   dataOne.value = '';
   dataTwo.value = '';
-}
+} 
 
 
 
