@@ -815,6 +815,20 @@ table, td {
 }
 
 
+.arrow-config-section {
+  height: 600px;
+  background-color: silver;
+}
+
+.arrow-config-section-header {
+  text-align: center;
+}
+
+.arrow-config-section-image {
+  height:100px;
+  width:100px;
+}
+
 
 
 
