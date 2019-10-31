@@ -1010,5 +1010,29 @@ function stackTable() {
   dataTwo.value = '';
 }
 
+function configDown() {
+  console.log('configDown triggered');
+  var target = document.getElementsByClassName('arrow-config-section-image')[0];
+  target.setAttribute('style', 'transform: rotate(90deg)');
+}
+
+function configLeft() {
+  console.log('configLeft triggered');
+  var target = document.getElementsByClassName('arrow-config-section-image')[0];
+  target.setAttribute('style', 'transform: rotate(180deg)');
+}
+
+function configRight() {
+  console.log('configRight triggered');
+  var target = document.getElementsByClassName('arrow-config-section-image')[0];
+  target.setAttribute('style', 'transform: rotate(360deg)');
+}
+
+function configUp() {
+  console.log('configUp triggered');
+  var target = document.getElementsByClassName('arrow-config-section-image')[0];
+  target.setAttribute('style', 'transform: rotate(270deg)');
+}
+
 
 
