@@ -14,6 +14,8 @@
   height: 50px;
   width: 100%;
   background-color: lightblue;
+  position: fixed;
+  z-index: 8888;
 }
 
 .NYC {
@@ -834,6 +836,7 @@ table, td {
   height:100px;
   width:100px;
 }
+
 
 
 
