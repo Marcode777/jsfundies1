@@ -910,6 +910,8 @@ function pageCrawlerTrigger() {
 }
 
 // Promise Section
+// it seems that the key concepts of promises are that they are similar to event listeners
+// however, promises have a feature that event listeners do not have, they are able to wait for information even before the DOM loads
 function promiseButtonTrigger() {
   console.log('promiseButtonTrigger triggered');
   setTimeout(function(){
