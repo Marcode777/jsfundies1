@@ -1037,4 +1037,3 @@ function configUp() {
   target.setAttribute('style', 'transform: rotate(270deg)');
 }
 
-
