@@ -1035,5 +1035,5 @@ function configUp() {
   console.log('configUp triggered');
   var target = document.getElementsByClassName('arrow-config-section-image')[0];
   target.setAttribute('style', 'transform: rotate(270deg)');
-} 
+}
 
