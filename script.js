@@ -1037,3 +1037,10 @@ function configUp() {
   target.setAttribute('style', 'transform: rotate(270deg)');
 }
 
+function htmlLogger() {
+  console.log('htmlLogger triggered');
+  var target = document.getElementsByClassName('foundation');
+  $target = $(target);
+  $target.append('<h2 style="color:purple">' + 'built string' + '</h2>');
+}
+
