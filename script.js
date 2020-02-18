@@ -1043,4 +1043,3 @@ function htmlLogger() {
   $target = $(target);
   $target.append('<h2 style="color:purple">' + 'built string' + '</h2>');
 }
-
