@@ -1042,4 +1042,4 @@ function htmlLogger() {
   var target = document.getElementsByClassName('foundation');
   $target = $(target);
   $target.append('<h2 style="color:purple">' + 'built string' + '</h2>');
-} 
+}   
