@@ -1043,3 +1043,22 @@ function htmlLogger() {
   $target = $(target);
   $target.append('<h2 style="color:purple">' + 'built string' + '</h2>');
 } 
+
+
+
+
+// for Google Trends API usage, via NPM, from here https://www.npmjs.com/package/google-trends-api
+
+const googleTrends = require('google-trends-api');
+
+
+function getTheGoogleTrends() {
+  console.log('getTheGoogleTrends activated');
+  googleTrends.interestOverTime({keyword: 'Women\'s march'})
+    .then(function(results){
+      console.log('These results are awesome', results);
+  })
+  .catch(function(err){
+    console.error('Oh no there was an error', err);
+  });
+}
