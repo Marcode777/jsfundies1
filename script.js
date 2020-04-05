@@ -1061,4 +1061,4 @@ function getTheGoogleTrends() {
   .catch(function(err){
     console.error('Oh no there was an error', err);
   });
-}
+} 
