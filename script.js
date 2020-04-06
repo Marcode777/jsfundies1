@@ -1048,6 +1048,12 @@ function htmlLogger() {
 
 
 // for Google Trends API usage, via NPM, from here https://www.npmjs.com/package/google-trends-api
+// found out from old notes in server.js file that this can only work on node, so it can only work on server.js file
+
+setTimeout(function(){
+
+  console.log('*****found out from old notes in server.js file that this can only work on node, so it can only work on server.js file');
+}, 5500);
 
 const googleTrends = require('google-trends-api');
 
@@ -1062,3 +1068,4 @@ function getTheGoogleTrends() {
     console.error('Oh no there was an error', err);
   });
 } 
+
