@@ -1069,3 +1069,17 @@ function getTheGoogleTrends() {
   });
 } 
 
+// sample code: finally figured out why the event was not being detected, need to use 'keydown' instead of 'keypress'
+function trigger(e) {
+   console.log('trigger!');
+   if(e.keyCode === 81) {
+        console.log('Jim Rickards!');
+     }
+   if(e.keyCode === 80) {
+        console.log('P');
+     }
+}
+
+// document.addEventListener('keydown', trigger, false);
+// sample
+
