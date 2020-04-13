@@ -867,6 +867,7 @@ function objectSectionTrigger() {
     second: 'https://cdn.jmbullion.com/wp-content/uploads/2013/09/1-oz-sunshine-silver-bar.jpg',
     third: 'https://cdn3.vectorstock.com/i/1000x1000/03/62/gold-bar-vector-2200362.jpg',
     fourth: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvDbgqeP4MlR_q2JNSYWIWvVqU7g0TOUopza-vQea-irH9hOJcQ',
+    fifth: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*qiRzcuyOTM1UjH3dq7SMOA.png&f=1&nofb=1'
   }
   setTimeout(function(){
     console.log('objectSectionTrigger triggered');
@@ -874,6 +875,7 @@ function objectSectionTrigger() {
     document.getElementById('objectSectionSecondImage').src = theObject.second;
     document.getElementById('objectSectionThirdImage').src = theObject.third;
     document.getElementById('objectSectionFourthImage').src = theObject.fourth;
+    document.getElementById('objectSectionFifthImage').src = theObject.fifth;
       setTimeout(function(){
         console.log('secondary time trigger');
         document.getElementById('objectSectionFirstImage').classList.add('appear');
@@ -883,6 +885,9 @@ function objectSectionTrigger() {
             document.getElementById('objectSectionThirdImage').classList.add('appear');
             setTimeout(function(){
               document.getElementById('objectSectionFourthImage').classList.add('appear');
+              setTimeout(function(){
+                document.getElementById('objectSectionFifthImage').classList.add('appear');
+              }, 1000);
             }, 1000);
           }, 1000);
         }, 1000);
