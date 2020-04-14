@@ -1088,3 +1088,4 @@ function trigger(e) {
 // document.addEventListener('keydown', trigger, false);
 // sample
 
+
