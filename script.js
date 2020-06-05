@@ -1089,3 +1089,10 @@ function trigger(e) {
 // sample
 
 
+// notes from working with Curtis Degidio on AJAX request for data to populate JPMC IR Events 
+$.ajax( settings: {
+  url: queryLink,
+}).done(function(results){
+  console.log(results);
+})
+ 
