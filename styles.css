@@ -863,6 +863,45 @@ table, td {
   background-color: blue;
 }
 
+.flexbox-section {
+  height:600px;
+  background-color: #ffe6e6;
+}
+
+.flexbox-section h1 {
+  text-align: center;
+}
+
+.flexbox-container {
+  display: flex;
+  /*flex-direction: row-reverse;*/
+  /*flex-direction: row;*/
+  flex-direction: column;
+}
+
+.flexbox-item-one {
+  height: 6rem;
+  /*width: 6rem;*/
+  width: 100%;
+  background-color: blue;
+  margin: 1rem;
+}
+
+.flexbox-item-two {
+  height: 8rem;
+  /*width: 8rem;*/
+  width: 100%;
+  background-color: yellow;
+  margin: 1rem;
+}
+
+.flexbox-item-three {
+  height: 10rem;
+  /*width: 10rem;*/
+  width: 100%;
+  background-color: orange;
+  margin: 1rem;
+}
 
 
 
