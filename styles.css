@@ -876,31 +876,17 @@ table, td {
   display: flex;
   /*flex-direction: row-reverse;*/
   /*flex-direction: row;*/
-  flex-direction: column;
+  /*flex-direction: column;*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
 }
 
-.flexbox-item-one {
-  height: 6rem;
-  /*width: 6rem;*/
-  width: 100%;
-  background-color: blue;
-  margin: 1rem;
-}
-
-.flexbox-item-two {
-  height: 8rem;
-  /*width: 8rem;*/
-  width: 100%;
-  background-color: yellow;
-  margin: 1rem;
-}
-
-.flexbox-item-three {
-  height: 10rem;
-  /*width: 10rem;*/
-  width: 100%;
-  background-color: orange;
-  margin: 1rem;
+.flexbox-item {
+  height: 360px;
+  width: 360px;
+  background-color: lightgray;
 }
 
 
