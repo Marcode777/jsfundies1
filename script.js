@@ -1094,5 +1094,5 @@ $.ajax( settings: {
   url: queryLink,
 }).done(function(results){
   console.log(results);
-})
- 
+});
+     
