@@ -1095,4 +1095,3 @@ $.ajax( settings: {
 }).done(function(results){
   console.log(results);
 });
-
