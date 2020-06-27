@@ -1090,75 +1090,75 @@ function trigger(e) {
 
 
 // notes from working with Curtis Degidio on AJAX request for data to populate JPMC IR Events 
-$.ajax( settings: {
-  url: queryLink,
-}).done(function(results){
-  console.log(results);
-});
+// $.ajax( settings: {
+//   url: queryLink,
+// }).done(function(results){
+//   console.log(results);
+// });
 
 
 
 
 // masterpiece section start
-function heightsGrouping() {
-     console.log('heightsGrouping activated');
-     var targets = document.querySelectorAll('h2.dg-profile-name');
-     var heightsContainer = [];
-     for(var i = 0; i < targets.length; i++){
-         var heightCalc = targets[i].clientHeight;
-         heightsContainer.push(heightCalc);
-         console.log('heightsContainer', heightsContainer);
-         window.heightsContainer = heightsContainer;
-     }
-     console.log('final heightsContainer', heightsContainer);
-     var greatestNumber = Math.max(...heightsContainer);
-     var greatestNumberForReal = greatestNumber.toString() + 'px';
-     console.log('greatestNumberForReal is', greatestNumberForReal);
-     console.log('greatestNumber is', greatestNumber);
-     var newTargets = document.querySelectorAll('h2.dg-profile-name');
-     console.log('right before secondary loop, targets', targets);
-     for(var i = 0; i < newTargets.length; i++){
-         console.log('secondary loop triggered');
-         newTargets[i].style.height = greatestNumberForReal;
-     }
-}
+// function heightsGrouping() {
+//      console.log('heightsGrouping activated');
+//      var targets = document.querySelectorAll('h2.dg-profile-name');
+//      var heightsContainer = [];
+//      for(var i = 0; i < targets.length; i++){
+//          var heightCalc = targets[i].clientHeight;
+//          heightsContainer.push(heightCalc);
+//          console.log('heightsContainer', heightsContainer);
+//          window.heightsContainer = heightsContainer;
+//      }
+//      console.log('final heightsContainer', heightsContainer);
+//      var greatestNumber = Math.max(...heightsContainer);
+//      var greatestNumberForReal = greatestNumber.toString() + 'px';
+//      console.log('greatestNumberForReal is', greatestNumberForReal);
+//      console.log('greatestNumber is', greatestNumber);
+//      var newTargets = document.querySelectorAll('h2.dg-profile-name');
+//      console.log('right before secondary loop, targets', targets);
+//      for(var i = 0; i < newTargets.length; i++){
+//          console.log('secondary loop triggered');
+//          newTargets[i].style.height = greatestNumberForReal;
+//      }
+// }
 
-$(document).ready(function(){
-    console.log('document is ready');
-    setTimeout(function(){
-        console.log('timeout triggered');
-        heightsGrouping();
-    }, 5000);
-});
+// $(document).ready(function(){
+//     console.log('document is ready');
+//     setTimeout(function(){
+//         console.log('timeout triggered');
+//         heightsGrouping();
+//     }, 5000);
+// });
 
-function heightsGrouping() {
-     console.log('heightsGrouping activated');
-     var targets = document.querySelectorAll('h2.dg-profile-name');
-     var heightsContainer = [];
-     for(var i = 0; i < targets.length; i++){
-         var heightCalc = targets[i].clientHeight;
-         heightsContainer.push(heightCalc);
-         console.log('heightsContainer', heightsContainer);
-         window.heightsContainer = heightsContainer;
-     }
-     console.log('final heightsContainer', heightsContainer);
-     var greatestNumber = Math.max(...heightsContainer);
-     var greatestNumberForReal = greatestNumber.toString() + 'px';
-     console.log('greatestNumberForReal is', greatestNumberForReal);
-     console.log('greatestNumber is', greatestNumber);
-     var newTargets = document.querySelectorAll('h2.dg-profile-name');
-     console.log('right before secondary loop, targets', targets);
-     for(var i = 0; i < newTargets.length; i++){
-         console.log('secondary loop triggered');
-         newTargets[i].style.height = greatestNumberForReal;
-     }
-}
+// function heightsGrouping() {
+//      console.log('heightsGrouping activated');
+//      var targets = document.querySelectorAll('h2.dg-profile-name');
+//      var heightsContainer = [];
+//      for(var i = 0; i < targets.length; i++){
+//          var heightCalc = targets[i].clientHeight;
+//          heightsContainer.push(heightCalc);
+//          console.log('heightsContainer', heightsContainer);
+//          window.heightsContainer = heightsContainer;
+//      }
+//      console.log('final heightsContainer', heightsContainer);
+//      var greatestNumber = Math.max(...heightsContainer);
+//      var greatestNumberForReal = greatestNumber.toString() + 'px';
+//      console.log('greatestNumberForReal is', greatestNumberForReal);
+//      console.log('greatestNumber is', greatestNumber);
+//      var newTargets = document.querySelectorAll('h2.dg-profile-name');
+//      console.log('right before secondary loop, targets', targets);
+//      for(var i = 0; i < newTargets.length; i++){
+//          console.log('secondary loop triggered');
+//          newTargets[i].style.height = greatestNumberForReal;
+//      }
+// }
 
-function imager() {
-     console.log('imager activated');
-     var targets = document.querySelectorAll('img.dg-profile-image');
-     for(var i = 0; i < targets.length; i++) {
-          targets[i].setAttribute('src', '/content/dam/kolokoyfolder/securities/Paulina-Wong.png')
-     }
-}
+// function imager() {
+//      console.log('imager activated');
+//      var targets = document.querySelectorAll('img.dg-profile-image');
+//      for(var i = 0; i < targets.length; i++) {
+//           targets[i].setAttribute('src', '/content/dam/kolokoyfolder/securities/Paulina-Wong.png')
+//      }
+// }
 // masterpiece section finish
