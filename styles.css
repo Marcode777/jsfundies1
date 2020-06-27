@@ -889,6 +889,10 @@ table, td {
   background-color: lightgray;
 }
 
+.sort-section {
+  height: 10rem;
+  background-color: lightblue;
+}
 
 
 
