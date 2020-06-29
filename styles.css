@@ -890,11 +890,14 @@ table, td {
 }
 
 .sort-section {
-  height: 10rem;
+  height: 20rem;
   background-color: lightblue;
 }
 
-
+.sort-area {
+  height: 10rem;
+  width: 100%;
+}
 
 
 
