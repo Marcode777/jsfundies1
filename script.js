@@ -865,7 +865,7 @@ function objectSectionTrigger() {
   var theObject = {
     first: 'https://images.unsplash.com/photo-1542830466-91773113dd3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
     second: 'https://cdn.jmbullion.com/wp-content/uploads/2013/09/1-oz-sunshine-silver-bar.jpg',
-    third: 'https://cdn3.vectorstock.com/i/1000x1000/03/62/gold-bar-vector-2200362.jpg',
+    third: 'https://360view.hum3d.com/zoom/Tools/Gold_Bar_1000_0001.jpg',
     fourth: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVvDbgqeP4MlR_q2JNSYWIWvVqU7g0TOUopza-vQea-irH9hOJcQ',
     fifth: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-images-1.medium.com%2Fmax%2F1200%2F1*qiRzcuyOTM1UjH3dq7SMOA.png&f=1&nofb=1'
   }
@@ -1163,3 +1163,21 @@ function trigger(e) {
 // }
 // masterpiece section finish
    
+
+
+function populateDataForSorting() {
+  console.log('populate data triggered');
+  var target = document.getElementsByClassName('sort-area');
+  //$target = $(target);
+  //$target.append('<h4 style="color: gray">' + 'testTextForSorter' + '</h4>');
+}
+
+function sorter() {
+  console.log('sorter triggered');
+}
+
+function getSortSectionInputValue() {
+  console.log('getSortSectionInputValue triggered');
+  var value = document.getElementById('sort-section-input').value;
+  console.log(value);
+}
