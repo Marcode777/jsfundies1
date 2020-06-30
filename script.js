@@ -1181,3 +1181,4 @@ function getSortSectionInputValue() {
   var value = document.getElementById('sort-section-input').value;
   console.log(value);
 }
+
