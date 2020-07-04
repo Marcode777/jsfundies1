@@ -1182,6 +1182,10 @@ function getSortSectionInputValue() {
   console.log(value);
 }
 
+// sample sorting by date
+// var dateArray = [{name: 'M', birthday: new Date('1983-10-22')}, {name: 'C', birthday: new Date('1989-06-21')}, {name: 'A', birthday: '1990-07-25'}]
+// var sortedBirthdays = dateArray.sort((a, b) => b.birthday - a.birthday);
+
 // Just remember, in plain vanilla JavaScript
 //when targeting an element, it can be targeted directly, 
 //but when targeting more than 1 element or multiple elements (without giving them classnames using css from the start),
