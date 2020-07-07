@@ -1191,4 +1191,4 @@ function getSortSectionInputValue() {
 //but when targeting more than 1 element or multiple elements (without giving them classnames using css from the start),
 //you must use a loop
 
-  
+   
