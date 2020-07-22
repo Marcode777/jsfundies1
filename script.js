@@ -1195,4 +1195,12 @@ function getSortSectionInputValue() {
 
  
 
-   
+//sample array sorter
+//  var array = ['one', 'two', 'html', 'css', 'javascript'];
+
+//  function iterator() {
+//    console.log('iterator triggered');
+//    for(var i = 0 ; i < array.length; i++) {
+//      console.log('the contents of the array are', array[i]);
+//    }
+//  }   
