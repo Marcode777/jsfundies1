@@ -1207,4 +1207,14 @@ function getSortSectionInputValue() {
 
 
  
-   
+ 
+
+
+
+
+
+
+
+
+
+ // look into Lodash for JavaScript, it is helpful for dealing with arrays and objects  
