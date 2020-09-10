@@ -1219,4 +1219,34 @@ function getSortSectionInputValue() {
 
  // look into Lodash for JavaScript, it is helpful for dealing with arrays and objects
 
+
+
+
+
+// Set tab index for paywall elements, lock tabbing inside the paywall-content div - from Humberto
+        // setTabbing: function () {
+        //     var tabindex = 1;
+        //     $('div.paywall-content *').each(function () {
+        //         var $input = $(this);
+        //         if ($input.hasClass('mktoField')) {
+        //             $input.attr('tabindex', tabindex);
+        //             if (tabindex === 1) {
+        //                 $input.focus();
+        //             }
+        //             tabindex += 1;
+        //         }
+        //     });
+        //     var $submitButton = $('button.mktoButton');
+        //     if ($submitButton && $submitButton.length) {
+        //         $submitButton.attr('tabindex', tabindex);
+        //         tabindex += 1;
+        //     }
+        //     var $closeButton = $('button.close-button');
+        //     if ($closeButton && $closeButton.length) {
+        //         $closeButton.attr('tabindex', tabindex);
+        //         $closeButton.on('focusout', function () {
+        //             $('input.mktoField').first().focus();
+        //         });
+        //     }
+        //   }
  
