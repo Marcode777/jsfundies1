@@ -748,7 +748,7 @@ function coinDeskBitcoinPriceAPIGetter(){ // haha nice I am getting some of it!
   }).then(function(data){
     // var yay = data;
     console.log('data:', data);
-    var grouped = data[372] + data[373] + data[374] + data[375] + data[376] + data[377] + data[378];
+    var grouped = data[372] + data[373] + data[374] + data[375] + data[376] + data[377] + data[378] + data[379];
     console.log('grouped', grouped);
     var message =  "$" + grouped;
     console.log('message', message);
