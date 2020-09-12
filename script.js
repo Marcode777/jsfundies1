@@ -1055,24 +1055,24 @@ function htmlLogger() {
 // for Google Trends API usage, via NPM, from here https://www.npmjs.com/package/google-trends-api
 // found out from old notes in server.js file that this can only work on node, so it can only work on server.js file
 
-setTimeout(function(){
+// setTimeout(function(){
 
-  console.log('*****found out from old notes in server.js file that this can only work on node, so it can only work on server.js file');
-}, 5500);
+//   console.log('*****found out from old notes in server.js file that this can only work on node, so it can only work on server.js file');
+// }, 5500);
 
-const googleTrends = require('google-trends-api');
+// const googleTrends = require('google-trends-api');
 
 
-function getTheGoogleTrends() {
-  console.log('getTheGoogleTrends activated');
-  googleTrends.interestOverTime({keyword: 'Women\'s march'})
-    .then(function(results){
-      console.log('These results are awesome', results);
-  })
-  .catch(function(err){
-    console.error('Oh no there was an error', err);
-  });
-} 
+// function getTheGoogleTrends() {
+//   console.log('getTheGoogleTrends activated');
+//   googleTrends.interestOverTime({keyword: 'Women\'s march'})
+//     .then(function(results){
+//       console.log('These results are awesome', results);
+//   })
+//   .catch(function(err){
+//     console.error('Oh no there was an error', err);
+//   });
+// } 
 
 // sample code: finally figured out why the event was not being detected, need to use 'keydown' instead of 'keypress'
 function trigger(e) {
@@ -1207,14 +1207,6 @@ function getSortSectionInputValue() {
 
 
   
- 
-
-
-
-
-
-
-
 
 
  // look into Lodash for JavaScript, it is helpful for dealing with arrays and objects
@@ -1250,3 +1242,26 @@ function getSortSectionInputValue() {
         //     }
         //   }
  
+
+
+function nycTransformation() {
+  console.log('nycTransformation function triggered');
+  var theObject = {
+    first: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcrossfitttown.com%2Fwp-content%2Fuploads%2F2015%2F09%2FRajs-110509-0014spotkevincurv.jpg&f=1&nofb=1',
+    second: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.gettyimages.com%2Fphotos%2Faerial-view-of-statue-of-liberty-lower-manhattan-picture-id84183602&f=1&nofb=1',
+    third: 'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fil2.picdn.net%2Fshutterstock%2Fvideos%2F16032052%2Fthumb%2F1.jpg%3Fi10c%3Dimg.resize(height%3A160)&f=1&nofb=1'
+  }
+  setTimeout(function(){
+    document.getElementById('NYC-transformation-section-image').src = theObject.first;
+    setTimeout(function(){
+      document.getElementById('NYC-transformation-section-image').src = theObject.second;
+      setTimeout(function(){
+        document.getElementById('NYC-transformation-section-image').src = theObject.third;
+        nycTransformation();
+      }, 3600);
+    }, 3600);
+  }, 3600)
+ }
+
+
+ nycTransformation();
