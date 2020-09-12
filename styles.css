@@ -903,4 +903,18 @@ table, td {
 
 
 
+.NYC-transformation-section {
+  /*height: auto;*/
+  height: 36rem;
+  background-color: lightblue;
+}
 
+img#NYC-transformation-section-image {
+  /*height: auto;
+  width: auto;*/
+  height: 20rem;
+  width: 35rem;
+  display: block;
+  margin: 0 auto;
+
+}
