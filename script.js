@@ -1263,5 +1263,5 @@ function nycTransformation() {
   }, 3600)
  }
 
-
+ 
  nycTransformation();
