@@ -1269,4 +1269,12 @@ function nycTransformation() {
 
 
 
- 
+ function multipleTypesOfHeadersHighlighter() {
+  cosole.log('multipleTypesOfHeadersHighlighter triggered');
+  setTimeout(function(){
+    var targets = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    for (var i = 0; i < targets.length; i++) {
+      targets[i].style.backgroundColor = 'orange';
+    }
+  }, 3000);
+ }
