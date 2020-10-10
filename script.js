@@ -1278,3 +1278,38 @@ function nycTransformation() {
     }
   }, 3000);
  } 
+
+
+ // beginning of  incrementer section   (incrementing a value by 1)
+
+var value = 0;
+function adder() {
+   console.log('adder triggered');
+   value++;
+}
+
+function displayer() {
+    console.log('displayer triggered');
+    document.getElementsByClassName('StyledTime-sc-18zjaou')[0].innerHTML = value;
+}
+
+// incrementer section complete
+
+// beginning link filter example 
+
+function filter(x) {
+  console.log('filter triggered');
+  if(x.href.indexOf('.ca') > - 1) {
+    x.style.backgroundColor = 'blue';
+  }
+}
+
+function linkScanner() {
+  console.log('linkScanner triggered');
+  var linkz = document.querySelectorAll('a');
+  for(var i = 0; i < linkz.length; i++) {
+    filter(linkz[i])
+  }
+}
+
+// link filter example complete
