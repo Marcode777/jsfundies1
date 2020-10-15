@@ -1313,3 +1313,19 @@ function linkScanner() {
 }
 
 // link filter example complete
+
+
+// start of webcast-icon-filter-distributor
+function webcastIconFilter(x) {
+    if (x.href.indexOf('/content/dam') === -1) {
+        x.classList.add('webcast');
+    }
+}
+
+function webcastIconDistributor() {
+    var targets = document.querySelectorAll('div.document-list-item-title > a');
+    for (var i = 0; i < targets.length; i++) {
+        webcastIconFilter(targets[i]);
+    }
+}
+// finish of webcast-icon-filter-distributor
