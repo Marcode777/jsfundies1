@@ -1329,3 +1329,8 @@ function webcastIconDistributor() {
     }
 }
 // finish of webcast-icon-filter-distributor 
+
+
+
+
+// Idea for function for automated styling applier to whatever items/syntax entered 
