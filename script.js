@@ -1333,4 +1333,6 @@ function webcastIconDistributor() {
 
 
 
-// Idea for function for automated styling applier to whatever items/syntax entered    
+// Idea for function for automated styling applier to whatever items/syntax entered
+
+// Idea for on-click accordion expander    
