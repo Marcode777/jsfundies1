@@ -918,3 +918,9 @@ img#NYC-transformation-section-image {
   margin: 0 auto;
 
 }
+
+.style-automator-section {
+  width: 100%;
+  height: 600px;
+  background-color: gray;
+}

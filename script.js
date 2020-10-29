@@ -1335,4 +1335,15 @@ function webcastIconDistributor() {
 
 // Idea for function for automated styling applier to whatever items/syntax entered
 
+function testSubmitter() {
+  alert('testSubmitter triggered');
+  setTimeout(function(){
+    var enteredValue = document.getElementById('styleAutomatorInput').value;
+    document.getElementsByClassName('styledResult')[0].innerHTML = enteredValue;
+    setTimeout(function(){
+      document.getElementById('styleAutomatorInput').value = '';
+    }, 1000);
+  }, 2000);
+}
+
 // Idea for on-click accordion expander    
