@@ -1346,4 +1346,4 @@ function testSubmitter() {
   }, 2000);
 }
 
-// Idea for on-click accordion expander     
+// Idea for on-click accordion expander      
