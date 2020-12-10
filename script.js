@@ -323,9 +323,12 @@ function apiGetterIEX(){ // haha nice I am getting some of it!
     method: 'GET'
   }).then(function(data){
     var yay = data.symbol;
-    document.getElementById("actualTickerArea").innerHTML = yay;
-    // alert("the script has worked here");
-  })
+    //document.getElementById("actualTickerArea").innerHTML = yay;
+    //var target = document.getElementById("actualTickerArea"); test
+    //target.style.display = 'none';
+     //alert("the script has worked here");
+  });
+  console.log('****** apiGetter is not functioning for now');
 }
 
 // calculatorArea
@@ -1347,4 +1350,3 @@ function testSubmitter() {
 }
 
 // Idea for on-click accordion expander
-  
