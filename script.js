@@ -768,7 +768,7 @@ function coinDeskTimedTrigger() {
   setTimeout(function(){
     coinDeskTimedTrigger();
     attributeDistributor();
-  }, 120000);
+  }, 12000);
 }
 
 coinDeskTimedTrigger();
