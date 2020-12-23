@@ -1349,4 +1349,19 @@ function testSubmitter() {
   }, 2000);
 }
 
-// Idea for on-click accordion expander 
+// Idea for on-click accordion expander
+
+
+// button style looper
+// source of inspiration from stackoverflow https://stackoverflow.com/questions/38373291/using-javascript-how-to-display-element-one-by-one-on-click
+  var colors = ['gray', 'blue', 'orange'];
+  var x = '';
+  var i = 0;
+  document.getElementById('button-click-styler').onclick = function() {
+    alert('test Jeff');
+    if(i < colors.length) {
+      x = colors[i++];
+    }
+    var target = document.getElementById('style-looper-section');
+    target.style.backgroundColor = x;
+  };
