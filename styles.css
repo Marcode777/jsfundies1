@@ -924,3 +924,9 @@ img#NYC-transformation-section-image {
   height: 600px;
   background-color: gray;
 }
+
+#style-looper-section {
+  width: 100%;
+  height: 800px;
+  background-color: white;
+}
