@@ -1365,3 +1365,4 @@ function testSubmitter() {
     var target = document.getElementById('style-looper-section');
     target.style.backgroundColor = x;
   };
+  
