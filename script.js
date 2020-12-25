@@ -1365,4 +1365,24 @@ function testSubmitter() {
     var target = document.getElementById('style-looper-section');
     target.style.backgroundColor = x;
   };
+
+  // movie casts section
+  function detectMovieInput() {
+    console.log('detectMovieInput triggered');
+    var target = document.getElementById('movieInput');
+    console.log('the movie input value is', target.value);
+    if(target.value === 'Mad Men') {
+      document.getElementsByClassName('madmen')[0].style.display = 'block';
+    }
+    if(target.value === 'Suits') {
+      document.getElementsByClassName('suits')[0].style.display = 'block';
+    }
+  }
+
+  function clearMovieInput() {
+    var target = document.getElementById('movieInput');
+    target.value = '';
+    document.getElementsByClassName('madmen')[0].style.display = 'none';
+    document.getElementsByClassName('suits')[0].style.display = 'none';
+  }
   
