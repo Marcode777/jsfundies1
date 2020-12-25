@@ -925,8 +925,27 @@ img#NYC-transformation-section-image {
   background-color: gray;
 }
 
+.styledResult {
+  font-size: 100px;
+  font-family: 'Avanta Garde';
+}
+
 #style-looper-section {
   width: 100%;
   height: 800px;
   background-color: white;
+}
+
+.movie-casts-section {
+  width: 100%;
+  height: 800px;
+  background-color: blue;
+}
+
+.madmen {
+  display: none;
+}
+
+.suits {
+  display: none;
 }
