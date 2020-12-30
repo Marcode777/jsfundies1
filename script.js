@@ -1385,4 +1385,3 @@ function testSubmitter() {
     document.getElementsByClassName('madmen')[0].style.display = 'none';
     document.getElementsByClassName('suits')[0].style.display = 'none';
   }
- 
