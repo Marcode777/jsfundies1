@@ -1385,4 +1385,25 @@ function testSubmitter() {
     document.getElementsByClassName('madmen')[0].style.display = 'none';
     document.getElementsByClassName('suits')[0].style.display = 'none';
   }
+
+
+
+// regex function for searching string terms such as 'Chase'. Beginning:
+
+// function filter(x) {
+//   console.log('filter triggered');
+//   if(x.textContent.match(/Chase/g)) {
+//       console.log('verified are', x.textContent);
+//    }
+// }
+
+// function scanner() {
+//    console.log('scanner triggered');
+//    var targets = document.querySelectorAll('div.ghx-summary > span.ghx-inner');
+//    for(var i = 0; i < targets.length; i++) {
+//       filter(targets[i]); 
+//    }
+// }
+
+// regex function for searching string terms such as 'Chase'. Complete
  
