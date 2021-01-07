@@ -1392,8 +1392,12 @@ function testSubmitter() {
 
 // function filter(x) {
 //   console.log('filter triggered');
-//   if(x.textContent.match(/Chase/g)) {
+//   if(x.textContent.match(/Bill/g)) {
 //       console.log('verified are', x.textContent);
+//       x.style.backgroundColor = 'blue';
+//    }
+//   if(x.textContent.match(/Constitution/g)) {
+//       x.style.backgroundColor = 'hotpink';
 //    }
 // }
 
@@ -1406,4 +1410,4 @@ function testSubmitter() {
 // }
 
 // regex function for searching string terms such as 'Chase'. Complete
- 
+  
