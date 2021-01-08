@@ -1410,4 +1410,3 @@ function testSubmitter() {
 // }
 
 // regex function for searching string terms such as 'Chase'. Complete
-  
