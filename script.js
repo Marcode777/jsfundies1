@@ -1317,6 +1317,8 @@ function linkScanner() {
 
 // link filter example complete
 
+// FlexBox resource
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 // start of webcast-icon-filter-distributor
 function webcastIconFilter(x) {
@@ -1410,3 +1412,43 @@ function testSubmitter() {
 // }
 
 // regex function for searching string terms such as 'Chase'. Complete
+
+
+
+
+
+
+
+
+// Sorting strings is different from sorting integers, e.g. in an array of 'one', 'five hundred', 'eight', 1, 500, 8
+// it will only be sorted alphabetically and then the first number, so it would be sorted as only this 1, 500, 8, 'eight', 'five hundred', 'one'
+
+var array = ['one', 'five hundred', 'eight', 1, 500, 8];
+var sortedArray = array.sort();
+// results in 1, 500, 8, 'eight', 'five hundred', 'one'
+
+// to sort integers properly, another method must be inserted in addition to the sort
+var numberSort = array.sort(function(a, b){
+  return a - b;
+})
+// results in 1, 8, 500
+
+
+// making local variable from function available globally
+var number = 8;
+
+function transformer(number) {
+  console.log('number is', number);
+  var result = number * 6;
+  console.log('result is', result);
+  window.result;
+}
+
+function secondaryTransformer(result) {
+  console.log('secondaryTransformer triggered');
+  var finalResult = result * 8;
+  return finalResult;
+}
+
+// transformer(number);
+// secondaryTransformer(result);
