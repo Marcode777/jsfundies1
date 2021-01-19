@@ -1452,3 +1452,9 @@ function secondaryTransformer(result) {
 
 // transformer(number);
 // secondaryTransformer(result); 
+
+
+// family members section
+function initiate() {
+  alert('initiate triggered');
+}
