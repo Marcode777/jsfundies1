@@ -949,3 +949,9 @@ img#NYC-transformation-section-image {
 .suits {
   display: none;
 }
+
+.family-members-section {
+  height: 700px;
+  width: 100%;
+  background-color: yellow;
+}
