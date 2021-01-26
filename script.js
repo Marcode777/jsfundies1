@@ -1454,9 +1454,89 @@ function secondaryTransformer(result) {
 // secondaryTransformer(result); 
 
 
-// family members section
+// members section
 function initiate() {
-  alert('initiate triggered');
+  console.log('initiate triggered');
+  var Mark = {
+    firstName: 'Mark',
+    familyMember: '1st born'
+  }
+  var Grandpa = {
+    firstName: 'Abraham',
+    familyMember: 'Grandfather'
+  }
+  var Grandma = {
+    firstName: 'Evelina',
+    familyMember: 'Grandmother',
+    age: '81'
+  }
+  var Mom = {
+    firstName: 'Susan',
+    familyMember: 'Mother'
+  }
+  var Dad = {
+    firstName: 'Cesar',
+    familyMember: 'father'
+  }
+  var Carlo = {
+    firstName: 'Carlo',
+    familyMember: '2nd born brother'
+  }
+  var Angelo = {
+    firstName: 'Angelo',
+    familyMember: '3rd born brother'
+  }
+  var start = prompt('What is your first name?');
+  if(start === 'Mark') {
+    alert('your name is' +  Mark.firstName + 'and you are' + Mark.familyMember);
+    var firstData = Mark.firstName;
+    var secondData = Mark.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  } 
+  if(start === 'Grandpa') {
+    alert('your name is' +  Grandpa.firstName + '' + Grandpa.familyMember);
+    var firstData = Grandpa.firstName;
+    var secondData = Grandpa.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  }
+  if(start === 'Grandma') {
+    alert('your name is' +  Grandma.firstName + '' + Grandma.familyMember);
+    var firstData = Grandma.firstName;
+    var secondData = Grandma.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  }
+  if(start === 'Mom') {
+    alert('your name is' +  Mom.firstName + '' + Mom.familyMember);
+    var firstData = Mom.firstName;
+    var secondData = Mom.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  }
+  if(start === 'Cesar') {
+    alert('your name is' +  Cesar.firstName + '' + Cesar.familyMember);
+    var firstData = Cesar.firstName;
+    var secondData = Cesar.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  }
+  if(start === 'Carlo') {
+    alert('your name is' +  Carlo.firstName + '' + Carlo.familyMember);
+    var firstData = Carlo.firstName;
+    var secondData = Carlo.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  }
+  if(start === 'Angelo') {
+    alert('your name is' +  Angelo.firstName + '' + Angelo.familyMember);
+    var firstData = Angelo.firstName;
+    var secondData = Angelo.familyMember;
+    var totalData = firstData + ' ' + secondData;
+    document.getElementsByClassName('members-display')[0].innerHTML = totalData;
+  } else {
+    return;
+  }
 }
 
- 
