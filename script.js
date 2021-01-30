@@ -1459,84 +1459,118 @@ function initiate() {
   console.log('initiate triggered');
   var Mark = {
     firstName: 'Mark',
-    familyMember: '1st born'
+    familyMember: '1st born',
+    age: '37',
+    nickname: 'Marky-Mark'
   }
   var Grandpa = {
     firstName: 'Abraham',
-    familyMember: 'Grandfather'
+    familyMember: 'Grandfather',
+    age: 'passed to heaven',
+    nickname: 'Grandpups'
   }
   var Grandma = {
     firstName: 'Evelina',
     familyMember: 'Grandmother',
-    age: '81'
+    age: '81',
+    nickname: 'Grand Mama'
   }
-  var Mom = {
+  var Susan = {
     firstName: 'Susan',
-    familyMember: 'Mother'
+    familyMember: 'Mother',
+    age: '61',
+    nickname: 'Mommumz'
   }
-  var Dad = {
+  var Cesar = {
     firstName: 'Cesar',
-    familyMember: 'father'
+    familyMember: 'father',
+    age: '67',
+    nickname: 'The Mexican'
   }
   var Carlo = {
     firstName: 'Carlo',
-    familyMember: '2nd born brother'
+    familyMember: '2nd born brother',
+    age: '31',
+    nickname: 'Shaq-Pack'
   }
   var Angelo = {
     firstName: 'Angelo',
-    familyMember: '3rd born brother'
+    familyMember: '3rd born brother',
+    age: '30',
+    nickname: 'Nicholas Cage'
   }
   var start = prompt('What is your first name?');
   if(start === 'Mark') {
-    alert('your name is' +  Mark.firstName + 'and you are' + Mark.familyMember);
+    
     var firstData = Mark.firstName;
     var secondData = Mark.familyMember;
-    var totalData = firstData + ' ' + secondData;
+    var thirdData = Mark.age;
+    var latestData = Mark.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   } 
   if(start === 'Grandpa') {
-    alert('your name is' +  Grandpa.firstName + '' + Grandpa.familyMember);
+   
     var firstData = Grandpa.firstName;
     var secondData = Grandpa.familyMember;
-    var totalData = firstData + ' ' + secondData;
+    var thirdData = Grandpa.age;
+    var latestData = Grandpa.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   }
   if(start === 'Grandma') {
-    alert('your name is' +  Grandma.firstName + '' + Grandma.familyMember);
+    
     var firstData = Grandma.firstName;
     var secondData = Grandma.familyMember;
-    var totalData = firstData + ' ' + secondData;
+    var thirdData = Grandma.age;
+    var latestData = Grandma.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   }
-  if(start === 'Mom') {
-    alert('your name is' +  Mom.firstName + '' + Mom.familyMember);
-    var firstData = Mom.firstName;
-    var secondData = Mom.familyMember;
-    var totalData = firstData + ' ' + secondData;
+  if(start === 'Susan') {
+    
+    var firstData = Susan.firstName;
+    var secondData = Susan.familyMember;
+    var thirdData = Susan.age;
+    var latestData = Susan.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   }
   if(start === 'Cesar') {
-    alert('your name is' +  Cesar.firstName + '' + Cesar.familyMember);
+    
     var firstData = Cesar.firstName;
     var secondData = Cesar.familyMember;
-    var totalData = firstData + ' ' + secondData;
+    var thirdData = Cesar.age;
+    var latestData = Cesar.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   }
   if(start === 'Carlo') {
-    alert('your name is' +  Carlo.firstName + '' + Carlo.familyMember);
+   
     var firstData = Carlo.firstName;
     var secondData = Carlo.familyMember;
-    var totalData = firstData + ' ' + secondData;
+    var thirdData = Carlo.age;
+    var latestData = Carlo.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   }
   if(start === 'Angelo') {
-    alert('your name is' +  Angelo.firstName + '' + Angelo.familyMember);
+    
     var firstData = Angelo.firstName;
     var secondData = Angelo.familyMember;
-    var totalData = firstData + ' ' + secondData;
+    var thirdData = Angelo.age;
+    var latestData = Angelo.nickname;
+    var totalData = 'Name:' + ' ' + firstData + ' ' + 'member:' + ' ' + secondData + ' ' + 'age:' + ' ' + thirdData + ' ' + 'nickname:' + ' ' + latestData;
+    alert('you are' + ' ' + totalData);
     document.getElementsByClassName('members-display')[0].innerHTML = totalData;
   } else {
     return;
   }
 }
- 
+
