@@ -1575,4 +1575,15 @@ function initiate() {
 }
 
 
+// parameter samples
+var x = 3;
+var y = 7;
+function transformer(x, y) {
+  // variables outside can be defined 
+  // variables within scope can be redefined and result can change
+  var result = x * y;
+  console.log('result is', result);
+}
+
+
 
