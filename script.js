@@ -1588,4 +1588,21 @@ function transformer(x, y) {
 
 
 
- 
+ // incrementor section
+//  var results = [];
+
+// function calculatez(e) {
+//      console.log('calculatez triggered');
+//      if(e.keyCode === 38) {
+//           results.push(1);
+//      }
+//      if(e.keyCode === 40) {
+//           results.pop(1);
+//      }
+//      setTimeout(function(){
+//           console.log('results are', results);
+//      }, 1000);
+// }
+
+// document.addEventListener('keydown', calculatez);
+// incrementor section complete
