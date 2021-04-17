@@ -1606,3 +1606,28 @@ function transformer(x, y) {
 
 // document.addEventListener('keydown', calculatez);
 // incrementor section complete
+
+
+
+
+
+
+
+
+
+
+
+
+// keylogger sample
+// array keyArray = [];
+
+// function logger(x) {
+//   console.log('logger triggered');
+//   console.log('key pressed was', x);
+//   keyArray.push(x.key);
+// }
+
+// function getter() {
+//   console.log('getter triggered');
+//   console.log('keyArray is', keyArray);
+// }
