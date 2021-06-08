@@ -1635,4 +1635,12 @@ function transformer(x, y) {
 
 
 
- 
+ function autoSizerTrig() {
+  console.log('autoSizerTrig triggered');
+  var targVal = document.getElementById('autosizer-input').value;
+  console.log('targVal is', targVal);
+  var targDestination = document.getElementsByClassName('autosizer-display')[0];
+  targDestination.innerHTML = targVal;
+ }
+
+ document.addEventListener('keydown', autoSizerTrig)
