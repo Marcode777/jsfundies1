@@ -1643,4 +1643,4 @@ function transformer(x, y) {
   targDestination.innerHTML = targVal;
  }
 
- document.addEventListener('keydown', autoSizerTrig)
+ document.addEventListener('keydown', autoSizerTrig) 
