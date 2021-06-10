@@ -1641,6 +1641,7 @@ function transformer(x, y) {
   console.log('targVal is', targVal);
   var targDestination = document.getElementsByClassName('autosizer-display')[0];
   targDestination.innerHTML = targVal;
+  console.log('letter length from targVal is', targVal.length);
  }
 
  document.addEventListener('keydown', autoSizerTrig) 
