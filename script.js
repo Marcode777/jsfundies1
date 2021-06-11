@@ -1642,6 +1642,16 @@ function transformer(x, y) {
   var targDestination = document.getElementsByClassName('autosizer-display')[0];
   targDestination.innerHTML = targVal;
   console.log('letter length from targVal is', targVal.length);
+  if (targVal.length == 8) {
+    console.log('******** 8 reached');
+    targDestination.style.border = '5px solid yellow';
+    targDestination.style.fontSize = '5rem';
+  }
+  if (targVal.length == 10) {
+    console.log('********** 10 reached');
+    targDestination.style.border = '5px solid orange';
+    targDestination.style.fontSize = '8rem';
+  }
  }
 
  document.addEventListener('keydown', autoSizerTrig) 
