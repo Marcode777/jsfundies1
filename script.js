@@ -1654,4 +1654,5 @@ function transformer(x, y) {
   }
  }
 
- document.addEventListener('keydown', autoSizerTrig) 
+ document.addEventListener('keydown', autoSizerTrig)
+  
