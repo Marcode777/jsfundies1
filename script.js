@@ -1656,4 +1656,4 @@ function transformer(x, y) {
 
  document.addEventListener('keydown', autoSizerTrig)
 
-// random note: .append() and .html() seem to be the same 
+// random note: .append() and .html() seem to be the same
