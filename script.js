@@ -1660,3 +1660,5 @@ function transformer(x, y) {
 
 
 // look to create a webform 
+
+// look to create dynamic accessible text (where variables + their sum indicate text)
