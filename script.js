@@ -1663,3 +1663,33 @@ function transformer(x, y) {
 
 // look to create dynamic accessible text (where variables + their sum indicate text) 
  
+
+
+ // More Complex Masterpiece
+ function sniper(x) {
+    console.log('sniper triggered');
+    console.log('textContent from sniper is', x.textContent);
+    if(x.textContent.match(/Sustainable/g)) {
+       x.style.backgroundColor = 'orange';
+       console.log('parentElement is', x.parentElement);
+       setTimeout(function() {
+          console.log('**sniper sTo triggered');
+          x.innerHTML = 'TRANSFORMED!'
+          console.log('*** the closest element is', x.closest('a'));
+          var nextTarget = x.closest('a');
+          nextTarget.setAttribute('href', 'https://www.google.com');
+       }, 1000);
+    }
+}
+
+function sweeper() {
+    console.log('sweeper triggered');
+    var targets = document.querySelectorAll('div.item > a > h2 > span.util-text-trimmer-trimmed');
+    setTimeout(function() {
+        console.log('sTo triggered');
+        for(var i = 0; i < targets.length; i++) {
+             sniper(targets[i])
+        }
+    }, 2000);
+}
+ // More Complex Masterpiece Complete
