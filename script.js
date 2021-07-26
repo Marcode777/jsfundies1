@@ -1694,3 +1694,9 @@ function sweeper() {
 }
  // More Complex Masterpiece Complete
  
+
+
+ // Simple JavaScript Encryption on Console
+ //var testString = 'kolokoy';
+ //var encodedTestString = window.btoa(testString); 
+ //var decodedTestString = window.atob(testString);
