@@ -1700,4 +1700,16 @@ function sweeper() {
  //var testString = 'kolokoy';
  //var encodedTestString = window.btoa(testString); 
  //var decodedTestString = window.atob(testString);
-  
+
+
+  // reusable mixin example
+  // .content-p(@font-weight, @line-height, @font-size) {
+  //   font-family: Amplitude;
+  //   font-weight: @font-weight;
+  //   font-size: @font-size;
+  //   line-height: @line-height;
+  //   margin-left: 5.5rem;
+  // }
+
+  // to use:
+  // .content-p(500, 5rem, 3rem);
