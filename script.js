@@ -1715,4 +1715,11 @@ function sweeper() {
   // .content-p(500, 5rem, 3rem);
 
 
- 
+ // secure code practices
+ //   direct insertion of data that comes from user input should either be avoided
+ //   or at least sanitized
+ //   ways of sanitizing 
+ //   1) making data, variables which cannot be changed later on by the user
+ //   2) using textContent property instead because this converts tags tp plain text instead  of innerHTML because innerHTML can bring in new HTML from user
+ //   3) basically avoid anything that can be actively manipulated and inserted by the user without sanitization
+//    In other words, inputs, should be "JavaScript" prevented and / or validated
