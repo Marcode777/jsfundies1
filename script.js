@@ -1723,4 +1723,3 @@ function sweeper() {
  //   2) using textContent property instead because this converts tags tp plain text instead  of innerHTML because innerHTML can bring in new HTML from user
  //   3) basically avoid anything that can be actively manipulated and inserted by the user without sanitization
 //    In other words, inputs, should be "JavaScript" prevented and / or validated
-   
