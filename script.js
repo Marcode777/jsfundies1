@@ -1723,3 +1723,55 @@ function sweeper() {
  //   2) using textContent property instead because this converts tags tp plain text instead  of innerHTML because innerHTML can bring in new HTML from user
  //   3) basically avoid anything that can be actively manipulated and inserted by the user without sanitization
 //    In other words, inputs, should be "JavaScript" prevented and / or validated
+
+
+// test logic for formatting ISO Dates into Human Readable Date Format
+    var list = [];
+  function converter(y) {
+      console.log('converter triggered');
+      console.log('the list is', list);
+      var results = y.textContent;
+      var formattedResult = results.substring(0,10);
+      list.push(formattedResult);
+  }
+
+  function updateDOM(y, i) {
+      console.log('update DOM triggered');
+      var newestTargs = document.querySelectorAll('.testDate > span.jpmc-util-text-trimmer-trimmed');
+      newestTargs.forEach(function(y, i){
+          console.log('*y is', y);
+          console.log('** i is', i);
+          y.innerHTML = list[i];
+      });
+  }
+
+
+  function dateElementScanner() {
+      console.log('dateElementScanner triggered');
+      var targets = document.querySelectorAll('.testDate > span.jpmc-util-text-trimmer-trimmed');
+      for(var i = 0; i < targets.length; i++) {
+          converter(targets[i]);
+      }
+    updateDOM();
+  }
+  setTimeout(function(){
+        console.log('***sTo triggered');
+        dateElementScanner();
+    }, 2000);
+
+
+
+
+
+// example callback
+
+function doWork(subject, callback) {
+  alert(`starting ${subject} work`);
+  alert('also be aware that the first alert does not use quotes but uses tick marks instead');
+}
+
+function announceComplete() {
+  alert('work complete');
+}
+
+doWork('coding', announceComplete);
