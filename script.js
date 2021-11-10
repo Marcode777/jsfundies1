@@ -1774,4 +1774,4 @@ function announceComplete() {
   alert('work complete');
 }
 
-doWork('coding', announceComplete);
+doWork('coding', announceComplete); 
