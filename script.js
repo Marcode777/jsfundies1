@@ -1775,3 +1775,4 @@ function announceComplete() {
 }
 
 doWork('coding', announceComplete); 
+ 
