@@ -1778,15 +1778,33 @@ doWork('coding', announceComplete);
  
 
  function fctabuttonTrigger() {
-  console.log('*fctabuttonTrigger triggered');
-  var target = document.getElementsByClassName('floating-cta-button')[0];
-  var bodyTarget = document.getElementsByClassName('floating-cta')[0];
-  var buttonTarget = document.getElementsByClassName('fctabutton')[0];
-  var openOptionsTarget = document.getElementsByClassName('new-open-options')[0];
-  target.classList.toggle('open');
-  bodyTarget.style.transition = '1s';
-  openOptionsTarget.style.transition = '1s';
-  bodyTarget.classList.toggle('open');
-  buttonTarget.classList.toggle('open');
-  openOptionsTarget.classList.toggle('open');
+    console.log('*fctabuttonTrigger triggered');
+    var target = document.getElementsByClassName('floating-cta-button')[0];
+    var bodyTarget = document.getElementsByClassName('floating-cta')[0];
+    var buttonTarget = document.getElementsByClassName('fctabutton')[0];
+    var openOptionsTarget = document.getElementsByClassName('new-open-options')[0];
+    target.classList.toggle('open');
+    bodyTarget.style.transition = '1s';
+    openOptionsTarget.style.transition = '1s';
+    bodyTarget.classList.toggle('open');
+    buttonTarget.classList.toggle('open');
+    openOptionsTarget.classList.toggle('open');
  }
+
+
+
+
+
+
+// simple sample iterator distributor
+ var arrayContainer = ['onez', 'twoz', 'threez', 'fourz,' 'fivez'];
+
+function simpleSampleIteratorDistributor() {
+  console.log('simpleSampleIteratorDistributor triggered');
+  setTimeout(function(){
+      var targets = document.querySelectorAll('a.jq-link');
+      for(var i = 0; i < targets.length; i++) {
+        targets[i].setAttribute('alt', arrayContainer[i])
+      }
+  }, 1800);
+} 
