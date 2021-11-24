@@ -1809,24 +1809,3 @@ function simpleSampleIteratorDistributor() {
   }, 1800);
 } 
 
-
-// GOOGLE API REPLICA
-setTimeout(function(){
-     console.log('*****replica sTo triggered');
-     var axios = require("axios").default;
-
-var options = {
-  method: 'GET',
-  url: 'https://google-trends.p.rapidapi.com/api/v1/DailyTrendingSearches/Ref12345/US/15/20200923',
-  headers: {
-    'x-rapidapi-host': 'google-trends.p.rapidapi.com',
-    'x-rapidapi-key': 'SIGN-UP-FOR-KEY'
-  }
-};
-
-axios.request(options).then(function (response) {
-  console.log(response.data);
-}).catch(function (error) {
-  console.error(error);
-});
-}, 5000);
