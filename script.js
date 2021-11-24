@@ -115,12 +115,19 @@ function newStartFunction(){
   }
 }
 
+var root = "&apikey";
+var Api = "=";
+var Key = "43e240f9";
+
+var rootApiKey = root + Api + Key;
+console.log('from script.js rootApiKey is:', rootApiKey );
+
 function apiGetter(){ // haha nice I am getting some of it!
   var root = "http://www.omdbapi.com/?t=";
   var theValue = document.getElementById("testInput").value; // line of test code here
   // var root = "http://www.omdbapi.com/?t=vanilla+sky&apikey=43e240f9";
   // var root = "https://jsonplaceholder.typicode.com";
-  var rootApiKey = "&apikey=43e240f9";
+  //var rootApiKey = "&apikey=43e240f9";
   $.ajax({
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
@@ -1808,4 +1815,67 @@ function simpleSampleIteratorDistributor() {
       }
   }, 1800);
 } 
+
+
+
+
+
+
+
+// NEW D3.JS Section JavaScript Logic  (d3.js logic is being imported from minified cdn in index.html script)
+function d3Trigger() {
+  console.log('d3Trigger started');
+  setTimeout(function(){
+    console.log('d3 sTo triggered');
+    // setting dimensions of the pie chart
+    var height = 450;
+    var width = 450;
+    var margin = 45;
+    // radius is half the height or half the width of the smallest one
+    var radius = Math.min(width,height) / 2 - margin
+    // append svg object to my div with id #myDataViz
+    var svg = d3.select('#myDataViz')
+      .append('svg')
+        .attr('width', width)
+          .attr('height', height)
+      .append('g')
+        .attr('transform', 'translate(' + width / 2 + ', ' + height / 2 +')');
+    // create sample data
+    var data = {a: 9, b: 8, c: 5, d: 4, e: 1};
+    // set color scale
+    var color = d3.scaleOrdinal()
+      .domain(data)
+      .range(['#98abc5', '#8a89a6', '#7b6888', '#6b486b', '#a05d56']);
+    // compute position of each group in pie
+    var pie = d3.pie()
+      .value(function(d) {return d.value;});
+    var data_ready = pie(d3.entries(data))
+    // build pie chart, basically each part of pie is a part built using the arc function
+    console.log('testLog: svg is', svg);
+    svg
+      .selectAll('whatever')
+      .data(data_ready)
+      .enter()
+      .append('path')
+      .attr('d',d3.arc()
+        .innerRadius(0)
+        .outerRadius(radius)
+      )
+      .attr('fill', function(d){return(color(d.data.key))})
+      .attr('stroke', 'black')
+      .style('stroke-width', '2px')
+      .style('opacity', 0.7)
+  }, 999);
+}
+
+
+
+
+
+
+
+
+
+
+
 

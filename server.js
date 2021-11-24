@@ -4,6 +4,8 @@ connect().use(serveStatic(__dirname)).listen(8080, function(){
   console.log("server is running on port 8080");
 });
 
+console.log('apiKey from node for omdbapi is', process.env.API_KEY);
+
 
 
 // using Google Trends api, source can be found here: https://www.npmjs.com/package/google-trends-api#installation
