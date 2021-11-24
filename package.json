@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "require": "^2.4.20",
+    "requirejs": "^2.3.6"
+  }
 }
