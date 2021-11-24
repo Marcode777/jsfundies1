@@ -1797,7 +1797,7 @@ doWork('coding', announceComplete);
 
 
 // simple sample iterator distributor
- var arrayContainer = ['onez', 'twoz', 'threez', 'fourz,' 'fivez'];
+ var arrayContainer = ['onez', 'twoz', 'threez', 'fourz', 'fivez'];
 
 function simpleSampleIteratorDistributor() {
   console.log('simpleSampleIteratorDistributor triggered');
