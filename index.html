@@ -10,6 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script data-main="/script.js" src="/require.js"></script> 
+  <script type="module" src="./keys.js"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body onload="loadFunc(), onloadFunc()">
@@ -41,6 +42,7 @@
       <a href="#newStartDiv">newStartDiv</a>
       <a href="#characterDiv">characterDiv</a>
       <a href="#kolokoy">kolokoy</a>
+      <a href="#myDataViz">NEW D3.JS SECTION</a>
     </div>
     <img class="NYC" src="./assets/NYCHRO_2000x1125_MikeChavarrionUnsplash.jpg" style="height:100%; width:100%"/>
   </div>
@@ -592,6 +594,16 @@
     </div>
     <div class="new-open-options">
       <h3>new open options</h3>
+    </div>
+  </div>
+
+  <div class="new-D3-JS-section">
+    <div class="jumbotron">
+      <h1>NEW D3 JS SECTION</h1>
+    </div>
+    <button onclick="d3Trigger()">pressToTriggerD3.JS</button>
+    <div id="myDataViz">
+      
     </div>
   </div>
 
