@@ -127,7 +127,6 @@ function apiGetter(){ // haha nice I am getting some of it!
   var theValue = document.getElementById("testInput").value; // line of test code here
   // var root = "http://www.omdbapi.com/?t=vanilla+sky&apikey=43e240f9";
   // var root = "https://jsonplaceholder.typicode.com";
-  //var rootApiKey = "&apikey=43e240f9";
   $.ajax({
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=vanilla+sky",
     // url: "https://www.omdbapi.com/?&apikey=43e240f9&t=blade+runner+2049",
