@@ -1840,7 +1840,7 @@ function d3Trigger() {
       .append('g')
         .attr('transform', 'translate(' + width / 2 + ', ' + height / 2 +')');
     // create sample data
-    var data = {a: 9, b: 8, c: 5, d: 4, e: 1};
+    var data = {a: 50, b: 30, c: 20};
     // set color scale
     var color = d3.scaleOrdinal()
       .domain(data)

@@ -13,10 +13,14 @@
 .menu {
   height: 50px;
   width: 100%;
-  background-color: lightblue;
-  position: fixed;
+  color: white;
+  /*background-color: lightblue;*/
+  /*position: fixed;*/
   z-index: 8888;
-  top: 0.5%;
+  /*top: 0.5%;*/
+}
+.menu a {
+  color: white;
 }
 
 .NYC {
@@ -1004,7 +1008,7 @@ img#NYC-transformation-section-image {
 
    .floating-cta.open {
       height: 200px;
-      width: 500px;
+      width: 800px;
       background-color: darkblue;
       top: 50%;
       right: 0%;
