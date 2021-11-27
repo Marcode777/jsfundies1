@@ -1877,4 +1877,3 @@ function d3Trigger() {
 
 
 
-
