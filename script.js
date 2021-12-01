@@ -1869,10 +1869,35 @@ function d3Trigger() {
 
 
 
+// counter examples 11-30-21
+var counter = 0;
+function filter(x) {
+  console.log('filter triggered');
+  var attr = x.getAttribute('src');
+  if(attr.match(/jpg/g)) {
+    console.log('*** match found', counter++)
+  }
+}
 
+function scanner() {
+  console.log('scanner triggered');
+  setTimeout(function(){
+    console.log('sTo triggered');
+    var targets = document.querySelectorAll('img');
+    for(var i = 0; i < targets.length; i++) {
+      console.log('the attributes of the targers are', targets[i].getAttribute('src'));
+      filter(targets[i]);
+    }
+  }, 1800);
+}
 
-
-
+// another simple sample counter 11-30-21
+var count = 0;
+function counter(){
+  console.log('counter triggered');
+  console.log('count is', count++);
+}
+ 
 
 
 
