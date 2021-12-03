@@ -1897,7 +1897,7 @@ function counter(){
   console.log('counter triggered');
   console.log('count is', count++);
 }
-
+ 
 
 
 
