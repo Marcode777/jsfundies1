@@ -1,11 +1,20 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
+const dotenv = require('dotenv'); // new
+dotenv.config({ path: './config.env' }); // new
 connect().use(serveStatic(__dirname)).listen(8080, function(){
   console.log("server is running on port 8080");
 });
 
-console.log('apiKey from node for omdbapi is', process.env.API_KEY);
 
+// process.env variables have now been defined more properly using dotenv in the config.env file
+
+// to create env variables via GIT:
+// export testVariable="myTestVariale"
+// to check what the variable is:
+// $testVariable
+// to delete env variable via GIT:
+// unset testVariable
 
 
 // using Google Trends api, source can be found here: https://www.npmjs.com/package/google-trends-api#installation
