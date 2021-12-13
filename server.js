@@ -1,7 +1,7 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
 const dotenv = require('dotenv'); // new
-dotenv.config({ path: './config.env' }); // new
+dotenv.config({ path: './config.env' }); // new environmental variables are stored here in the config.env file as defined in the path
 connect().use(serveStatic(__dirname)).listen(8080, function(){
   console.log("server is running on port 8080");
 });
