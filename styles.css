@@ -983,7 +983,7 @@ img#NYC-transformation-section-image {
 
    .floating-cta {
      height: 200px;
-     width: 200px;
+     width: 100px;
      background-color: darkblue;
      top: 50%;
      right: 0%;
@@ -991,6 +991,9 @@ img#NYC-transformation-section-image {
      transition: '2s';
    }
 
+   .floating-cta-button {
+     margin-top: 2rem;
+   }
 
    .floating-cta-button::after {
       content: '<';
@@ -1031,7 +1034,14 @@ img#NYC-transformation-section-image {
 
    .floating-cta-title {
       color: lightblue;
+      margin-top: 8rem;
+      transform: rotate(-90deg);
    }
+
+   .floating-cta.open .floating-cta-title {
+      display: none;
+   }
+
 
 
 
@@ -1064,4 +1074,18 @@ img#NYC-transformation-section-image {
       width: 200px;
       background-color: yellow;
    }
+
+   /*.block-one { //just some ideas for keyframes animation taken from https://www.freecodecamp.org/news/css-transition-examples/
+     animation: moveToRight 2s ease-in-out;
+     animation-delay: 1000ms;
+   }
+
+   @keyframes moveToRight {
+    from {
+      transform: translateX(0px);
+    }
+    to {
+      transform: translate(600px);
+    }
+   }*/
 
