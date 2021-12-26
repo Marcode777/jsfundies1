@@ -1902,6 +1902,24 @@ function counter(){
 
 
 
+function configurationTrigger() {
+  console.log('configuratonTrigger triggered');
+  var target = document.getElementsByClassName('block-one')[0];
+  setTimeout(function(){
+    target.style.float = 'right';
+  },1000);
+}
 
-
+function configurationInputTrigger() {
+  console.log('configurationInputTrigger');
+  var target = document.getElementById('configurationInput');
+  var targetTwo = document.getElementsByClassName('block-one')[0];
+  setTimeout(function() {
+    console.log('target.value is', target.value);
+    if(target.value == 'right') {
+      targetTwo.style.float = 'right';
+    }
+    target.value = '';
+  }, 1000);
+}
 
