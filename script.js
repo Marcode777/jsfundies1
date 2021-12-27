@@ -1923,3 +1923,6 @@ function configurationInputTrigger() {
   }, 1000);
 }
 
+
+
+ 
