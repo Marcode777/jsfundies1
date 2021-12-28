@@ -1900,24 +1900,23 @@ function counter(){
 
 
 
-
-
-function configurationTrigger() {
-  console.log('configuratonTrigger triggered');
-  var target = document.getElementsByClassName('block-one')[0];
-  setTimeout(function(){
-    target.style.float = 'right';
-  },1000);
-}
-
 function configurationInputTrigger() {
   console.log('configurationInputTrigger');
   var target = document.getElementById('configurationInput');
   var targetTwo = document.getElementsByClassName('block-one')[0];
+  targetTwo.style.transition = '3s';
   setTimeout(function() {
     console.log('target.value is', target.value);
     if(target.value == 'right') {
-      targetTwo.style.float = 'right';
+      targetTwo.style.marginLeft = '80%';
+    }
+    if(target.value == 'middle') {
+      targetTwo.style.marginRight = '50%';
+      targetTwo.style.marginLeft = '50%';
+    }
+    if(target.value == 'left') {
+      targetTwo.style.marginLeft = '0%';
+      targetTwo.style.marginRigt = '50%';
     }
     target.value = '';
   }, 1000);
