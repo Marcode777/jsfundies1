@@ -34,3 +34,5 @@ connect().use(serveStatic(__dirname)).listen(8080, function(){
 //   console.log('these results are awesome', kolokoy);
 // })
  
+
+ //console.log('from server.js, TEST is', process.env.TEST);
