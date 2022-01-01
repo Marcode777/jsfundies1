@@ -1925,4 +1925,18 @@ function configurationInputTrigger() {
 
 
 
- 
+ function happyNewYear() {
+  console.log('happyNewYear triggered');
+  setTimeout(function(){
+    var firstTarget = document.getElementsByClassName('first-image-gif')[0];
+    var secondTarget = document.getElementsByClassName('second-image-gif')[0];
+    firstTarget.style.display = 'none';
+    secondTarget.style.display = 'block';
+    setTimeout(function(){
+      secondTarget.style.display = 'none';
+      firstTarget.style.display = 'block';
+      happyNewYear();
+    }, 5000);
+  }, 10000)
+ }
+ happyNewYear();
