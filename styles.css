@@ -1089,3 +1089,26 @@ img#NYC-transformation-section-image {
     }
    }*/
 
+
+
+
+
+
+
+.happy-new-year-section {
+  height: 800px;
+  width: 100%;
+  background-color: yellow;
+}
+.happy-new-year-section .jumbotron {
+  background-color: gold;
+}
+
+.first-image-gif {
+  margin-left: 30%;
+}
+
+.second-image-gif {
+  display: none;
+  margin-left:30%;
+}
