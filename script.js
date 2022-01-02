@@ -1940,3 +1940,6 @@ function configurationInputTrigger() {
   }, 10000)
  }
  happyNewYear();
+
+
+ 
