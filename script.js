@@ -1942,4 +1942,10 @@ function configurationInputTrigger() {
  happyNewYear();
 
 
- 
+// example trigger when page reaches this point on scroll; substitute id with whatever element id wanted 
+$(document).on('scroll', function() {
+    if( $(this).scrollTop() >= $('#').position().top ){
+        // alert('page position reached!!!!!')
+        console.log('page position reached!!!!!');
+    }
+});
