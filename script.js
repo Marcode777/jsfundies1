@@ -1949,3 +1949,10 @@ $(document).on('scroll', function() {
         console.log('page position reached!!!!!');
     }
 });
+
+
+
+
+
+
+// try to create looping video hero banner
