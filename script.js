@@ -1952,8 +1952,40 @@ $(document).on('scroll', function() {
 
 
 
-
-
+// Stock Market data using GET request via API
+  // older version attempt
+// var theUrl = 'https://api.stockdata.org/v1/data/quote?symbols=AAPL,TSLA,MSFT&api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
+// function getAsyncHttpRequest(theUrl, callback) {
+//   var xmlHttp = new XMLHttpRequest();
+//   xmlHttp.onreadystatechange = function() {
+//     if(xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+//       callback(xmlHttp.responseText);
+//     }
+//     xmlHttp.open('GET', theUrl, true) // true for asynchronous
+//     xmlHttp.send(null);
+//   }
+// }
+  // newer version attempt using fetch
+function getRequestForStockPricesViaAPI() {
+  console.log('getRequestForStockPricesViaAPI triggered');
+  //var url = 'https://api.stockdata.org/v1/data/quote?symbols=DJIA&api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
+  var url = 'https://api.stockdata.org/v1/entity/exchange/list?api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
+  fetch(url).then(function(response) {
+    return response.json();
+  }).then(function(data){
+    //var translatedData = data[0].ticker;
+    console.log('******** response data is:', data);
+    //var dataToDisplay = data.data[0].ticker;
+    //var dataToDisplay = data.data[0].name + ' ' + data.data[0].ticker + ' ' + data.data[0].price;
+    //var displayArea = document.getElementsByClassName('stock-market-data-display')[0];
+    //displayArea.innerHTML = dataToDisplay;
+    var dataToDisplay = data.data[34].exchange;
+    var displayArea = document.getElementsByClassName('stock-market-data-display')[0];
+    displayArea.innerHTML = dataToDisplay;
+  }).catch(function(){
+    console.log('????????fetch unsucessful')
+  });
+}
 
 // try to create looping video hero banner
 

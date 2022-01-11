@@ -1112,3 +1112,15 @@ img#NYC-transformation-section-image {
   display: none;
   margin-left:30%;
 }
+
+
+
+.getStockMarketDataSection {
+  background-color: navy;
+  height: 800px;
+}
+
+.stock-market-data-display {
+  height: 200px;
+  background-color: white;
+}
