@@ -1970,7 +1970,8 @@ function getRequestForStockPricesViaAPI() {
   console.log('getRequestForStockPricesViaAPI triggered');
   //var url = 'https://api.stockdata.org/v1/data/quote?symbols=DJIA&api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
   //var url = 'https://api.stockdata.org/v1/entity/exchange/list?api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
-  var url = 'https://api.stockdata.org/v1/data/eod/multiple?symbols=JPM,BAC,GS&published_after=2022-01-11T03:48&language=en&api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
+  // var url = 'https://api.stockdata.org/v1/data/eod/multiple?symbols=JPM,BAC,GS&published_after=2022-01-11T03:48&language=en&api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
+  var url = 'https://api.stockdata.org/v1/data/quote?symbols=JPM,BAC,GS&published_after=2022-01-11T03:48&language=en&api_token=O1yG5I2nVkKOvpMlEqctFXWKlzfeMUOMNRZtUoGA';
   fetch(url).then(function(response) {
     return response.json();
   }).then(function(data){
@@ -1980,13 +1981,16 @@ function getRequestForStockPricesViaAPI() {
     //var dataToDisplay = data.data[0].name + ' ' + data.data[0].ticker + ' ' + data.data[0].price;
     //var displayArea = document.getElementsByClassName('stock-market-data-display')[0];
     //displayArea.innerHTML = dataToDisplay;
-    var dataToDisplay = data.data[0].symbol + ' ' + data.data[0].close + ' ' + data.data[1].symbol + ' ' + data.data[1].close + ' ' + data.data[2].symbol + ' ' + data.data[2].close;
+    // var dataToDisplay = data.data[0].symbol + ' ' + data.data[0].close + ' ' + data.data[1].symbol + ' ' + data.data[1].close + ' ' + data.data[2].symbol + ' ' + data.data[2].close;
+    var dataToDisplay = data.data[0].ticker + ' ' + data.data[0].price + ' ' + data.data[1].ticker + ' ' + data.data[1].price + ' ' + data.data[2].ticker + ' ' + data.data[2].price;
     var displayArea = document.getElementsByClassName('stock-market-data-display')[0];
     displayArea.innerHTML = dataToDisplay;
   }).catch(function(){
     console.log('????????fetch unsucessful')
   });
 }
+// miscellaneous notes
+//https://quant.stackexchange.com/questions/26078/how-can-one-query-the-google-finance-api-for-dow-jones-and-sp-500-values
 
 // try to create looping video hero banner
 
