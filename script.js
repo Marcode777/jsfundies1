@@ -1995,3 +1995,4 @@ function getRequestForStockPricesViaAPI() {
 // try to create looping video hero banner
 
 
+ 
