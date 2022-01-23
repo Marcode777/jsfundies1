@@ -1,8 +1,8 @@
 document.write("this is being written from a document.write script");
 
 function verifyFunction(){
-  var start = prompt("what is the number");
-  if(start == "90210"){
+  var start = prompt("what is the current year");
+  if(start == "2022"){
     document.getElementById("here").innerHTML = "account verified"
   } else {
     alert("account not verified");
