@@ -1124,3 +1124,13 @@ img#NYC-transformation-section-image {
   height: 200px;
   background-color: white;
 }
+
+.prompt-notification {
+  position: fixed;
+  top: 5%;
+  right: 50%;
+  height: 8rem;
+  width: 14rem;
+  background-color: orange;
+  visibility: hidden;
+}

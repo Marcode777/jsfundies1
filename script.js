@@ -1944,9 +1944,16 @@ function configurationInputTrigger() {
 
 // example trigger when page reaches this point on scroll; substitute id with whatever element id wanted 
 $(document).on('scroll', function() {
-    if( $(this).scrollTop() >= $('#').position().top ){
+    if( $(this).scrollTop() >= $('#apiSection').position().top ){
         // alert('page position reached!!!!!')
         console.log('page position reached!!!!!');
+        // this will reveal the prompt-notification that specified area on page has been reached
+        var target = document.getElementsByClassName('prompt-notification')[0];
+        target.style.visibility = "visible";
+    }
+    if( $(this).scrollTop() <= $('#apiSection').position().top) {
+        var target = document.getElementsByClassName('prompt-notification')[0];
+        target.style.visibility = "hidden";
     }
 });
 
