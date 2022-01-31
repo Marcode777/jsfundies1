@@ -1134,3 +1134,9 @@ img#NYC-transformation-section-image {
   background-color: orange;
   visibility: hidden;
 }
+
+.screen-sizer {
+  height: 800px;
+  width: 100%;
+  background-color: gray;
+}
