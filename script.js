@@ -2001,7 +2001,23 @@ function getRequestForStockPricesViaAPI() {
 
 // try to create looping video hero banner
 
+// window resize detector function
+function resizeDetector() {
+  var target = document.getElementsByClassName('screen-announcer')[0];
+  console.log('resize resize resize');
+  console.log('current width is', document.body.clientWidth);
+  if (document.body.clientWidth = 1200) {
+    target.innerHTML = '1200px';
+  } 
+  if (document.body.clientWidth = 1000) {
+      target.innerHTML = '1000px';
+  }
+  if (document.body.clientWidth = 800) {
+    target.innerHTML = '800px';
+  }
+}
 
+window.addEventListener('resize', resizeDetector);
 
 
  
