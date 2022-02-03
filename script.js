@@ -2019,4 +2019,4 @@ function resizeDetector() {
 
 window.addEventListener('resize', resizeDetector);
 
- 
+  
