@@ -2019,4 +2019,68 @@ function resizeDetector() {
 
 window.addEventListener('resize', resizeDetector);
 
-  
+// sample emailValidation from codepen, for MktoForms2
+// HTML
+<!-- standard Form embed -->
+<script src="//app-sj01.marketo.com/js/forms2/js/forms2.min.js"></script>
+<form id="mktoForm_1293"></form>
+<script>MktoForms2.loadForm("//app-sj01.marketo.com", "410-XOR-673", 1293);</script>
+<!-- /standard Form embed -->
+
+<!-- FormsPlus libraries -->
+<script id="teknklFormsPlus-EmailPattern-1.0.3" src="https://assets.codepen.io/250687/teknkl-formsplus-emailpattern-1.0.3.js"></script>
+<!-- /FormsPlus libraries -->
+// JavaScript
+/*
+ * @author Sanford Whiteman
+ * @version v1.1 2020-11-15
+ * @copyright © 2020 Sanford Whiteman
+ * @license Hippocratic 2.1: This license must appear with all reproductions of this software.
+ *
+ *
+ *
+ */
+
+(function () {
+   const invalidDomains = [
+      "gmail.com", 
+      "yahoo.com", 
+      "hotmail.com",
+      "sandy@fig1.com",
+      "sandy@fig1.net"
+      ]
+      invalidMessage = "Must be a Business email.";
+
+   const interestingEmailField = "Email";
+
+   /* NO NEED TO ALTER BELOW THIS LINE */
+
+   MktoForms2.whenReady(function (mktoForm) {
+      const formEl = mktoForm.getFormElem()[0],
+         emailEl = formEl.querySelector("[name='" + interestingEmailField + "']");
+
+      mktoForm.onValidate(extendedEmailValidation);
+
+      function extendedEmailValidation(nativeValid) {
+         if (nativeValid === false) return;
+
+         let currentValues = mktoForm.getValues(),
+            originalSubmittable = mktoForm.submittable(),
+            email = currentValues[interestingEmailField];
+
+         if (email) {
+            if (FormsPlus.emailPattern.match(email, invalidDomains)) {
+               emailEl.classList.add("customInvalid");
+               emailEl.setAttribute("aria-invalid", "true");
+               mktoForm.submittable(false);
+               mktoForm.showErrorMessage(invalidMessage, MktoForms2.$(emailEl));
+            } else {
+               emailEl.classList.remove("customInvalid");
+               emailEl.setAttribute("aria-invalid", "false");
+               mktoForm.submittable(originalSubmittable);
+            }
+         }
+      }
+   });
+   
+})();
