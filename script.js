@@ -2083,4 +2083,5 @@ window.addEventListener('resize', resizeDetector);
       }
    });
    
-})(); 
+})();
+
