@@ -2085,4 +2085,3 @@ window.addEventListener('resize', resizeDetector);
    
 })();
 
- 
