@@ -2085,3 +2085,34 @@ window.addEventListener('resize', resizeDetector);
    
 })();
 
+// randomizing an array
+//  first is sorting it
+var container = ['burgers', 'pizza', 'sushi', 'omelette', 'nilagang baka'];
+container.sort() 
+  // outputs (5) ['burders', 'nilagang baka', 'omelette', 'pizza', 'sushi'];
+container.sort((a, b) => 0.5 - Math.random());
+  // outputs a randomized version 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
