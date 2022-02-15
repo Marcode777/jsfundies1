@@ -2097,6 +2097,14 @@ container.sort((a, b) => 0.5 - Math.random());
 
 
 
+// sample dom-scanner-detector
+// for condition-based logic
+// (for confirming whether an element or condition is present on the page, and then performing logic accordingly)
+var thing = 'something';
+if(thing.length) {
+  // perform logic 
+} 
+
 
 
 
