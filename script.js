@@ -2103,7 +2103,7 @@ container.sort((a, b) => 0.5 - Math.random());
 var thing = 'something';
 if(thing.length) {
   // perform logic 
-}
+} 
 
 
 
