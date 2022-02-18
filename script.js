@@ -2021,15 +2021,15 @@ window.addEventListener('resize', resizeDetector);
 
 // sample emailValidation from codepen, for MktoForms2
 // HTML
-<!-- standard Form embed -->
-<script src="//app-sj01.marketo.com/js/forms2/js/forms2.min.js"></script>
-<form id="mktoForm_1293"></form>
-<script>MktoForms2.loadForm("//app-sj01.marketo.com", "410-XOR-673", 1293);</script>
-<!-- /standard Form embed -->
+// <!-- standard Form embed -->
+// <script src="//app-sj01.marketo.com/js/forms2/js/forms2.min.js"></script>
+// <form id="mktoForm_1293"></form>
+// <script>MktoForms2.loadForm("//app-sj01.marketo.com", "410-XOR-673", 1293);</script>
+// <!-- /standard Form embed -->
 
-<!-- FormsPlus libraries -->
-<script id="teknklFormsPlus-EmailPattern-1.0.3" src="https://assets.codepen.io/250687/teknkl-formsplus-emailpattern-1.0.3.js"></script>
-<!-- /FormsPlus libraries -->
+// <!-- FormsPlus libraries -->
+// <script id="teknklFormsPlus-EmailPattern-1.0.3" src="https://assets.codepen.io/250687/teknkl-formsplus-emailpattern-1.0.3.js"></script>
+// <!-- /FormsPlus libraries -->
 // JavaScript
 /*
  * @author Sanford Whiteman
