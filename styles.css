@@ -1141,8 +1141,15 @@ img#NYC-transformation-section-image {
   background-color: gray;
 }
 
+
+.pagelink {
+  height: 220px;
+  width: 100%;
+  background-color: orange;
+}
+
 .React-Sample {
-  height: 900px;
+  height: 320px;
   width: 100%;
   border: 3px dotted navy;
   background-color: blue;
