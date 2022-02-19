@@ -2109,6 +2109,9 @@ if(thing.length) {
 
 
 
+// to simulate slower connections, the network tab in developer console has options to switch from online to 5, 4, and 3g
+
+
 
 
 
