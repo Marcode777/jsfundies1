@@ -2112,6 +2112,11 @@ if(thing.length) {
 // to simulate slower connections, the network tab in developer console has options to switch from online to 5, 4, and 3g
 
 
+// promises are used to avoid callback hell, this is why promises are mainly useful for
+// https://www.youtube.com/watch?v=YiYtwbnPfkY 1
+// https://www.youtube.com/watch?v=EQem2gugonA 2
+
+// https://reactjs.org/docs/react-without-jsx.html 
 
 
 
