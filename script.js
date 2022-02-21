@@ -2119,6 +2119,8 @@ if(thing.length) {
 // https://reactjs.org/docs/react-without-jsx.html 
 
 
+// https://reactgo.com/react-createelement-example/
+// https://stackoverflow.com/questions/65989536/how-to-define-a-img-tag-inside-a-react-createelement-in-react
 
 
 
