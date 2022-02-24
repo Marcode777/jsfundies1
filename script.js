@@ -2129,7 +2129,23 @@ if(thing.length) {
 
 
 
-
+// JavaScript, compare variable against array of values
+// https://stackoverflow.com/questions/23108643/javascript-compare-variable-against-array-of-values
+// in jQuery for now, should convert to plain JavaScript
+// needs to be attached to eventListener on a form, as it runs a type of validaton on the form's input values
+function inputScanner() {
+  console.log('inputScanner triggered');
+  var valueArray = ['marketoz', 'marketingz', 'valuez'];
+  $(':input').each(function(){
+    console.log('the values of the inputs are', $(this).val());
+    if(valueArray.includes($(this).val())) {
+      alert('********keyword match found********');
+    }
+  })
+}
+$('input').click(function(){
+  inputScanner();
+})
 
 
 
