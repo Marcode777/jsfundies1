@@ -2147,7 +2147,12 @@ $('input').click(function(){
   inputScanner();
 })
 
-
+$(document).ready(function(){
+  console.log('!!!!!!ready!!!!!!')
+  $(':a').click(function(){
+    alert('link clicked!')
+  })
+})
 
 
 
