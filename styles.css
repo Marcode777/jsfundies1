@@ -1154,3 +1154,22 @@ img#NYC-transformation-section-image {
   border: 3px dotted navy;
   background-color: blue;
 }
+
+#PopulatorWindowsSection {
+  height: 500px;
+  width: 100%;
+  background-color: pink;
+}
+
+.pws-window-container {
+  display:flex;
+  width: 100%;
+}
+
+.pws-window {
+  height: 50px;
+  width: 200px;
+  background-color: orange;
+  margin-left: 10px;
+  margin-right: 10px;
+}

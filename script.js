@@ -2155,7 +2155,19 @@ $(document).ready(function(){
 })
 
 
- 
+ // sample re-direct logic after successful form submit
+  var form = 'whatever form used';
+  var successUrl = 'whatever url (page) we want user to see after successfully submitting';
+  var followUpUrl = 'whatever url (page) we want user to see after submitting regardless';
+  form.onSubmit(function(){
+    if(successUrl) {
+      location.href = successUrl;
+    } 
+    else {
+      location.href = followUpUrl;
+    }
+    return false;
+  })
 
 
 
