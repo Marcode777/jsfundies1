@@ -2169,7 +2169,25 @@ $(document).ready(function(){
     return false;
   })
 
-
+// simple email input validator (can be used for any input, or string data, really)
+function emailValidator() {
+  console.log('emailValidator triggered');
+  var errorMessage = 'please use correct letter / syntax format';
+  var emailInputVal = document.getElementById('Email');
+  var value = emailInputVal.value;
+  // RegEx here, ig at the end: i means case insensitive, g, means global
+  if(value.match(/gmail.com|yahoo.com|hotmail.com/ig)) {
+    console.log('emailValidator match made, email is invalid');
+    emailInputVal.classList.add('customInvalid');
+    emailInputVal.setAttribute('aria-invalid', 'true');
+    form.submittable(false);
+  } else {
+    console.log('email validated');
+    emailInputVal.classList.remove('customInvalid');
+    emailInputVal.setAttribute('aria-invalid', 'false');
+    form.submittable(true);
+  }
+}
 
 
 
