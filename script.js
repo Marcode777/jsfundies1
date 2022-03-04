@@ -1,4 +1,4 @@
-document.write("this is being written from a document.write script");
+// document.write("this is being written from a document.write script");
 
 function verifyFunction(){
   var start = prompt("what is the current year");
@@ -475,7 +475,7 @@ setTimeout(function(){
 
 
 function loadFunc(){
-  alert('this script is ran onload and is invoked from the actual html body');
+  console.log('this script is ran onload and is invoked from the actual html body');
 }
 
 function onloadFunc() {
@@ -1771,16 +1771,16 @@ function sweeper() {
 
 // example callback
 
-function doWork(subject, callback) {
-  alert(`starting ${subject} work`);
-  alert('also be aware that the first alert does not use quotes but uses tick marks instead');
-}
+// function doWork(subject, callback) {
+//   alert(`starting ${subject} work`);
+//   alert('also be aware that the first alert does not use quotes but uses tick marks instead');
+// }
 
-function announceComplete() {
-  alert('work complete');
-}
+// function announceComplete() {
+//   alert('work complete');
+// }
 
-doWork('coding', announceComplete); 
+// doWork('coding', announceComplete); 
  
 
  function fctabuttonTrigger() {
@@ -2186,6 +2186,31 @@ function emailValidator() {
     emailInputVal.classList.remove('customInvalid');
     emailInputVal.setAttribute('aria-invalid', 'false');
     form.submittable(true);
+  }
+}
+
+
+function windowPopulatorTrigger() {
+  var populatorArray = ['one', 'two', 'three'];
+  console.log('windowPopulatorTrigger triggered');
+  // console.log('populatorArray[i] is', populatorArray[i]);
+  // console.log('populatorArray[i++] is', populatorArray[i++]);
+  // var sortedArray = populatorArray.sort();
+  // console.log('sortedArray is', sortedArray);
+  var targets = document.querySelectorAll('div.pws-window > h2');
+  // console.log('targets are', targets);
+  for(var i = 0; i < targets.length; i++){
+    //targets[i].innerHTML = populatorArray.join('&nbsp');
+    targets[i].innerHTML = populatorArray[i];
+    console.log('populatorArray[i] is', populatorArray[i]);
+  }
+}
+
+function clearPopulatedWindows() {
+  console.log('clearPopulatedWindows triggered');
+  var targets = document.querySelectorAll('div.pws-window > h2');
+  for(var i = 0; i < targets.length; i++) {
+    targets[i].innerHTML = '';
   }
 }
 
