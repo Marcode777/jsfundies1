@@ -2215,5 +2215,32 @@ function clearPopulatedWindows() {
 }
 
 
+// load preferred image, then check if it's actually present on the DOM, if not, replace with default img
+$(document).ready(function(){
+  var targetElements = document.querySelectorAll('img.first-logo');
+  for(var i = 0; i < targetElements.length; i++) {
+    targetElements[i].setAttribute('src', '/content/dam/sampleImage1');
+  }
+  function missingLogoDetector() {
+    console.log('mLD triggered');
+    var targetElement = document.getElementsByClassName('first-logo')[0];
+    console.log('targetElement.naturalHeight is', targetElement.naturalHeight);
+    if(targetElement.naturalHeight == 0) {
+      console.log('logi image is missing, and will now be replaced');
+      var targetElements = document.querySelectorAll('img.first-logo');
+      for(var i = 0; i < targetElements.length; i++) {
+        targetElements[i].style.height = '40px';
+        targetElements[i].style.width = '40px';
+        targetElements[i].setAttribute('src', '/content/dam/sampleImage2');
+      }
+    }
+  }
+  setTimeout(function(){
+    console.log('sTo triggered');
+    missingLogoDetector();
+  }, 2200);
+})
+
+
 
 
