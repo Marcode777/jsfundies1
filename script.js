@@ -2245,3 +2245,19 @@ $(document).ready(function(){
 
 
 
+// node traversal
+function filter(y) {
+  console.log('filter triggered');
+  if(y.textContent.indexOf('Copy') > -1) {
+    y.style.backgroundColor = 'orange';
+    y.parentNode.parentNode.childNodes[1].firstElementChild.firstElementChild.setAttribute('src', 'https://media.istockphoto.com/photos/the-city-of-dreams-new-york-citys-skyline-at-twilight-picture-id599766748');
+  }
+}
+
+function scanner() {
+  console.log('scanner triggered');
+  var targets = document.querySelectorAll('span.jpmc-util-text-trimmer-trimmed');
+  for(var i = 0; i < targets.length; i++) {
+    filter(targets[i]);
+  }
+}
