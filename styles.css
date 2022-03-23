@@ -1173,3 +1173,27 @@ img#NYC-transformation-section-image {
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.flex-area {
+  height: 888px;
+  width: 100%;
+  background-color: pink;
+}
+
+.flex-container {
+  height:800px;
+  width:80%;
+  background-color: orange;
+}
+
+.flex-item {
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+}
+
+.micro {
+  height:50px;
+  width: 50px;
+  background-color: white;
+}
