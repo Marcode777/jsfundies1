@@ -2263,4 +2263,22 @@ function scanner() {
 }
 
 
- 
+function flex() {
+  console.log('flex triggered');
+  setTimeout(function(){
+    var firstTarg = document.getElementsByClassName('flex-container')[0];
+    var secondTargets = document.getElementsByClassName('flex-item');
+    firstTarg.style.display = 'flex';
+    setTimeout(function(){
+      firstTarg.style.flexDirection = 'column';
+      setTimeout(function(){
+        firstTarg.style.justifyContent = 'space-between';
+        setTimeout(function(){
+          for(var i = 0; i < secondTargets.length; i++) {
+            secondTargets[i].style.backgroundColor = 'blue';
+          }
+        },1000);
+      },1000)
+    },1000);
+  },1000);
+} 
