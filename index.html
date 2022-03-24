@@ -4,8 +4,8 @@
   <title>FUNDIESJS1</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
@@ -703,14 +703,16 @@
     <div class="jumbotron">
       <h1>FLEX AREA</h1>
     </div>
+    <input id="flex-input" placeholder="testinput"/>
+    <input id="flex-input-name" placeholder="name"/>
+    <input id="flex-input-company" placeholder="company"/>
+    <input id="flex-input-title" placeholder="job title"/>
+    <button onclick="submitFlexInputData()">submit</button>
+    <button class="flex-button" onclick="flex()">flex</button>
     <div class="flex-container">
       <div class="flex-item"><div class="micro"></div></div>
       <div class="flex-item"><div class="micro"></div></div>
       <div class="flex-item"><div class="micro"></div></div>
-      <div class="flex-item"><div class="micro"></div></div>
-      <div class="flex-item"><div class="micro"></div></div>
-      <div class="flex-item"><div class="micro"></div></div>
-      <button onclick="flex()">flex</button>
     </div>
   </div>
 
