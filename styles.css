@@ -891,6 +891,7 @@ table, td {
   height: 360px;
   width: 360px;
   background-color: lightgray;
+  margin: auto;
 }
 
 .sort-section {
@@ -1175,15 +1176,16 @@ img#NYC-transformation-section-image {
 }
 
 .flex-area {
-  height: 888px;
+  height: auto;
   width: 100%;
   background-color: pink;
 }
 
 .flex-container {
-  height:800px;
-  width:80%;
-  background-color: orange;
+  height:888px;
+  width:600px;
+  background-color: gray;
+  margin:auto;
 }
 
 .flex-item {
@@ -1196,4 +1198,13 @@ img#NYC-transformation-section-image {
   height:50px;
   width: 50px;
   background-color: white;
+}
+
+
+
+/*note about media queries, sometimes with the developer console open it does not render, the window has to be resized with the developer console closed*/
+@media screen and (max-width: 500px) {
+  .flex-container {
+    background-color: lightblue;
+  }
 }

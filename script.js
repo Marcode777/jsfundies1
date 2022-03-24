@@ -2262,23 +2262,66 @@ function scanner() {
   }
 }
 
+function flexDistributor(y) {
+  console.log('flexDistributor triggered')
+  var firstTarg = document.getElementsByClassName('flex-container')[0];
+  var dynamicContainer = document.createElement('div');
+  dynamicContainer.style.height = '100px';
+  dynamicContainer.style.width = '100px';
+  dynamicContainer.style.backgroundColor = 'blue';
+  var tag = document.createElement('p');
+  tag.innerHTML = y;
+  dynamicContainer.appendChild(tag);
+  firstTarg.appendChild(dynamicContainer);
+}
+function submitFlexInputData() {
+  var flexInputArray = [];
+  var flexinputTarg = document.getElementById('flex-input').value;
+  var flexinputName = document.getElementById('flex-input-name').value;
+  var flexinputCompany = document.getElementById('flex-input-company').value;
+  var flexinputTitle = document.getElementById('flex-input-title').value;
+  console.log('flexInputName is', flexinputName);
+  flexInputArray.push(flexinputTarg);
+  flexInputArray.push(flexinputName);
+  flexInputArray.push(flexinputCompany);
+  flexInputArray.push(flexinputTitle);
+  setTimeout(function(){  
+    console.log('flexInputArray is now', flexInputArray)
+  }, 1000)
+  for(var i = 0; i < flexInputArray.length; i++) {
+     flexDistributor(flexInputArray[i]);
+  }
+}
+
 
 function flex() {
   console.log('flex triggered');
+  var firstTarg = document.getElementsByClassName('flex-container')[0];
+  var inputTarg = document.getElementById('flex-input').value;
+  var dynamicContainer = document.createElement('div');
+  var tag = document.createElement('p')
+  var text = document.createTextNode(inputTarg);
+  tag.appendChild(text);
+  dynamicContainer.style.height = '100px';
+  dynamicContainer.style.width = '100px';
+  dynamicContainer.style.backgroundColor = 'brown';
+  // firstTarg.appendChild(tag);
+  firstTarg.appendChild(dynamicContainer);
+  dynamicContainer.appendChild(tag);
   setTimeout(function(){
     var firstTarg = document.getElementsByClassName('flex-container')[0];
     var secondTargets = document.getElementsByClassName('flex-item');
     firstTarg.style.display = 'flex';
     setTimeout(function(){
-      firstTarg.style.flexDirection = 'column';
+      firstTarg.style.flexDirection = 'row';
       setTimeout(function(){
         firstTarg.style.justifyContent = 'space-between';
         setTimeout(function(){
           for(var i = 0; i < secondTargets.length; i++) {
             secondTargets[i].style.backgroundColor = 'blue';
           }
-        },1000);
-      },1000)
-    },1000);
-  },1000);
+        },2000);
+      },2000)
+    },2000);
+  },2000);
 } 
