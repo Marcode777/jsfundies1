@@ -2325,3 +2325,34 @@ function flex() {
     },2000);
   },2000);
 } 
+
+function apiFetch() {
+  console.log('apiFetch triggered');
+    // commented out original syntax because the console.log was the completion and data could not further be parsed.
+    // fetch('https://dummyjson.com/products')
+    // .then(res => res.json())
+    // .then(console.log);
+    fetch('https://dummyjson.com/products/1')
+    .then(res => res.json())
+    .then(function(data){
+      console.log('data is', data);
+      console.log('data.title is', data.title);
+      var dataNow = data.title;
+      console.log('from deep within apiFetch, dataNow is', dataNow);
+      var firstTarg = document.getElementsByClassName('flex-container')[0];
+      // from my experimentations, i think DOM modification is not allowed within .then chains, it seems to be purely for data
+      // and any DOM or styling must be implemented after outside of the scope of the .then chains
+      
+      // var tag = document.createElement('p');
+      // var result = tag.appendChild(dataNow);
+      // firstTarg.innerHTML = dataNow;
+      // var dynamicApiFetchContainer = document.createElement('div');
+      // dynamicApiFetchContainer.appendChild(result);
+      // dynamicApiFetchContainer.style.height = '100px';
+      // dynamicApiFetchContainer.style.width = '100px';
+      // dynamicApiFetchContainer.style.backgroundColor = 'hotpink';
+      firstTarg.innerHTML = dataNow;
+    }).catch(function(){
+      console.log('the apiFetch is not successful right now');
+    })
+}
