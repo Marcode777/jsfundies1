@@ -2329,6 +2329,7 @@ function flex() {
 function apiFetch() {
   console.log('apiFetch triggered');
     // commented out original syntax because the console.log was the completion and data could not further be parsed.
+    // OR actually now, I think since the data can be plural, it has to be parsed through a for loop or map function first, before being able to be rendered
     // fetch('https://dummyjson.com/products')
     // .then(res => res.json())
     // .then(console.log);
@@ -2340,18 +2341,46 @@ function apiFetch() {
       var dataNow = data.title;
       console.log('from deep within apiFetch, dataNow is', dataNow);
       var firstTarg = document.getElementsByClassName('flex-container')[0];
+      console.log('firstTarg is', firstTarg);
       // from my experimentations, i think DOM modification is not allowed within .then chains, it seems to be purely for data
       // and any DOM or styling must be implemented after outside of the scope of the .then chains
-      
-      // var tag = document.createElement('p');
-      // var result = tag.appendChild(dataNow);
+
+      var tag = document.createElement('p');
+      var node = document.createTextNode(dataNow);
+      var translated = node.textContent;
+      var result = tag.appendChild(node);
+      // var finalResult = result.data;
+      var finalResult = dataNow;
+
+      // var dynamicApiFetchContainer = document.createElement('div');
+      // dynamicApiFetchContainer.appendChild(result);
+      // dynamicApiFetchContainer.style.height = '100px';
+      // dynamicApiFetchContainer.style.width = '100px';
+      // dynamicApiFetchContainer.style.backgroundColor = 'hotpink';
+      console.log('tag is', tag);
+      console.log('node is', node);
+      console.log('node.toString() is', node.toString());
+      console.log('node.textContent it', node.textContent);
+      console.log('translated is', translated);
       // firstTarg.innerHTML = dataNow;
       // var dynamicApiFetchContainer = document.createElement('div');
       // dynamicApiFetchContainer.appendChild(result);
       // dynamicApiFetchContainer.style.height = '100px';
       // dynamicApiFetchContainer.style.width = '100px';
       // dynamicApiFetchContainer.style.backgroundColor = 'hotpink';
-      firstTarg.innerHTML = dataNow;
+
+      // firstTarg.innerHTML = dataNow;
+      //firstTarg.innerHTML = translated;
+      //firstTarg.innerHTML = translated;
+      firstTarg.innerHTML = finalResult;
+
+      // for(var i = 0; i < data.length; i++) {
+      //   let container = document.createElement('div');
+      //   let firstData = document.createElement('p');
+      //   firstData.appendChild(data[i]);
+      //   container.appendChild(firstData);
+      //   firstTarg.innerHTML = container;
+      // }
     }).catch(function(){
       console.log('the apiFetch is not successful right now');
     })
