@@ -2385,3 +2385,48 @@ function apiFetch() {
       console.log('the apiFetch is not successful right now');
     })
 }
+
+
+
+
+// DOM highlighter using wildcards
+function wildCardHighLighter() {
+  console.log('wildCardHighLighter triggered');
+  setTimeout(function(){
+    console.log('sTo triggered');
+    var targets = document.querySelectorAll('[class^="flex"]');
+    for(var i = 0; i < targets.length; i++) {
+      console.log('targets[i] are', targets[i]);
+      targets[i].style.border = '3px dotted orange';
+    }
+  }, 1000);
+}
+
+
+
+
+// infocard
+function infocardTrigger() {
+  console.log('infocardTrigger triggered');
+  var target = document.getElementsByClassName('info-card-display')[0];
+  var infocard = document.createElement('div');
+  infocard.style.height = '300px';
+  infocard.style.width = '300px';
+  infocard.style.backgroundColor = 'maroon';
+  infocard.classList.add('info-card-hidden');
+  target.appendChild(infocard);
+  setTimeout(function(){
+    console.log('infocard sTo triggered');
+    infocard.classList.add('appear');
+    setTimeout(function(){
+      target.style.display = 'flex';
+      target.style.flexWrap = 'wrap';
+      setTimeout(function(){
+        target.style.flexDirection = 'row';
+        setTimeout(function(){
+          target.style.justifyContent = 'space-between';
+        },1000);
+      },1000)
+    },1000);
+  },1000)
+}

@@ -1210,7 +1210,32 @@ img#NYC-transformation-section-image {
 }
 
 .api-fetch-section {
-  height: 500px;
+  height: 100px;
   width: 100%;
   background-color: gray;
+}
+
+
+
+
+
+.wildcardHighLight {
+  height: 200px;
+  width: 100%;
+  background-color: gray;
+}
+
+.info-card-section {
+  height: 888px;
+  width: 100%;
+  background-color: navy;
+}
+
+.info-card-hidden {
+  opacity: 0;
+}
+
+.info-card-hidden.appear {
+  opacity: 1;
+  transition: 2s;
 }
