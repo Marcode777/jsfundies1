@@ -2270,6 +2270,8 @@ function flexDistributor(y) {
   dynamicContainer.style.width = '100px';
   dynamicContainer.style.backgroundColor = 'blue';
   var tag = document.createElement('p');
+  tag.style.fontSize = '22px';
+  tag.style.color = 'white';
   tag.innerHTML = y;
   dynamicContainer.appendChild(tag);
   firstTarg.appendChild(dynamicContainer);
@@ -2297,7 +2299,7 @@ function submitFlexInputData() {
 function flex() {
   console.log('flex triggered');
   var firstTarg = document.getElementsByClassName('flex-container')[0];
-  var inputTarg = document.getElementById('flex-input').value;
+  //var inputTarg = document.getElementById('flex-input').value;
   var dynamicContainer = document.createElement('div');
   var tag = document.createElement('p')
   var text = document.createTextNode(inputTarg);
@@ -2305,7 +2307,7 @@ function flex() {
   dynamicContainer.style.height = '100px';
   dynamicContainer.style.width = '100px';
   dynamicContainer.style.backgroundColor = 'brown';
-  // firstTarg.appendChild(tag);
+  firstTarg.appendChild(tag);
   firstTarg.appendChild(dynamicContainer);
   dynamicContainer.appendChild(tag);
   setTimeout(function(){
@@ -2316,6 +2318,7 @@ function flex() {
       firstTarg.style.flexDirection = 'row';
       setTimeout(function(){
         firstTarg.style.justifyContent = 'space-between';
+        firstTarg.style.flexWrap = 'wrap';
         setTimeout(function(){
           for(var i = 0; i < secondTargets.length; i++) {
             secondTargets[i].style.backgroundColor = 'blue';
@@ -2409,15 +2412,28 @@ function wildCardHighLighter() {
 function infocardTrigger() {
   console.log('infocardTrigger triggered');
   var target = document.getElementsByClassName('info-card-display')[0];
+  var inputName = document.getElementById('info-card-input-name').value;
+  var inputProfession = document.getElementById('info-card-input-profession').value;
   var infocard = document.createElement('div');
+  var textNodeName = document.createTextNode(inputName);
+  var textNodeProfession = document.createTextNode(inputProfession);
+  var text = document.createElement('p');
+  text.style.fontSize = '22px';
+  text.style.color = 'white';
+  console.log('input is', inputName);
+  text.appendChild(textNodeName);
+  text.appendChild(textNodeProfession);
   infocard.style.height = '300px';
   infocard.style.width = '300px';
   infocard.style.backgroundColor = 'maroon';
   infocard.classList.add('info-card-hidden');
+  infocard.appendChild(text);
   target.appendChild(infocard);
   setTimeout(function(){
     console.log('infocard sTo triggered');
     infocard.classList.add('appear');
+    document.getElementById('info-card-input-name').value = '';
+    document.getElementById('info-card-input-profession').value = '';
     setTimeout(function(){
       target.style.display = 'flex';
       target.style.flexWrap = 'wrap';
