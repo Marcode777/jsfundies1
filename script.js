@@ -2446,3 +2446,22 @@ function infocardTrigger() {
     },1000);
   },1000)
 } 
+
+// dynamically generating text for array through iteration
+function dynamicAdder() {
+  console.log('dynamicAdder triggered');
+  var array = ['first ', 'second ', 'third '];
+  setTimeout(function(){
+    console.log('sTo triggered');
+    var targetDestination = document.getElementsByClassName('text-container')[0];
+    for(var i = 0; i < array.length; i++) {
+      console.log('contents of array are array[i]', array[i]);
+      var container = document.createElement('div');
+      var tag = document.createElement('p');
+      var text = document.createTextNode(array[i]);
+      var textandtag = tag.appendChild(text);
+      var result = container.appendChild(textandtag);
+      targetDestination.appendChild(result);
+    }
+  },3100);
+}
