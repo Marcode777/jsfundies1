@@ -2415,6 +2415,15 @@ function infocardTrigger() {
   var inputName = document.getElementById('info-card-input-name').value;
   var inputProfession = document.getElementById('info-card-input-profession').value;
   var infocard = document.createElement('div');
+  var linkDiv = document.createElement('div');
+  linkDiv.style.height = '38px';
+  linkDiv.style.width = '38px';
+  linkDiv.style.backgroundColor = 'lightblue';
+  var link = document.createElement('a');
+  var linkText = document.createTextNode('link here');
+  link.appendChild(linkText);
+  link.setAttribute('href', 'https://www.google.com');
+  linkDiv.appendChild(link);
   var textNodeName = document.createTextNode(inputName);
   var textNodeProfession = document.createTextNode(inputProfession);
   var text = document.createElement('p');
@@ -2428,6 +2437,7 @@ function infocardTrigger() {
   infocard.style.backgroundColor = 'maroon';
   infocard.classList.add('info-card-hidden');
   infocard.appendChild(text);
+  infocard.appendChild(linkDiv);
   target.appendChild(infocard);
   setTimeout(function(){
     console.log('infocard sTo triggered');
@@ -2450,18 +2460,25 @@ function infocardTrigger() {
 // dynamically generating text for array through iteration
 function dynamicAdder() {
   console.log('dynamicAdder triggered');
-  var array = ['first ', 'second ', 'third '];
+  var array = ['first ', 'second ', 'third ', ' fourth', ' fifth'];
   setTimeout(function(){
     console.log('sTo triggered');
-    var targetDestination = document.getElementsByClassName('text-container')[0];
+    var targetDestination = document.getElementsByClassName('info-card-display')[0];
+    console.log('targetDestination is', targetDestination);
     for(var i = 0; i < array.length; i++) {
       console.log('contents of array are array[i]', array[i]);
       var container = document.createElement('div');
+      container.style.height = '100px';
+      container.style.width = '100px';
+      container.style.backgroundColor = 'lightblue';
+      console.log('container is', container)
       var tag = document.createElement('p');
+      tag.style.fontSize = '22px';
+      tag.style.color = 'white';
       var text = document.createTextNode(array[i]);
       var textandtag = tag.appendChild(text);
-      var result = container.appendChild(textandtag);
-      targetDestination.appendChild(result);
+      container.appendChild(textandtag);
+      targetDestination.appendChild(container);
     }
   },3100);
 }
