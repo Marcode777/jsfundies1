@@ -2041,49 +2041,49 @@ window.addEventListener('resize', resizeDetector);
  *
  */
 
-(function () {
-   const invalidDomains = [
-      "gmail.com", 
-      "yahoo.com", 
-      "hotmail.com",
-      "sandy@fig1.com",
-      "sandy@fig1.net"
-      ]
-      invalidMessage = "Must be a Business email.";
+// (function () {
+//    const invalidDomains = [
+//       "gmail.com", 
+//       "yahoo.com", 
+//       "hotmail.com",
+//       "sandy@fig1.com",
+//       "sandy@fig1.net"
+//       ]
+//       invalidMessage = "Must be a Business email.";
 
-   const interestingEmailField = "Email";
+//    const interestingEmailField = "Email";
 
-   /* NO NEED TO ALTER BELOW THIS LINE */
+//    /* NO NEED TO ALTER BELOW THIS LINE */
 
-   MktoForms2.whenReady(function (mktoForm) {
-      const formEl = mktoForm.getFormElem()[0],
-         emailEl = formEl.querySelector("[name='" + interestingEmailField + "']");
+//    MktoForms2.whenReady(function (mktoForm) {
+//       const formEl = mktoForm.getFormElem()[0],
+//          emailEl = formEl.querySelector("[name='" + interestingEmailField + "']");
 
-      mktoForm.onValidate(extendedEmailValidation);
+//       mktoForm.onValidate(extendedEmailValidation);
 
-      function extendedEmailValidation(nativeValid) {
-         if (nativeValid === false) return;
+//       function extendedEmailValidation(nativeValid) {
+//          if (nativeValid === false) return;
 
-         let currentValues = mktoForm.getValues(),
-            originalSubmittable = mktoForm.submittable(),
-            email = currentValues[interestingEmailField];
+//          let currentValues = mktoForm.getValues(),
+//             originalSubmittable = mktoForm.submittable(),
+//             email = currentValues[interestingEmailField];
 
-         if (email) {
-            if (FormsPlus.emailPattern.match(email, invalidDomains)) {
-               emailEl.classList.add("customInvalid");
-               emailEl.setAttribute("aria-invalid", "true");
-               mktoForm.submittable(false);
-               mktoForm.showErrorMessage(invalidMessage, MktoForms2.$(emailEl));
-            } else {
-               emailEl.classList.remove("customInvalid");
-               emailEl.setAttribute("aria-invalid", "false");
-               mktoForm.submittable(originalSubmittable);
-            }
-         }
-      }
-   });
+//          if (email) {
+//             if (FormsPlus.emailPattern.match(email, invalidDomains)) {
+//                emailEl.classList.add("customInvalid");
+//                emailEl.setAttribute("aria-invalid", "true");
+//                mktoForm.submittable(false);
+//                mktoForm.showErrorMessage(invalidMessage, MktoForms2.$(emailEl));
+//             } else {
+//                emailEl.classList.remove("customInvalid");
+//                emailEl.setAttribute("aria-invalid", "false");
+//                mktoForm.submittable(originalSubmittable);
+//             }
+//          }
+//       }
+//    });
    
-})();
+// })();
 
 // randomizing an array
 //  first is sorting it
@@ -2156,18 +2156,18 @@ $(document).ready(function(){
 
 
  // sample re-direct logic after successful form submit
-  var form = 'whatever form used';
-  var successUrl = 'whatever url (page) we want user to see after successfully submitting';
-  var followUpUrl = 'whatever url (page) we want user to see after submitting regardless';
-  form.onSubmit(function(){
-    if(successUrl) {
-      location.href = successUrl;
-    } 
-    else {
-      location.href = followUpUrl;
-    }
-    return false;
-  })
+  // var form = 'whatever form used';
+  // var successUrl = 'whatever url (page) we want user to see after successfully submitting';
+  // var followUpUrl = 'whatever url (page) we want user to see after submitting regardless';
+  // form.onSubmit(function(){
+  //   if(successUrl) {
+  //     location.href = successUrl;
+  //   } 
+  //   else {
+  //     location.href = followUpUrl;
+  //   }
+  //   return false;
+  // })
 
 // simple email input validator (can be used for any input, or string data, really)
 function emailValidator() {
@@ -2235,10 +2235,10 @@ $(document).ready(function(){
       }
     }
   }
-  setTimeout(function(){
-    console.log('sTo triggered');
-    missingLogoDetector();
-  }, 2200);
+  // setTimeout(function(){
+  //   console.log('sTo triggered');
+  //   missingLogoDetector();
+  // }, 2200);
 })
 
 
@@ -2299,7 +2299,7 @@ function submitFlexInputData() {
 function flex() {
   console.log('flex triggered');
   var firstTarg = document.getElementsByClassName('flex-container')[0];
-  //var inputTarg = document.getElementById('flex-input').value;
+  var inputTarg = document.getElementById('flex-input').value;
   var dynamicContainer = document.createElement('div');
   var tag = document.createElement('p')
   var text = document.createTextNode(inputTarg);
@@ -2330,7 +2330,7 @@ function flex() {
 } 
 
 function apiFetch() {
-  console.log('apiFetch triggered');
+    console.log('apiFetch triggered');
     // commented out original syntax because the console.log was the completion and data could not further be parsed.
     // OR actually now, I think since the data can be plural, it has to be parsed through a for loop or map function first, before being able to be rendered
     // fetch('https://dummyjson.com/products')
@@ -2417,7 +2417,7 @@ function infocardTrigger() {
   var infocard = document.createElement('div');
   var linkDiv = document.createElement('div');
   linkDiv.style.height = '38px';
-  linkDiv.style.width = '38px';
+  linkDiv.style.width = '100%';
   linkDiv.style.backgroundColor = 'lightblue';
   var link = document.createElement('a');
   var linkText = document.createTextNode('link here');
@@ -2482,3 +2482,10 @@ function dynamicAdder() {
     }
   },3100);
 }
+
+
+
+// setTimeout(function(){
+//   console.log('!!!!!test log, will not set URL!!!!!');
+//   window.location.href = 'https://www.stackoverflow.com';
+// }, 5000);
