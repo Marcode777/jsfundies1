@@ -2489,4 +2489,3 @@ function dynamicAdder() {
 //   console.log('!!!!!test log, will not set URL!!!!!');
 //   window.location.href = 'https://www.stackoverflow.com';
 // }, 5000);
- 
