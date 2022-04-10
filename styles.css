@@ -894,6 +894,15 @@ table, td {
   margin: auto;
 }
 
+.flexbox-item h3 { /*test for line-clamping*/
+  border: 3px dotted orange;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .sort-section {
   height: 20rem;
   background-color: lightblue;
