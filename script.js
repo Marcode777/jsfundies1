@@ -2429,6 +2429,7 @@ function infocardTrigger() {
   var text = document.createElement('p');
   text.style.fontSize = '22px';
   text.style.color = 'white';
+  text.classList.add('ellipseAndLineClamp');
   console.log('input is', inputName);
   text.appendChild(textNodeName);
   text.appendChild(textNodeProfession);
