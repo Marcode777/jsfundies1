@@ -894,7 +894,7 @@ table, td {
   margin: auto;
 }
 
-.flexbox-item h3 { /*test for line-clamping*/
+.flexbox-item h3 { /*test for adding ellipsis and line-clamping*/
   border: 3px dotted orange;
   display: -webkit-box;
   overflow: hidden;
@@ -1252,4 +1252,12 @@ img#NYC-transformation-section-image {
 i.fa-user {
   font-size: 38px;
   color: white;
+}
+
+.ellipseAndLineClamp {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
