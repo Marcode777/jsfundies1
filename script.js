@@ -2494,5 +2494,25 @@ function dynamicAdder() {
 
 
 
+// JIRA Masterpiece:
 
- 
+ function jiraFilter(x) {
+  console.log('jiraFilter triggered');
+  if(x.getAttribute('data-tooltip').indexOf('Marco') > -1) {
+    x.style.border = '3px dotted white';
+    x.style.backgroundColor = 'orange';
+  }
+ }
+
+
+
+function jiraComb() {
+  console.log('jiraComb triggered');
+  setTimeout(function(){
+    var targets = document.querySelectorAll('span.ghx-avatar-img');
+    for(var i = 0; i < targets.length; i++) {
+      console.log('target data-tooltip attributes are', targets[i].getAttribute('data-tooltip'));
+      jiraFilter(targets[i]);
+    }
+  })
+}
