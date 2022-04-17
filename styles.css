@@ -1261,3 +1261,11 @@ i.fa-user {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+
+
+
+
+/*smooth scroll*/
+html {
+  scroll-behavior: smooth;
+}
