@@ -2191,18 +2191,20 @@ function emailValidator() {
 
 
 function windowPopulatorTrigger() {
-  var populatorArray = ['one', 'two', 'three'];
+  var populatorArray = ['one', 'two', 'three', 'four', 'five'];
   console.log('windowPopulatorTrigger triggered');
   // console.log('populatorArray[i] is', populatorArray[i]);
   // console.log('populatorArray[i++] is', populatorArray[i++]);
   // var sortedArray = populatorArray.sort();
   // console.log('sortedArray is', sortedArray);
+  var sortedPopulatorArray = populatorArray.sort();
   var targets = document.querySelectorAll('div.pws-window > h2');
   // console.log('targets are', targets);
   for(var i = 0; i < targets.length; i++){
     //targets[i].innerHTML = populatorArray.join('&nbsp');
-    targets[i].innerHTML = populatorArray[i];
-    console.log('populatorArray[i] is', populatorArray[i]);
+    //targets[i].innerHTML = populatorArray[i];
+    //console.log('populatorArray[i] is', populatorArray[i]);
+    targets[i].innerHTML = sortedPopulatorArray[i];
   }
 }
 
