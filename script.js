@@ -2526,7 +2526,7 @@ function jiraComb() {
     console.log('multiTarget selected');
     var multipleTargets = document.querySelectorAll('h1', 'p', 'a');
     for(var i = 0; i < multipleTargets.length; i++) {
-      multipleTargets[i].style.backgroudColor = 'orange';
+      multipleTargets[i].style.backgroundColor = 'orange';
     }
   };
 
@@ -2535,3 +2535,4 @@ function jiraComb() {
 
 
 
+ 
