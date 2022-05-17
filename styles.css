@@ -1269,3 +1269,38 @@ i.fa-user {
 html {
   scroll-behavior: smooth;
 }
+
+
+
+
+
+
+.css-grid-section {
+  height: 100rem;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.css-grid-container {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  height: 80rem;
+  width: 100%;
+  border: 2px dotted maroon;
+}
+
+.css-grid-column-one {
+  background-color: lightblue;
+  /* use the order attribute / property to re-arrange items through ordering them */
+  /*order: 3;*/
+}
+
+.css-grid-column-two {
+  background-color: beige;
+  /*order: 2;*/
+}
+
+.css-grid-column-three {
+  background-color: brown;
+  /*order: 1;*/
+}

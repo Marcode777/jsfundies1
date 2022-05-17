@@ -2535,3 +2535,21 @@ function jiraComb() {
 
 
 
+function cssGridOrderTrigger() {
+  console.log('cssGridOrderTrigger triggered');
+  var targetOne = document.querySelector('.css-grid-column-one');
+  var targetTwo = document.querySelector('.css-grid-column-two');
+  var targetThree = document.querySelector('.css-grid-column-three');
+  console.log('one', targetOne);
+  console.log('two', targetTwo);
+  console.log('three', targetThree);
+  setTimeout(function(){
+    console.log('sTo cssGridOrderTrigger triggered');
+    targetOne.style.order = 3;
+    targetOne.style.order = 2;
+    targetThree.style.order = 1;
+  }, 1200);
+}
+
+
+ 
