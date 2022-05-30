@@ -1304,3 +1304,22 @@ html {
   background-color: brown;
   /*order: 1;*/
 }
+
+.tab-nav-section {
+  min-height: 800px;
+  background-color: lightgray;
+}
+
+#newyork { /*remember, .less css and scss can use nesting, but regular css has to do the old fashioned way without nesting*/
+  background-color: lightblue;
+}
+
+#newyork p {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: blue;
+}
+
+.tab-nav-container {
+  
+}
