@@ -2561,3 +2561,6 @@ function tabNavOpenClick(cityName) {
   }
   document.getElementById(cityName).style.display = 'block';
 } 
+
+
+ 
