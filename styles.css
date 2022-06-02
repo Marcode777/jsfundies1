@@ -1321,5 +1321,11 @@ html {
 }
 
 .tab-nav-container {
-  
+
+}
+
+.tabs {
+  text-align: center;
+  height: 50px;
+  background-color: brown;
 }
