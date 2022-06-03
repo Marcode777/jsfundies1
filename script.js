@@ -2552,15 +2552,66 @@ function cssGridOrderTrigger() {
 }
 
 
-function tabNavOpenClick(cityName) {
-  console.log('tabNavOpenClick triggered');
-  var i;
-  var x = document.getElementsByClassName('city');
-  for(i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
+// function tabNavOpenClick(cityName) {
+//   console.log('tabNavOpenClick triggered');
+//   var i;
+//   var x = document.getElementsByClassName('city');
+//   for(i = 0; i < x.length; i++) {
+//     x[i].style.display = 'none';
+//   }
+//   document.getElementById(cityName).style.display = 'block';
+// } 
+
+// The following tab nav logic 
+//allows for dynamically generated tab and tab content association
+// without the use of IDs
+// this achieves this by matching the index position of the tab clicked with the index position of the tab content
+// Also remember, when using document.querySelectorAll('whatever-element');
+// it returns "Array-like" objects, but it is not a true array
+// So in order to be able to use true array methods on it
+// use the apply method such as: var tabContentsToTrueArray = tabContents.apply(null, tabContents);
+// or use the preferred spread operator, such as: const tabContentsToTrueArray = {...{tabContents}};
+function tabOpener(e) {
+  console.log('tab opener triggered');
+  var tabs = document.querySelectorAll('a.tab');
+  console.log('*tabs are', tabs);
+  var indexPosition = Array.prototype.slice.call(e.target.parentElement.children).indexOf(e.target);
+  console.log('indexPosition is', indexPosition);
+  var tabContents = document.querySelectorAll('div.tab-nav-content-container > div.tab-content');
+  console.log('*tabContents are', tabContents);
+  for(var i = 0; i < tabContents.length; i++) {
+    tabContents[i].style.display = 'none';
+    tabContents[indexPosition].style.display = 'block';
   }
-  document.getElementById(cityName).style.display = 'block';
-} 
+  e.preventDefault();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log('tab nav DOM Content Loaded');
+  var tabs = document.querySelectorAll('a.tab');
+  var tabContents = document.querySelectorAll('div.tab-nav-content-container > div.tab-content');
+  // intentionally starting at i = 1, so that the first tabContent will display as default behavior
+  for(var i = 1; i < tabContents.length; i++) {
+    tabContents[i].style.display = 'none';
+  }
+  for(var i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', tabOpener);
+  }
+});
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
