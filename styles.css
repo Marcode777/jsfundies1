@@ -1320,12 +1320,23 @@ html {
   color: blue;
 }
 
-.tab-nav-container {
-
+.tab-nav-section {
+  display: grid;
 }
 
-.tabs {
-  text-align: center;
-  height: 50px;
-  background-color: brown;
+
+.tab-nav-container {
+  border: 2px solid brown;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 375px) and (max-width: 580px) {
+  .tab-nav-container {
+    border: 3px dotted blue;
+  }
 }
