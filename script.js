@@ -2573,7 +2573,7 @@ function cssGridOrderTrigger() {
 // or use the preferred spread operator, such as: const tabContentsToTrueArray = {...{tabContents}};
 function tabOpener(e) {
   console.log('tab opener triggered');
-  var tabs = document.querySelectorAll('a.tab');
+  var tabs = document.querySelectorAll('button.tab');
   console.log('*tabs are', tabs);
   var indexPosition = Array.prototype.slice.call(e.target.parentElement.children).indexOf(e.target);
   console.log('indexPosition is', indexPosition);
@@ -2581,15 +2581,29 @@ function tabOpener(e) {
   console.log('*tabContents are', tabContents);
   for(var i = 0; i < tabContents.length; i++) {
     tabContents[i].style.display = 'none';
+    tabContents[i].style,textDecoration = '';
     tabContents[indexPosition].style.display = 'block';
+    tabContents[indexPosition].style.textDecoration = 'underline';
   }
-  e.preventDefault();
+  // test for loop for active tab implementation
+  for(var i = 0; i < tabs.length; ++) {
+    tabs[i].style.backgroundColor = '';
+    tabs[indexPosition].style.backgroundColor = 'teal';
+  }
+  e.preventDefault(); // to preven user from being dragged to top of page after click
+}
+
+function dropdownMenuTrigger() {
+  console.log('dropdownMenuTrigger triggered');
+  var target = document.querySelector('div.tab-nav-dropdown-menu-container');
+  target.classList.toggle('reveal');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log('tab nav DOM Content Loaded');
   var tabs = document.querySelectorAll('a.tab');
   var tabContents = document.querySelectorAll('div.tab-nav-content-container > div.tab-content');
+  var dropdownMenuButton.addEventListener('click', dropdownMenuTrigger);
   // intentionally starting at i = 1, so that the first tabContent will display as default behavior
   for(var i = 1; i < tabContents.length; i++) {
     tabContents[i].style.display = 'none';
