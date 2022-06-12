@@ -1321,7 +1321,37 @@ html {
 }
 
 .tab-nav-section {
-  display: grid;
+  .tab-nav-container {
+    border: 2px dotted teal;
+    display: flex;
+    justify-content: center;
+    button.tab {
+      border: none;
+      background-color: transparent;
+      &:hover, &:focus {
+        @include tabNavHoverFocusMixin();
+      }
+    }
+    @include customMobile() {
+      display: none;
+    }
+  }
+  .dropdownButtonContainer {
+    display: none;
+    @include customMobile() {
+      display: block;
+    }
+  }
+  .tab-nav-content-container {
+    display: none;
+    button.tab {
+      border: 2px solid blue;
+    }
+    &.reveal {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 
