@@ -1,0 +1,41 @@
+.tab-nav-section .tab-nav-container {
+  border: 2px dotted teal;
+  display: flex;
+  justify-content: center;
+}
+.tab-nav-section .tab-nav-container button.tab {
+  border: none;
+  background-color: transparent;
+}
+.tab-nav-section .tab-nav-container button.tab:hover, .tab-nav-section .tab-nav-container button.tab:focus {
+  text-decoration: underline;
+  outline: 1px dotted;
+}
+@media screen and (min-width: 375px) and (max-width: 580px) {
+  .tab-nav-section .tab-nav-container {
+    display: none;
+  }
+}
+.tab-nav-section .dropdownButtonContainer {
+  display: none;
+}
+@media screen and (min-width: 375px) and (max-width: 580px) {
+  .tab-nav-section .dropdownButtonContainer {
+    display: block;
+  }
+}
+.tab-nav-section .tab-nav-dropdown-menu-container {
+  display: none;
+}
+.tab-nav-section .tab-nav-dropdown-menu-container button.tab {
+  border: 2px solid blue;
+}
+.tab-nav-section .tab-nav-dropdown-menu-container.reveal {
+  display: flex;
+  flex-direction: column;
+}
+.tab-nav-section .tab-nav-content-container {
+  border: 3px dotted blue;
+}
+
+/*# sourceMappingURL=sass-style.css.map */

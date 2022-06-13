@@ -1320,53 +1320,9 @@ html {
   color: blue;
 }
 
-.tab-nav-section {
-  .tab-nav-container {
-    border: 2px dotted teal;
-    display: flex;
-    justify-content: center;
-    button.tab {
-      border: none;
-      background-color: transparent;
-      &:hover, &:focus {
-        @include tabNavHoverFocusMixin();
-      }
-    }
-    @include customMobile() {
-      display: none;
-    }
-  }
-  .dropdownButtonContainer {
-    display: none;
-    @include customMobile() {
-      display: block;
-    }
-  }
-  .tab-nav-content-container {
-    display: none;
-    button.tab {
-      border: 2px solid blue;
-    }
-    &.reveal {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
-
-.tab-nav-container {
-  border: 2px solid brown;
-}
+/* started to incorporate sass for nesting benefits, located in the actual sass-style.scss file that compiles to the sass-style.css file which is injected into index.html */
+/* sass starting with tab nav */
 
 
 
 
-
-
-
-@media screen and (min-width: 375px) and (max-width: 580px) {
-  .tab-nav-container {
-    border: 3px dotted blue;
-  }
-}
