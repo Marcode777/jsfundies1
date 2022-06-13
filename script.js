@@ -2586,7 +2586,7 @@ function tabOpener(e) {
     tabContents[indexPosition].style.textDecoration = 'underline';
   }
   // test for loop for active tab implementation
-  for(var i = 0; i < tabs.length; ++) {
+  for(var i = 0; i < tabs.length; i++) {
     tabs[i].style.backgroundColor = '';
     tabs[indexPosition].style.backgroundColor = 'teal';
   }
@@ -2601,9 +2601,10 @@ function dropdownMenuTrigger() {
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log('tab nav DOM Content Loaded');
-  var tabs = document.querySelectorAll('a.tab');
+  var tabs = document.querySelectorAll('button.tab');
   var tabContents = document.querySelectorAll('div.tab-nav-content-container > div.tab-content');
-  var dropdownMenuButton.addEventListener('click', dropdownMenuTrigger);
+  var dropdownMenuButton = document.querySelector('button.drop-down-menu-initiator');
+  dropdownMenuButton.addEventListener('click', dropdownMenuTrigger);
   // intentionally starting at i = 1, so that the first tabContent will display as default behavior
   for(var i = 1; i < tabContents.length; i++) {
     tabContents[i].style.display = 'none';
