@@ -9,6 +9,7 @@
 @mixin tabNavHoverFocusMixin() {
   text-decoration: underline;
   outline: 1px dotted;
+  background-color: teal;
 }
 
 .tab-nav-section {
