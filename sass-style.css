@@ -39,4 +39,8 @@
   border: 3px dotted blue;
 }
 
+.play-list-renderer-section .jumbotron {
+  background-color: pink;
+}
+
 /*# sourceMappingURL=sass-style.css.map */
