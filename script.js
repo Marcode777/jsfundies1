@@ -2618,6 +2618,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+var playListArray = [];
+function playListAppenderTrigger() {
+  console.log('playListAppender triggered');
+  var target = document.getElementById('playListItemName');
+  var targetValue = target.value;
+  playListArray.push(targetValue);
+  console.log('playListArray is', playListArray);
+  target.value = '';
+}
+
+function playListArrayLogger() {
+  console.log('playListArrayLogger triggered');
+  for(var i = 0; i < playListArray.length; i++) {
+    console.log('playListArray[i] are', playListArray[i]);
+  }
+}
+
+
+
+
+
 
  
  
