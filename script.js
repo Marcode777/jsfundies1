@@ -2635,7 +2635,15 @@ function playListArrayLogger() {
   }
 }
 
-
+// specified Interval that runs for a set amount of attempts
+// var counter = 0;
+// var specifiedInterval = setInterval(function(){
+//     console.log('specifiedInterval triggered' + counter);
+//     if(++counter === 8) {
+//         console.log('limit 8 reached');
+//         clearInterval(specifiedInterval); 
+//     }
+// }, 2200);
 
 
 
