@@ -2645,7 +2645,16 @@ function playListArrayLogger() {
 //     }
 // }, 2200);
 
-
+// another way of looping and iteration besides
+const targets = document.querySelectorAll('div.menu > a');
+//    instead of doing
+// for(var i = 0; i < targets.length; i++) {
+//     targets[i].style.border = '8px dotted orange';
+// }
+//    can do this instead
+// for(const target of targets) {
+//    target.style.border = '8px dotted orange';
+// }
 
 
 
