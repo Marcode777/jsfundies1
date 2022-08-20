@@ -2655,7 +2655,7 @@ const targets = document.querySelectorAll('div.menu > a');
 // for(const target of targets) {
 //    target.style.border = '8px dotted orange';
 // }
- 
+
 
 
 
