@@ -2656,6 +2656,20 @@ const targets = document.querySelectorAll('div.menu > a');
 //    target.style.border = '8px dotted orange';
 // }
 
+// create individual representative objects from loop
+// const vidPlayers = document.querySelectorAll('.vid-player');
+// const vidPlayerList = [];
+// if(vidPlayers.length === 0) {
+//   return;
+// }
+// let vidPlayerObjs = {};
+// for (let i = 0; i < vidPlayers.length; i++) {
+//     let vidPlayerObj = {
+//       playerInstance: vidPlayers[i],
+//       posterImage: vidPlayers[i].vidPlayers[i].querySelector('div.poster-image');
+//     }
+// };
+// vidPlayerObjs[i] = vidPlayerObj; // this means each instance of of vidPlayerObjs will be a vidPlayerObj
 
 
 
