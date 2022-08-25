@@ -2672,7 +2672,7 @@ const targets = document.querySelectorAll('div.menu > a');
 // vidPlayerObjs[i] = vidPlayerObj; // this means each instance of of vidPlayerObjs will be a vidPlayerObj
 
 
-
+ 
 
 
 
