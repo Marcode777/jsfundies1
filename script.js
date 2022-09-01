@@ -2672,7 +2672,43 @@ const targets = document.querySelectorAll('div.menu > a');
 // vidPlayerObjs[i] = vidPlayerObj; // this means each instance of of vidPlayerObjs will be a vidPlayerObj
 
 
- 
+ // Mutation Observer section
+
+
+ function elementCreator() {
+  console.log('elementCreator triggered');
+  var target = document.querySelector('.mutation-observer-area');
+  console.log('target is', target);
+  var newElement = document.createElement('h1');
+  newElement.textContent = 'THIS IS OUR NEWLY CREATED ELEMENT';
+  newElement.classList.add('new-element');
+  target.appendChild(newElement);
+ }
+
+ // to create Mutation Observer with Promise
+function waitForTargetElement(selector) {
+  return new Promise(resolve => {
+    if(document.querySelector('.new-element')) {
+      return resolve(document.querySelector('.new-element'));
+    }
+    const observer = new MutationObserver(mutations => {
+      if(document.querySelector('.new-element')) {
+        resolve(document.querySelector('.new-element'));
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  })
+}
+
+// to use Mutation Observer
+waitForTargetElement('.new-element').then((elm) => {
+  console.log('MUTATION OF DOM CONFIRMED');
+  console.log('elm.textContent is', elm.textContent);
+});
 
 
 

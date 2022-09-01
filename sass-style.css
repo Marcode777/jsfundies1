@@ -43,4 +43,12 @@
   background-color: pink;
 }
 
+.mutation-observer-section .jumbotron {
+  background-color: blue;
+}
+.mutation-observer-section .mutation-observer-area {
+  height: 38px;
+  background-color: gray;
+}
+
 /*# sourceMappingURL=sass-style.css.map */
