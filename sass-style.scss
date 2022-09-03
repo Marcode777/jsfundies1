@@ -50,8 +50,14 @@
 }
 
 .play-list-renderer-section {
+  height: 500px;
   .jumbotron {
     background-color: pink;
+  }
+  .playListDisplayArea {
+    height: 250px;
+    width: 100%;
+    background-color: lightgray;
   }
 }
 
@@ -64,6 +70,7 @@
     background-color: gray;
   }
 }
+
 
 
 
