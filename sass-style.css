@@ -39,8 +39,16 @@
   border: 3px dotted blue;
 }
 
+.play-list-renderer-section {
+  height: 500px;
+}
 .play-list-renderer-section .jumbotron {
   background-color: pink;
+}
+.play-list-renderer-section .playListDisplayArea {
+  height: 250px;
+  width: 100%;
+  background-color: lightgray;
 }
 
 .mutation-observer-section .jumbotron {
