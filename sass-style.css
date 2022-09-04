@@ -45,10 +45,18 @@
 .play-list-renderer-section .jumbotron {
   background-color: pink;
 }
+.play-list-renderer-section .playListItem {
+  border: 3px solid brown;
+  height: 5rem;
+  background-color: blue;
+  color: white;
+}
 .play-list-renderer-section .playListDisplayArea {
-  height: 250px;
+  height: 500px;
   width: 100%;
   background-color: lightgray;
+  display: flex;
+  flex-direction: column;
 }
 
 .mutation-observer-section .jumbotron {

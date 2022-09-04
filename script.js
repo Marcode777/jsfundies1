@@ -2633,11 +2633,13 @@ function playListArrayLogger() {
   var displayArea = document.querySelector('.playListDisplayArea');
   for(var i = 0; i < playListArray.length; i++) {
     console.log('playListArray[i] are', playListArray[i]);
-    var newElement = document.createElement('h1');
+    var container = document.createElement('div');
+    container.classList.add('playListItem');
+    var newElement = document.createElement('a');
+    newElement.setAttribute('href', 'https://www.stackoverflow.com');
     newElement.textContent = playListArray[i];
-    newElement.style.color = 'blue';
-    newElement.style.fontSize = '3rem';
-    displayArea.appendChild(newElement);
+    container.appendChild(newElement);
+    displayArea.appendChild(container);
   }
   // alternative and more efficient way would be to use a for of loop like this
   // for (singleItem of playListArray) {
