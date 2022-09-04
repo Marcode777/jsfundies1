@@ -54,10 +54,18 @@
   .jumbotron {
     background-color: pink;
   }
+  .playListItem {
+    border: 3px solid brown;
+    height: 5rem;
+    background-color: blue;
+    color: white;
+  }
   .playListDisplayArea {
-    height: 250px;
+    height: 500px;
     width: 100%;
     background-color: lightgray;
+    display: flex;
+    flex-direction: column;
   }
 }
 
