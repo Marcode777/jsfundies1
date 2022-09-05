@@ -65,7 +65,13 @@
     width: 100%;
     background-color: lightgray;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+  }
+  
+  .presetObjects {
+    height: 28rem;
+    width: 28rem;
+    border: 1px dotted blue;
   }
 }
 
