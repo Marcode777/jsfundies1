@@ -2650,6 +2650,42 @@ function playListArrayLogger() {
   // }
 }
 
+var arrayOfPresetObjects = [
+  objectOne = {
+    imageSrc: 'https://images.unsplash.com/photo-1448317846460-907988886b33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG5ldyUyMHlvcmslMjBjaXR5JTIwc2t5bGluZXxlbnwwfHwwfHw%3D&w=1000&q=80',
+    imageCity: 'NYC'
+  },
+
+  objectTwo = {
+    imageSrc: 'https://images.unsplash.com/photo-1493134799591-2c9eed26201a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGNoaWNhZ28lMjBza3lsaW5lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
+    imageCity: 'Chicago'
+  },
+
+  objectThree = {
+    imageSrc: 'https://images.unsplash.com/photo-1597982087634-9884f03198ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2088&q=80',
+    imageCity: 'Los Angeles'
+  }
+]
+
+function displayArrayOfPresetObjects() {
+  console.log('displayArrayOfPresetObjects triggered');
+  var displayArea = document.querySelector('.playListDisplayArea');
+  for(var i = 0; i < arrayOfPresetObjects.length; i++) {
+    console.log('arrayOfPresetObjects[i] are', arrayOfPresetObjects[i]);
+    var container = document.createElement('div');
+    var newElement = document.createElement('img');
+    var newElementText = document.createElement('h1');
+    newElementText.textContent = arrayOfPresetObjects[i].imageCity;
+    newElement.setAttribute('src', arrayOfPresetObjects[i].imageSrc);
+    newElement.classList.add('presetObjects');
+    container.appendChild(newElementText);
+    container.appendChild(newElement);
+    displayArea.appendChild(container);
+  }
+}
+
+
+////////////////////////////////////////////////////////////
 // specified Interval that runs for a set amount of attempts
 // var counter = 0;
 // var specifiedInterval = setInterval(function(){

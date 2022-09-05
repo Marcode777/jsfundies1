@@ -56,7 +56,12 @@
   width: 100%;
   background-color: lightgray;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+.play-list-renderer-section .presetObjects {
+  height: 28rem;
+  width: 28rem;
+  border: 1px dotted blue;
 }
 
 .mutation-observer-section .jumbotron {
