@@ -2621,11 +2621,17 @@ document.addEventListener("DOMContentLoaded", () => {
 var playListArray = [];
 function playListAppenderTrigger() {
   console.log('playListAppender triggered');
+  var object = {};
   var target = document.getElementById('playListItemName');
   var targetValue = target.value;
-  playListArray.push(targetValue);
+  var targetTwo = document.getElementById('playListImageSrc');
+  var targetTwoValue = targetTwo.value;
+  object.firstProp = targetValue;
+  object.secondProp = targetTwoValue;
+  playListArray.push(object);
   console.log('playListArray is', playListArray);
   target.value = '';
+  targetTwo.value = '';
 }
 
 function playListArrayLogger() {
@@ -2635,10 +2641,13 @@ function playListArrayLogger() {
     console.log('playListArray[i] are', playListArray[i]);
     var container = document.createElement('div');
     container.classList.add('playListItem');
-    var newElement = document.createElement('a');
-    newElement.setAttribute('href', 'https://www.stackoverflow.com');
-    newElement.textContent = playListArray[i];
-    container.appendChild(newElement);
+    var newElementTitle = document.createElement('h1');
+    var newElementImg = document.createElement('img');
+    newElementImg.classList.add('playListItemImage');
+    newElementTitle.textContent = playListArray[i].firstProp;
+    newElementImg.setAttribute('src', playListArray[i].secondProp);
+    container.appendChild(newElementTitle);
+    container.appendChild(newElementImg);
     displayArea.appendChild(container);
   }
   // alternative and more efficient way would be to use a for of loop like this
