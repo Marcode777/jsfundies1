@@ -50,24 +50,35 @@
 }
 
 .play-list-renderer-section {
-  height: 500px;
+  height: auto;
   .jumbotron {
     background-color: pink;
   }
+  .play-list-input-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
   .playListItem {
     border: 3px solid brown;
-    height: 5rem;
+    max-height: 80rem;
     background-color: blue;
     color: white;
   }
+
+  .playListItemImage {
+    max-height: 25rem;
+    max-width: 20rem;
+  }
   .playListDisplayArea {
-    height: 500px;
+    min-height: 28rem;
     width: 100%;
     background-color: lightgray;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
   }
-  
+
   .presetObjects {
     height: 28rem;
     width: 28rem;
