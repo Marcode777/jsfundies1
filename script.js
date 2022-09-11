@@ -2764,7 +2764,7 @@ function waitForTargetElement(selector) {
   })
 }
 
-// to use Mutation Observer
+// to use Mutation Observer with Promise
 waitForTargetElement('.new-element').then((elm) => {
   console.log('MUTATION OF DOM CONFIRMED');
   console.log('elm.textContent is', elm.textContent);
@@ -2772,6 +2772,35 @@ waitForTargetElement('.new-element').then((elm) => {
 
 
 
+// Mutation Observer
+
+// function adder() {
+//   var target = document.querySelector('.sidebar-inner');
+//   var newElement = document.createElement('h1');
+//   newElement.textContent = 'HERE IS OUR NEW ELEMENT';
+//   target.appendChild(newElement);
+// }
+
+// var targetNode = document.querySelector('.sidebar-inner');
+
+// var config = {
+//   childList: true
+// }
+
+// var callback = (mutationList, observer) => {
+//   for(let mutation of mutationList) {
+//       if(mutation.type === 'childList') {
+//           console.log('DOM MUTATION OBSERVED');
+//           var targetNode = document.querySelector('.sidebar-inner');
+//           targetNode.style.border = '5px dotted brown';
+//       }
+//   }
+// }
+
+observer = new MutationObserver(callback);
+
+// way to use Mutation Observer
+// observer.observe(targetNode, config);
 
 
 
