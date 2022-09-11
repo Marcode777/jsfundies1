@@ -2626,12 +2626,16 @@ function playListAppenderTrigger() {
   var targetValue = target.value;
   var targetTwo = document.getElementById('playListImageSrc');
   var targetTwoValue = targetTwo.value;
+  var targetThree = document.getElementById('playListItemLink');
+  var targetThreeValue = targetThree.value;
   object.firstProp = targetValue;
   object.secondProp = targetTwoValue;
+  object.thirdProp = targetThreeValue;
   playListArray.push(object);
   console.log('playListArray is', playListArray);
   target.value = '';
   targetTwo.value = '';
+  targetThree.value = '';
 }
 
 function playListArrayLogger() {
@@ -2643,11 +2647,15 @@ function playListArrayLogger() {
     container.classList.add('playListItem');
     var newElementTitle = document.createElement('h1');
     var newElementImg = document.createElement('img');
+    var newElementLink = document.createElement('a');
     newElementImg.classList.add('playListItemImage');
     newElementTitle.textContent = playListArray[i].firstProp;
     newElementImg.setAttribute('src', playListArray[i].secondProp);
+    newElementLink.setAttribute('href', playListArray[i].thirdProp);
+    newElementLink.textContent = playListArray[i].firstProp;
     container.appendChild(newElementTitle);
     container.appendChild(newElementImg);
+    container.appendChild(newElementLink);
     displayArea.appendChild(container);
   }
   // alternative and more efficient way would be to use a for of loop like this
