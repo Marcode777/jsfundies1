@@ -2652,9 +2652,10 @@ function playListArrayLogger() {
     newElementTitle.textContent = playListArray[i].firstProp;
     newElementImg.setAttribute('src', playListArray[i].secondProp);
     newElementLink.setAttribute('href', playListArray[i].thirdProp);
-    newElementLink.textContent = playListArray[i].firstProp;
+    // newElementLink.textContent = playListArray[i].firstProp;
+    newElementLink.appendChild(newElementImg);
     container.appendChild(newElementTitle);
-    container.appendChild(newElementImg);
+    // container.appendChild(newElementImg);
     container.appendChild(newElementLink);
     displayArea.appendChild(container);
   }
