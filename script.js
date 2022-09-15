@@ -2819,7 +2819,30 @@ observer = new MutationObserver(callback);
 
 
 
+// private classes in JavaScript 
+// apparently we can create private classes in JavaScript just like in Java
+// this apparently results in more secure code
 
+// class testClass {
+//   #thePrivate;
+//   constructor(yooo) {
+//     this.#thePrivate = yooo;
+//   }
+// }
+
+// class ClassWithPrivateMethod {
+//   #privateMethod() {
+//     return 'hello world';
+//   }
+
+//   getPrivateMessage() {
+//     return this.#privateMethod();
+//   }
+// }
+
+// const instance = new ClassWithPrivateMethod();
+// console.log(instance.getPrivateMessage());
+// // hello world
 
 
 
