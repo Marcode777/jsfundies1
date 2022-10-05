@@ -2845,7 +2845,54 @@ observer = new MutationObserver(callback);
 // // hello world
 
 
-//
+ // re-usable waitForElement function, with Mutation Observer and Promise utilization
+ function waitForElement(selector) {
+  return new Promise(resolve => {
+    if(document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(mutations => {
+      if(document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
+}
+
+// example on how to use
+waitForElement('.video-js').then((elm) => {
+  console.log('perform logic');
+  // define all the media players on the page
+  const bcPlayerComponents = document.querySelectorAll('.brightcoveplayer') || null;
+  // create array to store the media players
+  const bcPlayerComponentList = [];
+  if(bcPlayerComponents.length === 0) {
+    // exit logic early if no media players on page
+    return;
+  }
+  let bcPlayerComponentsElements = {};
+
+  for(let i = 0; i < bcPlayerComponents.length; i++) {
+    // the following are references contained a media player instance
+    let bcPlayerComponentsElement = {
+      component: bcPlayerComponents[i],
+      playerInstance: bcPlayerComponentList[i],
+      playerBase: bcPlayerComponents[i].querySelector('div.cmp-brightcove'),
+      posterVersion: bcPlayerComponents[i].querySelector('div.video-poster')
+    };
+    // the following are states that this refers EACH INDIVIDUAL media player instance
+    bcPlayerComponentsElements[i] = bcPlayerComponentsElement;
+    if(bcPlayerComponentsElement.posterVersion !== null) {
+      // this means that this instance does have the poster option
+      // perform associated logic
+    }
+  }
+});
  
 
 
