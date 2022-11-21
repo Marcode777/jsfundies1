@@ -2905,9 +2905,66 @@ waitForElement('.video-js').then((elm) => {
 // 31st
 // Nov 1st, back
 
+// useful tester functions
 
+function urlEraser() {
+  console.log('urlEraser triggered');
+  var targets = document.querySelectorAll('a');
+  for(var i = 0; i < targets.length; i++) {
+    targets[i].setAttribute('href', '#');
+  }
+}
 
+function hrefScanner() {
+  console.log('hrefScanner triggered');
+  setTimeout(function(){
+    console.log('sTo triggered');
+    var targets = document.querySelectorAll('.media-series-list-main-container > .media-series-list-sub-container > .media-series-list-content-side > .content-container > a');
+    for(var i = 0; i < targets.length; i++) {
+      console.log('from within loop, targets[i] are', targerts[i]);
+      console.log('from within loop, targets[i].href are', targets[i].href);
+    }
+  }, 2200);
+}
 
+var mediaSeriesListSubContainer = document.querySelector('.media-series-list-main-container > .media-series-list-sub-container');
+
+function eventTrigger(e) {
+  console.log('e.target is', e.target);
+  var imageContainers = document.querySelectorAll('.media-series-list-main-container > .media-series-list-sub-container > .media-series-list-image-side > .image-container');
+  for(var i = 0; i < imageContainers.length; i ++) {
+    imageContainers[i].classList.remove('active');
+  }
+  e.target.parentElement.parentElement.previousElementSibling.firstElementChild.classList.add('active');
+}
+
+mediaSeriesListSubContainer.addEventListener('click', eventTrigger);
+
+// better approach than eventTrigger, using deconstruct '...' method
+// because querySelectorAll returns a node list, methods can't be added to them outright, using the destructuring allows methods to act on them
+// in other words,from geeksforgeeks: Destructuring Assignment is a JavaScript expression that allows to unpack values from arrays, or properties from objects, into distinct variables data can be extracted from arrays, objects, nested objects and assigning to variables.May 31, 2022
+// and i think it also allows for being able to act on each individual instance as in the following masterFunction
+// also remember the subtle difference when using querySelector where the dot . is used, and just 'regular javascript' such as classList.add('active'), where no dot . is used
+function masterFunction() {
+  console.log('masterFunction triggered');
+  const mediaListCards = [...document.querySelectorAll('.media-series-list-card')];
+  const mediaListMainContainer = document.querySelector('.media-series-list-main-container');
+  for(const mediaListCard of mediaListCards) {
+    const mediaSeriesCta = mediaListCard.querySelector('.media-series-cta');
+    mediaSeriesCta.addEventListener('click', (e) => {
+      console.log('click event triggered');
+      console.log('mediaSeriesCta', mediaSeriesCta);
+      console.log('mediaListCard', mediaListCard);
+      const currentActiveCard = mediaListMainContainer.querySelector('.active');
+      console.log('currentActiveCard is', currentActiveCard);
+      if(currentActiveCard != null) {
+        currentActiveCard.classList.remove('active');
+      }
+      mediaListCard.classList.add('active');
+      console.log('completion of event trigger');
+    })
+  }
+}
  
 
 
