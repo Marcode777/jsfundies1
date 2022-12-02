@@ -827,6 +827,16 @@
     <div class="mutation-observer-area"></div>
   </div>
 
+ <!--- // Adobe HTL conditional rendering via data-sly-test tags example
+<sly data-sly-test="${model.displayImage}">  render this layout if all images from content fragment are available
+  RENDER APPROPRIATE HTML HERE
+</sly>
+
+<sly data-sly-test="${!model.displayImage}">  render this layout only if one or more images from content fragment are missing
+  RENDER APPROPRIATE HTML HERE
+</sly>
+ // completion of Adobe HTL conditional rendering example--> 
+
 
   <!-- <script type="text/javascript"> alert("this is the very first script run")</script> -->
   <script type="text/javascript" src="script.js"></script>

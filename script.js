@@ -2927,6 +2927,15 @@ function hrefScanner() {
   }, 2200);
 }
 
+function linkPopulator() {
+  console.log('linkPopulator triggered');
+  var linkSrcArray = ['https://www.google.com', 'https://www.youtube.com', 'https://www.stackoverflow.com'];
+  var targetz = document.querySelectorAll('a');
+  targetz.forEach(function(el, i){
+    el.setAttribute('href', linkSrcArray[i]);
+  });
+}
+
 var mediaSeriesListSubContainer = document.querySelector('.media-series-list-main-container > .media-series-list-sub-container');
 
 function eventTrigger(e) {
