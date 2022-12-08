@@ -2975,9 +2975,30 @@ function masterFunction() {
   }
 }
  
- 
+// function for back to top button
+ function backToTopTrigger() {
+  const topDivTarget = document.getElementById('topDivTarget');
+  topDivTarget.scrollIntoView({
+    behavior: 'smooth';
+  });
+ }
+
+ // function that attempts to take parameter and match it to the current page URL and if match found, active class is added
+function currentURLMatcher(x) {
+  const currentURL = window.location.href;
+  if(currentURL.includes(x.href)) {
+    x.closest('.media-series-tile-card').classList.add('active');
+  }
+}
 
 
+// function that identifies cta links and iterates through them with the currentURLMatcher
+function urlIdentifyScanner() {
+  const allCtaLinks = document.querySelectorAll('.media-series-tile-card > .content-container > a');
+  for(var i = 0; i < allCtaLinks.length; i++) {
+    currentURLMatcher(allCtaLinks[i]);
+  }
+}
 
 
 
