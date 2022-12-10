@@ -3005,6 +3005,3 @@ function urlIdentifyScanner() {
 
 
 
-
-
-
