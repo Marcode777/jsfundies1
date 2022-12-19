@@ -2786,6 +2786,7 @@ waitForTargetElement('.new-element').then((elm) => {
 // function adder() {
 //   var target = document.querySelector('.sidebar-inner');
 //   var newElement = document.createElement('h1');
+//   //newElement.classList.add('new');
 //   newElement.textContent = 'HERE IS OUR NEW ELEMENT';
 //   target.appendChild(newElement);
 // }
@@ -3004,4 +3005,4 @@ function urlIdentifyScanner() {
 
 
 
-
+ 
