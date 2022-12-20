@@ -2590,7 +2590,7 @@ function tabOpener(e) {
     tabs[i].style.backgroundColor = '';
     tabs[indexPosition].style.backgroundColor = 'teal';
   }
-  e.preventDefault(); // to preven user from being dragged to top of page after click
+  e.preventDefault(); // to prevent user from being dragged to top of page after click
 }
 
 function dropdownMenuTrigger() {
@@ -2599,20 +2599,20 @@ function dropdownMenuTrigger() {
   target.classList.toggle('reveal');
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log('tab nav DOM Content Loaded');
-  var tabs = document.querySelectorAll('button.tab');
-  var tabContents = document.querySelectorAll('div.tab-nav-content-container > div.tab-content');
-  var dropdownMenuButton = document.querySelector('button.drop-down-menu-initiator');
-  dropdownMenuButton.addEventListener('click', dropdownMenuTrigger);
-  // intentionally starting at i = 1, so that the first tabContent will display as default behavior
-  for(var i = 1; i < tabContents.length; i++) {
-    tabContents[i].style.display = 'none';
-  }
-  for(var i = 0; i < tabs.length; i++) {
-    tabs[i].addEventListener('click', tabOpener);
-  }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   console.log('tab nav DOM Content Loaded');
+//   var tabs = document.querySelectorAll('button.tab');
+//   var tabContents = document.querySelectorAll('div.tab-nav-content-container > div.tab-content');
+//   var dropdownMenuButton = document.querySelector('button.drop-down-menu-initiator');
+//   dropdownMenuButton.addEventListener('click', dropdownMenuTrigger);
+//   // intentionally starting at i = 1, so that the first tabContent will display as default behavior
+//   for(var i = 1; i < tabContents.length; i++) {
+//     tabContents[i].style.display = 'none';
+//   }
+//   for(var i = 0; i < tabs.length; i++) {
+//     tabs[i].addEventListener('click', tabOpener);
+//   }
+// });
 
 
 
@@ -2774,6 +2774,7 @@ function waitForTargetElement(selector) {
 }
 
 // to use Mutation Observer with Promise
+
 waitForTargetElement('.new-element').then((elm) => {
   console.log('MUTATION OF DOM CONFIRMED');
   console.log('elm.textContent is', elm.textContent);
@@ -2807,7 +2808,7 @@ waitForTargetElement('.new-element').then((elm) => {
 //   }
 // }
 
-observer = new MutationObserver(callback);
+// observer = new MutationObserver(callback);
 
 // way to use Mutation Observer
 // observer.observe(targetNode, config);
@@ -2908,101 +2909,103 @@ waitForElement('.video-js').then((elm) => {
 
 // useful tester functions
 
-function urlEraser() {
-  console.log('urlEraser triggered');
-  var targets = document.querySelectorAll('a');
-  for(var i = 0; i < targets.length; i++) {
-    targets[i].setAttribute('href', '#');
-  }
-}
+// function urlEraser() {
+//   console.log('urlEraser triggered');
+//   var targets = document.querySelectorAll('a');
+//   for(var i = 0; i < targets.length; i++) {
+//     targets[i].setAttribute('href', '#');
+//   }
+// }
 
-function hrefScanner() {
-  console.log('hrefScanner triggered');
-  setTimeout(function(){
-    console.log('sTo triggered');
-    var targets = document.querySelectorAll('.media-series-list-main-container > .media-series-list-sub-container > .media-series-list-content-side > .content-container > a');
-    for(var i = 0; i < targets.length; i++) {
-      console.log('from within loop, targets[i] are', targerts[i]);
-      console.log('from within loop, targets[i].href are', targets[i].href);
-    }
-  }, 2200);
-}
+// function hrefScanner() {
+//   console.log('hrefScanner triggered');
+//   setTimeout(function(){
+//     console.log('sTo triggered');
+//     var targets = document.querySelectorAll('.media-series-list-main-container > .media-series-list-sub-container > .media-series-list-content-side > .content-container > a');
+//     for(var i = 0; i < targets.length; i++) {
+//       console.log('from within loop, targets[i] are', targerts[i]);
+//       console.log('from within loop, targets[i].href are', targets[i].href);
+//     }
+//   }, 2200);
+// }
 
-function linkPopulator() {
-  console.log('linkPopulator triggered');
-  var linkSrcArray = ['https://www.google.com', 'https://www.youtube.com', 'https://www.stackoverflow.com'];
-  var targetz = document.querySelectorAll('a');
-  targetz.forEach(function(el, i){
-    el.setAttribute('href', linkSrcArray[i]);
-  });
-}
+// function linkPopulator() {
+//   console.log('linkPopulator triggered');
+//   var linkSrcArray = ['https://www.google.com', 'https://www.youtube.com', 'https://www.stackoverflow.com'];
+//   var targetz = document.querySelectorAll('a');
+//   targetz.forEach(function(el, i){
+//     el.setAttribute('href', linkSrcArray[i]);
+//   });
+// }
 
-var mediaSeriesListSubContainer = document.querySelector('.media-series-list-main-container > .media-series-list-sub-container');
+// var mediaSeriesListSubContainer = document.querySelector('.media-series-list-main-container > .media-series-list-sub-container');
 
-function eventTrigger(e) {
-  console.log('e.target is', e.target);
-  var imageContainers = document.querySelectorAll('.media-series-list-main-container > .media-series-list-sub-container > .media-series-list-image-side > .image-container');
-  for(var i = 0; i < imageContainers.length; i ++) {
-    imageContainers[i].classList.remove('active');
-  }
-  e.target.parentElement.parentElement.previousElementSibling.firstElementChild.classList.add('active');
-}
+// function eventTrigger(e) {
+//   console.log('e.target is', e.target);
+//   var imageContainers = document.querySelectorAll('.media-series-list-main-container > .media-series-list-sub-container > .media-series-list-image-side > .image-container');
+//   for(var i = 0; i < imageContainers.length; i ++) {
+//     imageContainers[i].classList.remove('active');
+//   }
+//   e.target.parentElement.parentElement.previousElementSibling.firstElementChild.classList.add('active');
+// }
 
-mediaSeriesListSubContainer.addEventListener('click', eventTrigger);
+// mediaSeriesListSubContainer.addEventListener('click', eventTrigger);
 
 // better approach than eventTrigger, using deconstruct '...' method
 // because querySelectorAll returns a node list, methods can't be added to them outright, using the destructuring allows methods to act on them
 // in other words,from geeksforgeeks: Destructuring Assignment is a JavaScript expression that allows to unpack values from arrays, or properties from objects, into distinct variables data can be extracted from arrays, objects, nested objects and assigning to variables.May 31, 2022
 // and i think it also allows for being able to act on each individual instance as in the following masterFunction
 // also remember the subtle difference when using querySelector where the dot . is used, and just 'regular javascript' such as classList.add('active'), where no dot . is used
-function masterFunction() {
-  console.log('masterFunction triggered');
-  const mediaListCards = [...document.querySelectorAll('.media-series-list-card')];
-  const mediaListMainContainer = document.querySelector('.media-series-list-main-container');
-  for(const mediaListCard of mediaListCards) {
-    const mediaSeriesCta = mediaListCard.querySelector('.media-series-cta');
-    mediaSeriesCta.addEventListener('click', (e) => {
-      console.log('click event triggered');
-      console.log('mediaSeriesCta', mediaSeriesCta);
-      console.log('mediaListCard', mediaListCard);
-      const currentActiveCard = mediaListMainContainer.querySelector('.active');
-      console.log('currentActiveCard is', currentActiveCard);
-      if(currentActiveCard != null) {
-        currentActiveCard.classList.remove('active');
-      }
-      mediaListCard.classList.add('active');
-      console.log('completion of event trigger');
-    })
-  }
-}
+
+// function masterFunction() {
+//   console.log('masterFunction triggered');
+//   const mediaListCards = [...document.querySelectorAll('.media-series-list-card')];
+//   const mediaListMainContainer = document.querySelector('.media-series-list-main-container');
+//   for(const mediaListCard of mediaListCards) {
+//     const mediaSeriesCta = mediaListCard.querySelector('.media-series-cta');
+//     mediaSeriesCta.addEventListener('click', (e) => {
+//       console.log('click event triggered');
+//       console.log('mediaSeriesCta', mediaSeriesCta);
+//       console.log('mediaListCard', mediaListCard);
+//       const currentActiveCard = mediaListMainContainer.querySelector('.active');
+//       console.log('currentActiveCard is', currentActiveCard);
+//       if(currentActiveCard != null) {
+//         currentActiveCard.classList.remove('active');
+//       }
+//       mediaListCard.classList.add('active');
+//       console.log('completion of event trigger');
+//     })
+//   }
+// }
  
 // function for back to top button
- function backToTopTrigger() {
-  const topDivTarget = document.getElementById('topDivTarget');
-  topDivTarget.scrollIntoView({
-    behavior: 'smooth';
-  });
- }
+
+//  function backToTopTrigger() {
+//   const topDivTarget = document.getElementById('topDivTarget');
+//   topDivTarget.scrollIntoView({
+//     behavior: 'smooth';
+//   });
+//  }
 
  // function that attempts to take parameter and match it to the current page URL and if match found, active class is added
-function currentURLMatcher(x) {
-  const currentURL = window.location.href;
-  if(currentURL.includes(x.href)) {
-    x.closest('.media-series-tile-card').classList.add('active');
-  }
-}
+
+// function currentURLMatcher(x) {
+//   const currentURL = window.location.href;
+//   if(currentURL.includes(x.href)) {
+//     x.closest('.media-series-tile-card').classList.add('active');
+//   }
+// }
 
 
 // function that identifies cta links and iterates through them with the currentURLMatcher
-function urlIdentifyScanner() {
-  const allCtaLinks = document.querySelectorAll('.media-series-tile-card > .content-container > a');
-  for(var i = 0; i < allCtaLinks.length; i++) {
-    currentURLMatcher(allCtaLinks[i]);
-  }
-}
+
+// function urlIdentifyScanner() {
+//   const allCtaLinks = document.querySelectorAll('.media-series-tile-card > .content-container > a');
+//   for(var i = 0; i < allCtaLinks.length; i++) {
+//     currentURLMatcher(allCtaLinks[i]);
+//   }
+// }
 
  
 
 
-
- 
