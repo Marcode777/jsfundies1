@@ -82,4 +82,31 @@
   background-color: gray;
 }
 
+.card-suggestion-container {
+  height: 800px;
+  width: 100%;
+  background-color: lightgray;
+}
+.card-suggestion-container .first-card {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  opacity: 40%;
+  transition: 0.88s;
+}
+.card-suggestion-container .second-card {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+  opacity: 40%;
+  transition: 0.88s;
+}
+.card-suggestion-container .third-card {
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+  opacity: 40%;
+  transition: 0.88s;
+}
+
 /*# sourceMappingURL=sass-style.css.map */
