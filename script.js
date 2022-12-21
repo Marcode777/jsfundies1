@@ -3009,3 +3009,54 @@ waitForElement('.video-js').then((elm) => {
  
 
 
+// card-suggestion-section
+
+
+function showOptions() {
+  console.log('showOptions triggered');
+  var firstOption = document.querySelector('#firstOption');
+  var secondOption = document.querySelector('#secondOption');
+  var thirdOption = document.querySelector('#thirdOption');
+  var firstCard = document.querySelector('.first-card');
+  var secondCard = document.querySelector('.second-card');
+  var thirdCard = document.querySelector('.third-card');
+  if(firstOption.checked) {
+    firstCard.style.opacity = '100%';
+  }
+  if(secondOption.checked) {
+    secondCard.style.opacity = '100%';
+  }
+  if(thirdOption.checked) {
+    thirdCard.style.opacity = '100%';
+  }
+  if(firstOption.checked && secondOption.checked && thirdOption.checked) {
+    firstCard.style.border = '3px solid brown';
+    secondCard.style.border = '3px solid brown';
+    thirdCard.style.border = '3px solid brown';
+  }
+}
+
+function resetOptions() {
+  console.log('resetOptions triggered');
+  var firstOption = document.querySelector('#firstOption');
+  var secondOption = document.querySelector('#secondOption');
+  var thirdOption = document.querySelector('#thirdOption');
+  firstOption.checked = false;
+  secondOption.checked = false;
+  thirdOption.checked = false;
+  location.reload();
+}
+
+ document.addEventListener("DOMContentLoaded", function(){
+  console.log('card-suggestion-section loaded');
+  var firstOption = document.querySelector('#firstOption');
+  var secondOption = document.querySelector('#secondOption');
+  var thirdOption = document.querySelector('#thirdOption');
+  var resetOptionsButton = document.querySelector('#resetOptionsButton');
+
+  firstOption.addEventListener('click', showOptions);
+  secondOption.addEventListener('click', showOptions);
+  thirdOption.addEventListener('click', showOptions);
+  resetOptionsButton.addEventListener('click', resetOptions);
+
+ });
