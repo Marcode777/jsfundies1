@@ -2773,11 +2773,24 @@ function waitForTargetElement(selector) {
   })
 }
 
+// test function to confirm 
+function confirmation() {
+  var target = document.querySelector('.mutation-observer-area');
+  setTimeout(function(){
+    console.log('from sTo of confirmation');
+    var newerElement = document.createElement('h2');
+    newerElement.textContent = 'mutationObserver has confirmed transformation';
+    newerElement.style.color = 'yellow';
+    target.appendChild(newerElement);
+  },2200);
+}
+
 // to use Mutation Observer with Promise
 
 waitForTargetElement('.new-element').then((elm) => {
   console.log('MUTATION OF DOM CONFIRMED');
   console.log('elm.textContent is', elm.textContent);
+  confirmation();
 });
 
 
@@ -3065,3 +3078,4 @@ function resetOptions() {
 
 
 
+ 

@@ -78,7 +78,7 @@
   background-color: blue;
 }
 .mutation-observer-section .mutation-observer-area {
-  height: 38px;
+  height: 100%;
   background-color: gray;
 }
 
