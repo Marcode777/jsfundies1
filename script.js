@@ -3125,7 +3125,6 @@ function resetOptions() {
         x.style.display = 'none';
       }
     }
-
     // this hides non-suggested cards once user has completed their choices, this logic will only trigger on mobile
     function hideNonActiveItems() {
       var activeCardOnPage = document.querySelector('.card.active');
@@ -3138,7 +3137,6 @@ function resetOptions() {
         return;
       }
     }
-
     // this resets UI, displays all cards once user chooses clear all, this logic only triggers on mobile
     function showNonActiveItems() {
       console.log('showNonActive items triggered');
