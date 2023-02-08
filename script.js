@@ -3085,4 +3085,222 @@ function resetOptions() {
 
 
 
- 
+ // CCF
+ document.addEventListener("DOMContentLoaded", function(){
+  const CCFcomponent = document.querySelector('.ccf-component');
+  if(CCFcomponent) {
+    //global vars
+    const innerContainer = document.querySelector('.innerContainer');
+    const firstOption = innerContainer.querySelector('#id-0');
+    const secondOption = innerContainer.querySelector('#id-1');
+    const thirdOption = innerContainer.querySelector('#id-2');
+    const fourthOption = innerContainer.querySelector('#id-3');
+    const fifthOption = innerContainer.querySelector('#id-4');
+    const firstCheckbox = innerContainer.querySelector('#first-checkbox');
+    const secondCheckbox = innerContainer.querySelector('#second-checkbox');
+    const thirdCheckbox = innerContainer.querySelector('#third-checkbox');
+    const checkboxForNo = innerContainer.querySelector('#checkboxForNo');
+    const checkboxForYes = innerContainer.querySelector('#checkboxForYes');
+    const cardOne = innerContainer.querySelector('#cardOne');
+    const cardTwo = innerContainer.querySelector('#cardTwo');
+    const cardThree = innerContainer.querySelector('#cardThree');
+    const cardFour = innerContainer.querySelector('#cardFour');
+    const firstLevelOptions = innerContainer.querySelector('.firstLevelOptions');
+    const secondLevelOptions = innerContainer.querySelector('.secondLevelOptions');
+    const thirdLevelOptions = innerContainer.querySelector('.thirdLevelOptions');
+    const nextButton = innerContainer.querySelector('#nextButtonHere');
+    const totalCardContainer = innerContainer.querySelector('.card-total');
+
+    const firstLevelArray = [];
+    const secondLevelArray = [];
+    const thirdLevelArray = [];
+
+    const clearOptionsContainer = document.querySelector('.clear-options-container');
+    const cardSuggestionComplete = document.querySelector('.card-suggestion-complate');
+    const resetOptionsLink = document.querySelector('#resetOptions');
+
+    // need to use the ... spread operator because classList returns a DOMTokenList, while includes works with an array list
+    function nonActiveItemsFilter(x) {
+      if(![...x.classList].includes('active')) {
+        x.style.display = 'none';
+      }
+    }
+
+    // this hides non-suggested cards once user has completed their choices, this logic will only trigger on mobile
+    function hideNonActiveItems() {
+      var activeCardOnPage = document.querySelector('.card.active');
+      if(window.innerWidth < 416 && activeCardOnPage) {
+        var targets = document.querySelectorAll('.card');
+          for(var i = 0; i < targets.length; i++) {
+            nonActiveItemsFilter(targets[i]);
+          }
+      } else {
+        return;
+      }
+    }
+
+    // this resets UI, displays all cards once user chooses clear all, this logic only triggers on mobile
+    function showNonActiveItems() {
+      console.log('showNonActive items triggered');
+      if(window.innerWidth < 416) {
+        console.log('showNonActiveItems has detected that it is within mobile screensize range, so will trigger logic');
+        var targets = document.querySelectorAll('.card');
+        for(var i = 0; i < targets.length; i++) {
+          targets[i].style.display = 'block';
+        }
+      }
+    }
+    // this dynamically changes appropriate aria-labels dependong on card non-active or active states
+    function dynamicAriaLabelChanger() {
+      var nonActiveCards = document.querySelectorAll('div.card > a.anchorForLabel');
+      for(var i = 0; i < nonActiveCards.length; i++) {
+        nonActiveCards[i].setAttribute('aria-live', 'polite');
+        nonActiveCards[i].ariaLabel = 'Your selections indicate that this is not a recommended card';
+      }
+      var activeCards = document.querySelectorAll('div.card.acive > a.anchorForLabel');
+      for(var i = 0; i < activeCards.length; i++) {
+        activeCards[i].setAttribute('aria-live', 'polite');
+        activeCards[i].ariaLabel = 'This card is recommended';
+      }
+      // this setTimeout is needed to give script opportunity to implement .active class onto relevant cards before correct aria-label is implemented
+      setTimeout(function(){
+        var activeCards = document.querySelectorAll('div.card.active > a.anchorForLabel');
+        for(var i = 0; i < activeCards.length; i++) {
+          activeCards[i].setAttribute('aria-live', 'polite');
+          activeCards[i].ariaLabel = 'This card is recommended';
+        }
+      }, 800);
+    }
+    // this resets dynamically changed aria-labels back to original state
+    function ariaLabelReset() {
+      var activeCards = document.querySelectorAll('div.card.active > a.anchorForLabel');
+      var nonActiveCards = document.querySelectorAll('div.card > a.anchorForLabel');
+      for(var i = 0; i < activeCards.length; i++) {
+        activeCards[i].removeAttribute('aria-live', 'polite');
+        activeCards[i].ariaLabel = 'Please complete selections so an appropriate card may be suggested';
+      }
+      for(var i = 0; i < nonActiveCards.length; i++) {
+        nonActiveCards.removeAttribute('aria-live', 'polite');
+        nonActiveCards[i].ariaLabel = 'Please complete selections so an appropriate card may be suggested';
+      }
+    }
+    // note that secondLevel and thirdLevel logic must be defined prior to firstLevel logic, so their logic can be available, if needed, once user passes firstLevel
+    // also note that there may be duplicate entries produced, so the following Set method and destructuring ... will make sure that there are no duplicate entries, and that each entry is unique
+    thirdLevelOptionLogic() {
+      var destructuredSecondLevelArray = [...new(secondLevelArray)];
+      if(checkboxForNo.checked &&
+        !secondLevelArray.includes('firstCheckbox') &&
+        !destructuredSecondLevelArray.includes('firstCheckbox') &&
+        !destructuredSecondLevelArray.includes('secondCheckbox') &&
+        !destructuredSecondLevelArray.includes('thirdCheckbox')) {
+          thirdLevelOptions.classList.remove('active');
+          cardSuggestionComplete.classList.add('active');
+          cardOne.parentElement.parentElement.parentElement.classList.add('active');
+          totalCardContainer.style.display = 'none';
+          dynamicAriaLabelChanger();
+        }
+    }
+
+    function secondLevelOptionLogic() {
+      if(firstCheckbox.checked) {
+        secondLevelArray.push('firstCheckbox');
+      }
+      if(secondCheckbox.checked) {
+        secondLevelArray.push('secondCheckbox');
+      }
+      if(thirdCheckbox.checked) {
+        secondLevelArray.push('secondCheckbox');
+      }
+      hideNonActiveItems();
+    }
+
+    function firstLevelOptionLogic() {
+      if(firstOption.checked) {
+        firstLevelArray.push('firstOption');
+        firstLevelOptions.classList.add('hide');
+        clearOptionsContainer.classList.add('active');
+        cardSuggestionComplete.classList.add('active');
+        totalCardContainer.style.display = 'none';
+        if(firstLevelArray.includes('firstOption')) {
+          cardOne.parentElement.parentElement.parentElement.classList.add('active');
+        }
+        hideNonActiveItems();
+      }
+    }
+
+    function nextButtonTrigger() {
+      secondLevelOptions.classList.remove('active');
+      thirdLevelOptions.classList.add('active');
+      var destructuredSecondLevelArray = [... new Set(secondLevelArray)];
+      if(firstLevelArray.includes('fifthOptoon') &&
+        !destructuredSecondLevelArray.includes('firstCheckbox') &&
+        !destructuredSecondLevelArray.includes('secondCheckbox') &&
+        !destructuredSecondLevelArray.includes('thirdCheckbox')) {
+          secondLevelOptions.classList.remove('active');
+          thirdLevelOptions.classList.remove('active');
+          cardSuggestionComplete.classList.add('active');
+          totalCardContainer.style.display = 'none';
+        }
+        hideNonActiveItems();
+    }
+
+    function resetOptions () {
+      firstOption.checked = false;
+      secondOption.checked = false;
+      thirdOption.checked = false;
+      fourthOption.checked = false;
+      fifthOption.checked = false;
+      firstCheckbox.checked = false;
+      secondCheckbox.checked = false;
+      thirdCheckbox.checked = false;
+      checkboxForNo.checked = false;
+      checkboxForYes.checked = false;
+      totalCardContainer.style.display = 'block';
+      cardSuggestionComplete.classList.remove('active');
+      thirdLevelOptions.classList.remove('active');
+      sscondLevelOptions.classList.remove('active');
+      cardOne.parentElement.parentElement.parentElement.classList.remove('active');
+      cardTwo.parentElement.parentElement.parentElement.classList.remove('active');
+      cardThree.parentElement.parentElement.parentElement.classList.remove('active');
+      cardFour.parentElement.parentElement.parentElement.classList.remove('active');
+      clearOptionsContainer.classList.remove('active');
+      firstLevelOptions.classList.remove('hide');
+      firstLevelArray.length = 0;
+      secondLevelArray.length = 0;
+      thirdLevelArray.length = 0;
+      ariaLabelReset();
+      showNonActiveItems();
+    }
+
+    function totalCounter() {
+      var targets = document.querySelectorAll('.ccf-image-side');
+      var total = targets.length;
+      var totalCardContainer = document.querySelector('.card-total');
+      var totalCardCount = document.querySelector('.card-total > p.card-total-number');
+      totalCardCount.innerHTML = '(' + total + ')';
+    }
+
+    resetOptionsLink.addEventListener('click', resetOptions);
+    firstOption.addEventListener('click', firstLevelOptionLogic);
+    secondOption.addEventListener('click', firstLevelOptionLogic);
+    thirdOption.addEventListener('click', firstLevelOptionLogic);
+    fourthOption.addEventListener('click', firstLevelOptionLogic);
+    fifthOption.addEventListener('click', firstLevelOptionLogic);
+    firstCheckbox.addEventListener('click', secondLevelOptionLogic);
+    secondCheckbox.addEventListener('click', secondLevelOptionLogic);
+    thirdCheckbox.addEventListener('click', secondLevelOptionLogic);
+    nextButton.addEventListner('click', nextButtonTrigger);
+    checkboxForNo.addEventListener('click', thirdLevelOptionLogic);
+    checkboxForYes.addEventListener('click', thirdLevelOptionLogic);
+    totalCounter();
+    window.addEventListener('resize', hideNonActiveItems);
+
+  }
+ });
+
+
+
+
+
+
+
