@@ -3295,10 +3295,3 @@ function resetOptions() {
 
   }
  });
-  
-
-
-
-
-
-
