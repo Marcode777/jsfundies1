@@ -151,3 +151,21 @@
 //     border: 3px solid maroon;
 //   }
 // }
+
+
+
+// CSS re-usable functions sample
+// @mixin reusable($firstColor, $secondColor, $thirdColor) {
+//   .card-suggestion-container,
+//   .tab-nav-container {
+//     background-color: $firstColor;
+//     border: 8px dotted $secondColor;
+//     p, h1, h2, h3, h4, h5, h6 {
+//       color: $thirdColor
+//     }
+//   }
+// }
+
+// .card-suggestion-container {
+//   @include reusable(blue, orange, yellow);
+// }
