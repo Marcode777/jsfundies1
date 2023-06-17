@@ -1,4 +1,5 @@
 var array = ['June 21 2023', 'A very special day', 'It is your birthday'];
+let index = 0;
 
 
 document.addEventListener("DOMContentLoaded", function(){
