@@ -16,4 +16,4 @@ document.addEventListener("DOMContentLoaded", function(){
         console.log('array[index++] is', array[index++]);
         target.innerHTML = array[index++]
     }, 1300);
-})
+});
