@@ -3,24 +3,33 @@ let index = 0;
 
 
 document.addEventListener("DOMContentLoaded", function(){
+    console.log('script triggered');
     var array = ['June 21 2023', 'Today is a very special day', 'It is your birthday', 'A very quiet, patient and kind brother', 'You are one of the best brothers anyone could ask for', 'So A Very Special Happy Birthday to you, Carlo!' ];
     let start = 0;
     var sentenceChanger = setInterval(function() {
         var target = document.querySelector('p.sentences');
+        var images = document.querySelectorAll('img');
+        for(var i = 0; i < images.length; i++) {
+            images[i].style.transition = '2s';
+        }
         if(start === 1) {
             var imgSecondTarget = document.querySelector('img.two');
             imgSecondTarget.style.visibility = 'visible';
+            imgSecondTarget.style.marginBottom = '80px';
+            imgSecondTarget.style.opacity = 0;
             var titleTarget = document.querySelector('h1.title');
-            titleTarget.style.transition = '3s';
             titleTarget.style.opacity = 0;
 
         }
         if(start === 2) {
             var imgSecondTarget = document.querySelector('img.two');
+            imgSecondTarget.style.marginBottom = '0px';
+            imgSecondTarget.style.opacity = 1;
             imgSecondTarget.src = './bday-assets/brother_IMG_5588.jpg';
         }
         if(start === 3) {
             var imgSecondTarget = document.querySelector('img.two');
+            imgSecondTarget.style.opacity = 0;
             imgSecondTarget.src = './bday-assets/fam-pic-1.jpg';
         }
         if(start === array.length) {
