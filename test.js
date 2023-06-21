@@ -88,3 +88,5 @@ document.addEventListener("DOMContentLoaded", function(){
 //     }
 //     target.textContent = array[start++]
 // }, 3000);
+
+
