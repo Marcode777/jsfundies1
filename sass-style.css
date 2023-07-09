@@ -109,4 +109,31 @@
   transition: 0.88s;
 }
 
+.pop-up-modal-section {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  opacity: 1;
+  transition: 3s;
+  top: 23%;
+  position: fixed;
+}
+.pop-up-modal-section .pop-up-modal-heading {
+  text-align: center;
+}
+.pop-up-modal-section .pop-up-modal-close-button {
+  position: relative;
+  left: 90%;
+}
+.pop-up-modal-section .pop-up-modal-close-button:hover {
+  border: 3px solid gray;
+  cursor: pointer;
+}
+.pop-up-modal-section.closing {
+  opacity: 0;
+}
+.pop-up-modal-section.fully-closed {
+  display: none;
+}
+
 /*# sourceMappingURL=sass-style.css.map */

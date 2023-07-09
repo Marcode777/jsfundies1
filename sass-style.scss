@@ -170,3 +170,29 @@
 //   @include reusable(blue, orange, yellow);
 // }
 
+.pop-up-modal-section {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  opacity: 1;
+  transition: 3s;
+  top: 23%;
+  position: fixed;
+  .pop-up-modal-heading {
+    text-align: center;
+  }
+  .pop-up-modal-close-button {
+    position: relative;
+    left: 90%;
+    &:hover {
+      border: 3px solid gray;
+      cursor: pointer;
+    }
+  }
+  &.closing {
+    opacity: 0;
+  }
+  &.fully-closed {
+    display: none;
+  }
+}
