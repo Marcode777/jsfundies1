@@ -3309,4 +3309,17 @@ function resetOptions() {
  // validationRegex="\\+1 \\(d{3}) \\d{3}-\\d{4}"
 
 
+// note to remember, document.querySelector uses . dot notation for classnames, while other javascript references to classnames, such classList.add only use the classnames themselves
+function closeModal() {
+  console.log('closeModal triggered');
+  var entireModal = document.querySelector('.pop-up-modal-section');
+  entireModal.classList.add('closing');
+  setTimeout(function(){
+    console.log('closeModal sTo triggered');
+    var entireModal = document.querySelector('.pop-up-modal-section');
+    entireModal.classList.add('fully-closed');
+  }, 3000);
+}
 
+var modalCloseButton = document.querySelector('.pop-up-modal-close-button');
+modalCloseButton.addEventListener('click', closeModal);
