@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function(){
                     target.innerHTML = 'Love: your older brother Mark, and the rest of the family.';
                     console.log('target is', target);
                 }, 2000);
-            }, 1000);
+            }, 1500);
         }
         console.log('start is', start);
         target.textContent = array[start++];
