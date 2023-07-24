@@ -1,5 +1,9 @@
+body {
+    /* background-color: yellow; */
+}
+
 .title {
-    color: orange;
+    color: black;
     font-size: 88px;
 }
 
