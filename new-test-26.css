@@ -1,10 +1,11 @@
 body {
-    /* background-color: yellow; */
+     background-color: yellow;
 }
 
 .title {
-    color: black;
+    color: green;
     font-size: 88px;
+    text-decoration: underline;
 }
 
 .sentences {
@@ -26,15 +27,8 @@ img.two {
 }
 
 img.three {
-    opacity: 0;
-}
-
-img.four {
-    opacity: 0;
-}
-
-img.five {
     visibility: hidden;
-    height: 250px;
-    width: 250px;
+    height: 500px;
+    width: 500px;
 }
+
