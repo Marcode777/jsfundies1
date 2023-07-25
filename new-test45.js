@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
             imgSecondTarget.style.opacity = 1;
             var imgThirdTarget = document.querySelector('img.three');
             imgThirdTarget.style.visibility = 'visible';
+            imgThirdTarget.style.opacity = 1;
             setTimeout(function(){
                 console.log('completion sTo triggered');
                 var target = document.querySelector('p.sentences');
