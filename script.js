@@ -3325,3 +3325,20 @@ var modalCloseButton = document.querySelector('.pop-up-modal-close-button');
 modalCloseButton.addEventListener('click', closeModal);
 
 
+// TwoSum example of BruteForce method of finding solution
+// var nums = [2, 7, 11, 15];
+// var target = 9;
+
+// function twoSummer(nums, target) {
+//     console.log('twoSummer triggered');
+//     for(var i = 0; i < nums.length -1; i++) {
+//         for(var j = i + 1; j < nums.length; j++) {
+//             if(nums[i] + nums[j] == target) {
+//                 return [i, j];
+//             }
+//         }
+//     }
+//     return [];
+// }
+
+// twoSummer(nums, target);
