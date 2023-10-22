@@ -3326,23 +3326,54 @@ modalCloseButton.addEventListener('click', closeModal);
 
 
 // TwoSum example of BruteForce method of finding solution
-// var nums = [2, 7, 11, 15];
-// var target = 9;
+// var nums = [0, 1, 3, 5, 10];
+// var target = 8;
 
-// function twoSummer(nums, target) {
-//     console.log('twoSummer triggered');
-//     for(var i = 0; i < nums.length -1; i++) {
-//         for(var j = i + 1; j < nums.length; j++) {
-//             if(nums[i] + nums[j] == target) {
+// function twoSum(nums, target) {
+//     console.log('twoSums triggered');
+//     for(var i = 0; i < nums.length; i++) {
+//         for(var j = i +1; j < nums.length; j++) {
+//             if(nums[i] + nums[j] === target) {
+//                 console.log('answer found');
 //                 return [i, j];
 //             }
 //         }
 //     }
-//     return [];
+// }
+// twoSum(nums, target);
+
+// answer is [2, 3];
+
+// ^ even though it will definitely get the answer, it is not the ideal solution
+// because instead of using 1 loop, it is using 2 loops, therefore increasing the time it takes to get to the solution by at least twice, plus it may take even longer or may not even be practical as the size of the inputs increase
+// and it the least efficient, it will have to look at every single element of the array and do an operation of every other element of the array
+
+
+// Here is an improved and more optimal approach that does not have to iterate through the array more than once
+// by using caching and extra logic
+
+
+// var nums = [0, 1, 3, 5, 10];
+// var target = 8;
+
+// function newImprovedTwoSum(nums, target) {
+//     console.log('new and improved twoSums triggered');
+//     let numObj = {};
+//     for(let i = 0; i < nums.length; i++) {
+//         let complement = target - nums[i];
+//         if(numObj[complement] !== undefined) {
+//             console.log('answer found');
+//             return [numObj[complement], i];
+//         }
+//         numObj[nums[i]] = i;
+//     }
 // }
 
-// twoSummer(nums, target);
+// newImprovedTwoSum(nums, target);
+
+// answer is [2, 3];
 
 
-
- 
+// instead of looking for the sum of two numbers, which would be the obvious and intuitive approach, this appreach takes each number, and looks for the number which when added to it, would equal the target (which is the complement)
+// for each number in the array, it creates this complement variable, and if that complement number exists in the key:value object called numObj we created (e.g. it is not undefined), then great! Return that number's position in the object along with the position of the number we're looking at, and its position in the numObj object
+// it is not intuitive to come up with this more improved and optimal solution, but at the least efficient, it would only have to iterate through the entire array once, which is much better than the original brute force solution
