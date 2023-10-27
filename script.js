@@ -3377,7 +3377,7 @@ modalCloseButton.addEventListener('click', closeModal);
 // instead of looking for the sum of two numbers, which would be the obvious and intuitive approach, this appreach takes each number, and looks for the number which when added to it, would equal the target (which is the complement)
 // for each number in the array, it creates this complement variable, and if that complement number exists in the key:value object called numObj we created (e.g. it is not undefined), then great! Return that number's position in the object along with the position of the number we're looking at, and its position in the numObj object
 // it is not intuitive to come up with this more improved and optimal solution, but at the least efficient, it would only have to iterate through the entire array once, which is much better than the original brute force solution
-
+ 
 
 
 
