@@ -196,3 +196,18 @@
     display: none;
   }
 }
+
+.transition-component {
+  &.fade-in {
+    .transition-animation-component-parentContainer {
+      height: 888px;
+      width: 100%;
+      border: 3px dotted gray;
+      .transition-animation-component-mainContainer {
+        opacity: 0;
+        transition: 0.8s ease-out;
+        transform: translateX(-15%);
+      }
+    }
+  }
+}
