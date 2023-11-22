@@ -3385,4 +3385,40 @@ modalCloseButton.addEventListener('click', closeModal);
 
 
 
-  
+// logic for intersectionObserver for transition-animation component
+document.addEventListener("DOMContentLoaded", function(){
+  const transitionAnimationComponent = document.querySelector('.transition-component');
+  const transitionAnimationComponentWithFadeIn = document.querySelector('.fade-in');
+  if(transitionAnimationComponent) {
+    console.log('transitionAnimationComponent is on DOM');
+    if(transitionAnimationComponentWithFadeIn) {
+      console.log('transitionAnimationComponentWithFadeIn is on DOM');
+      document.addEventListener('scroll',function(){
+        let observerOptions = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.25
+        }
+        function observerCallback(entries, observer) {
+          entries.forEach(entry => {
+            if(entry.isIntersecting) {
+              let entryTarget = entry.target.querySelector('.transition-animation-component-mainContainer');
+              entryTarget.style.opacity = '1';
+              entryTarget.style.transform = 'translateX(0)';
+            }
+          });
+        }
+        let observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        let target = '.transition-component.fade-in';
+
+        document.querySelectorAll(target).forEach( (i) => {
+          if(i) {
+            observer.observe(i);
+          }
+        });
+
+      });
+    }
+  }
+});
