@@ -3422,7 +3422,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 });
- 
 
 
-   
+
+// Hello again from Paris, France! 
