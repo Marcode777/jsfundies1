@@ -1,0 +1,13 @@
+.simpleSearchBarMainContainer {
+    border: 8px dashed grey;
+    height: auto;
+    .simpleSearchBarFormContainer {
+        border: 2px solid blue;
+        height: 88px;
+    }
+    .simpleSearchBarSearchResultsContainer {
+        border: 2px solid brown;
+        margin-top: 88px;
+        height: 88px;
+    }
+}

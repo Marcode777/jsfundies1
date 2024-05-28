@@ -3422,7 +3422,3 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 });
-
-
-
-// Happy Birthday to the Best Grandma In The World!!
