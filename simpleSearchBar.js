@@ -12,41 +12,41 @@ setTimeout(function(){
     target.style.border = '8px solid gold';
   }, 2400);
 
-  // const citiesArray = [
-  //   { cityName: 'New York City', knownFor: 'finance, culture, fashion, entertainment, delegation, headquarters hub'},
-  //   { cityName: 'London', knownFor: 'finance, culture, hub'},
-  //   { cityName: 'Paris', knownFor: 'beauty, fashion, culture, hub'},
-  //   { cityName: 'Frankfurt', knownFor: 'finance, entertainment hub'}
-  // ] 
+  const citiesArray = [
+    { cityName: 'New York City'},
+    { cityName: 'London'},
+    { cityName: 'Paris'},
+    { cityName: 'Frankfurt'}
+  ] 
 
-  const people = [
-    { name: 'adri'},
-    { name: 'becky'},
-    { name: 'chris'},
-    { name: 'dillon'},
-    { name: 'evan'},
-    { name: 'frank'},
-    { name: 'georgette'},
-    { name: 'hugh'},
-    { name: 'igor'},
-    { name: 'jacoby'},
-    { name: 'kristina'},
-    { name: 'lemony'},
-    { name: 'matilda'},
-    { name: 'nile'},
-    { name: 'ophelia'},
-    { name: 'patrick'},
-    { name: 'quincy'},
-    { name: 'roslyn'},
-    { name: 'solene'},
-    { name: 'timothy'},
-    { name: 'uff'},
-    { name: 'violet'},
-    { name: 'wyatt'},
-    { name: 'x'},
-    { name: 'yadri'},
-    { name: 'zack'},
-]
+//   const people = [
+//     { name: 'adri'},
+//     { name: 'becky'},
+//     { name: 'chris'},
+//     { name: 'dillon'},
+//     { name: 'evan'},
+//     { name: 'frank'},
+//     { name: 'georgette'},
+//     { name: 'hugh'},
+//     { name: 'igor'},
+//     { name: 'jacoby'},
+//     { name: 'kristina'},
+//     { name: 'lemony'},
+//     { name: 'matilda'},
+//     { name: 'nile'},
+//     { name: 'ophelia'},
+//     { name: 'patrick'},
+//     { name: 'quincy'},
+//     { name: 'roslyn'},
+//     { name: 'solene'},
+//     { name: 'timothy'},
+//     { name: 'uff'},
+//     { name: 'violet'},
+//     { name: 'wyatt'},
+//     { name: 'x'},
+//     { name: 'yadri'},
+//     { name: 'zack'},
+// ]
 
   // function setList(results) {
   //   for (const city of results){
@@ -93,29 +93,54 @@ function noResults(){
   list.appendChild(error)
 }
 
-  function setList(results){
-    clearList();
+//   function setList(results){
+//     clearList();
 
-    for (const person of results){
-        // creating a li element for each result item
-        const resultItem = document.createElement('li')
+//     for (const person of results){
+//         // creating a li element for each result item
+//         const resultItem = document.createElement('li')
 
-        // adding a class to each item of the results
-        resultItem.classList.add('result-item')
+//         // adding a class to each item of the results
+//         resultItem.classList.add('result-item')
 
-        // grabbing the name of the current point of the loop and adding the name as the list item's text
-        const text = document.createTextNode(person.name)
+//         // grabbing the name of the current point of the loop and adding the name as the list item's text
+//         const text = document.createTextNode(person.name)
 
-        // appending the text to the result item
-        resultItem.appendChild(text)
+//         // appending the text to the result item
+//         resultItem.appendChild(text)
 
-        var list = document.querySelector('#simpleSearchBarResultsList');
-        // appending the result item to the list
-        list.appendChild(resultItem)
-    }
-    if (results.length === 0) {
-      noResults();
-    }
+//         var list = document.querySelector('#simpleSearchBarResultsList');
+//         // appending the result item to the list
+//         list.appendChild(resultItem)
+//     }
+//     if (results.length === 0) {
+//       noResults();
+//     }
+// }
+
+function setList(results){
+  clearList();
+
+  for (const city of results){
+      // creating a li element for each result item
+      const resultItem = document.createElement('li')
+
+      // adding a class to each item of the results
+      resultItem.classList.add('result-item')
+
+      // grabbing the name of the current point of the loop and adding the name as the list item's text
+      const text = document.createTextNode(city.cityName)
+
+      // appending the text to the result item
+      resultItem.appendChild(text)
+
+      var list = document.querySelector('#simpleSearchBarResultsList');
+      // appending the result item to the list
+      list.appendChild(resultItem)
+  }
+  if (results.length === 0) {
+    noResults();
+  }
 }
 
   const searchInput = document.querySelector('#simpleSearchBarInput');
@@ -145,18 +170,33 @@ function noResults(){
 
 
 
-  searchInput.addEventListener("input", (e) => {
-    let value = e.target.value
+//   searchInput.addEventListener("input", (e) => {
+//     let value = e.target.value
 
-    if (value && value.trim().length > 0){
-         value = value.trim().toLowerCase()
+//     if (value && value.trim().length > 0){
+//          value = value.trim().toLowerCase()
 
-        //returning only the results of setList if the value of the search is included in the person's name
-        setList(people.filter(person => {
-            return person.name.includes(value)
-        }))
-     }
+//         //returning only the results of setList if the value of the search is included in the person's name
+//         setList(people.filter(person => {
+//             return person.name.includes(value)
+//         }))
+//      }
+// });
+
+searchInput.addEventListener("input", (e) => {
+  let value = e.target.value
+
+  if (value && value.trim().length > 0){
+       value = value.trim().toLowerCase()
+
+      //returning only the results of setList if the value of the search is included in the person's name
+      setList(citiesArray.filter(city => {
+          return city.cityName.includes(value)
+      }))
+   }
 });
+
+
   const clearButton = document.querySelector('#simpleSearchBarClearButton');
   
   clearButton.addEventListener("click", function() {
