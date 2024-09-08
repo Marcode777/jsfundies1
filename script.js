@@ -3422,3 +3422,68 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   }
 });
+
+
+
+// should commit these following changes to repo when I get the chance (note made on08-20-2024)
+
+// ++++++++++++++++++++++++++
+
+// JavaScript here is a way of creating a function that loops through an array of items and console.logs an item every second, while using fat arrow function syntax
+
+// var citiesArray = ['NYC', 'Paris', 'London', 'Frankfurt', 'Chicago', 'LA'];
+// var index = 0;
+
+// function newLogger() {
+//   console.log('newLogger is triggered');
+//   citiesArray.forEach((city, index)=> {
+//     setTimeout(function(){
+//       console.log('city is', city);
+//     }, index * 1000);
+//   })
+// }
+
+// JavaScript here is a way of creating a function that loops through an array of items and console.logs an item every second, while using standard function syntax
+
+// var citiesArray = ['NYC', 'Paris', 'London', 'Frankfurt', 'Chicago', 'LA'];
+// var index = 0;
+
+// function standardLogger() {
+//   console.log('standard logger triggered');
+//   citiesArray.forEach(function(city, index){
+//     setTimeout(function(){
+//       console.log('city is', city);
+//     }, index * 1000);
+//   })
+// }
+
+
+// JavaScript Masterpiece involving defining an empty itemArray, declaring an index of 0 at the start, populating this array with elements, and then highlighting each array one by one every second with a function that uses a forEach loop and a setTimeout
+
+// var itemArray = [];
+// var index = 0;
+// console.log('itemArray is', itemArray);
+
+// function aggregator() {
+//   console.log('aggregator triggered');
+//   var targets = document.querySelectorAll('.cmp-banner_text > p');
+//   for(var i = 0; i < targets.length; i++) {
+//     itemArray.push(targets[i]);
+//   }
+
+//   setTimeout(function(){
+//     console.log('sTo triggered');
+//     console.log('itemArray is NOW', itemArray);
+//   }, 3000)
+// }
+
+// function actioner() {
+//   console.log('actioner triggered');
+//   itemArray.forEach((item, index)=> {
+//     setTimeout(function(){
+//       item.style.border = '8px dashed yellow';
+//     }, index * 1000);
+//   })
+// }
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++
